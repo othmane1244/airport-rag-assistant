@@ -1,0 +1,76 @@
+{
+  "realm": "aga-airport",
+  "enabled": true,
+  "displayName": "AGA Airport Assistant",
+  "registrationAllowed": true,
+  "loginWithEmailAllowed": true,
+  "duplicateEmailsAllowed": false,
+  "resetPasswordAllowed": true,
+  "rememberMe": true,
+  "verifyEmail": false,
+  "sslRequired": "none",
+  "internationalizationEnabled": true,
+  "supportedLocales": ["en", "fr", "ar"],
+  "defaultLocale": "en",
+  "loginTheme": "aga-airport",
+  "roles": {
+    "realm": [
+      {
+        "name": "document-admin",
+        "description": "Can upload, replace, list and remove airport knowledge documents"
+      }
+    ]
+  },
+  "clients": [
+    {
+      "clientId": "aga-web",
+      "name": "AGA Airport Assistant Web",
+      "enabled": true,
+      "protocol": "openid-connect",
+      "publicClient": true,
+      "standardFlowEnabled": true,
+      "directAccessGrantsEnabled": false,
+      "implicitFlowEnabled": false,
+      "serviceAccountsEnabled": false,
+      "redirectUris": [
+        "http://localhost:5173/*",
+        "http://127.0.0.1:5173/*",
+        "http://localhost:8080/*",
+        "http://127.0.0.1:8080/*"
+      ],
+      "webOrigins": [
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "http://localhost:8080",
+        "http://127.0.0.1:8080"
+      ],
+      "attributes": {
+        "pkce.code.challenge.method": "S256",
+        "post.logout.redirect.uris": "http://localhost:5173/*##http://127.0.0.1:5173/*##http://localhost:8080/*##http://127.0.0.1:8080/*"
+      },
+      "protocolMappers": [
+        {
+          "name": "aga-api-audience",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-audience-mapper",
+          "consentRequired": false,
+          "config": {
+            "included.client.audience": "aga-api",
+            "id.token.claim": "false",
+            "access.token.claim": "true"
+          }
+        }
+      ]
+    },
+    {
+      "clientId": "aga-api",
+      "name": "AGA Airport API",
+      "enabled": true,
+      "protocol": "openid-connect",
+      "bearerOnly": true,
+      "standardFlowEnabled": false,
+      "directAccessGrantsEnabled": false,
+      "serviceAccountsEnabled": false
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+:root {
+  --aga-ink: #071827;
+  --aga-panel: #102b40;
+  --aga-line: rgba(186, 219, 237, 0.18);
+  --aga-sky: #71d5f5;
+  --aga-text: #eff8fc;
+  --aga-muted: #afc4d2;
+}
+
+html,
+body,
+.login-pf body {
+  min-height: 100%;
+  background: var(--aga-ink);
+}
+
+.login-pf body {
+  color: var(--aga-text);
+  background-image:
+    radial-gradient(ellipse at 15% 12%, rgba(21, 113, 154, 0.28), transparent 42%),
+    radial-gradient(ellipse at 85% 88%, rgba(18, 82, 121, 0.22), transparent 38%),
+    linear-gradient(145deg, #061522, #0a2134 52%, #071827);
+  background-attachment: fixed;
+}
+
+.pf-v5-c-login__main,
+.pf-c-login__main {
+  overflow: hidden;
+  border: 1px solid var(--aga-line);
+  border-radius: 24px;
+  background: rgba(13, 37, 55, 0.96);
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.38);
+}
+
+.pf-v5-c-login__main-header::before,
+.pf-c-login__main-header::before {
+  display: block;
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 12px;
+  background: url("../img/aga-mark.svg") center / contain no-repeat;
+  content: "";
+}
+
+.pf-v5-c-login__main-header,
+.pf-c-login__main-header,
+#kc-header-wrapper {
+  color: var(--aga-text);
+}
+
+#kc-page-title {
+  color: var(--aga-text);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.pf-v5-c-form-control,
+.pf-c-form-control,
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  min-height: 44px;
+  color: var(--aga-text);
+  border-color: var(--aga-line);
+  border-radius: 11px;
+  background-color: rgba(4, 19, 31, 0.76);
+}
+
+.pf-v5-c-form-control:focus,
+.pf-c-form-control:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: var(--aga-sky);
+  box-shadow: 0 0 0 2px rgba(113, 213, 245, 0.2);
+}
+
+.pf-v5-c-button.pf-m-primary,
+.pf-c-button.pf-m-primary,
+input[type="submit"] {
+  min-height: 44px;
+  border: 0;
+  border-radius: 11px;
+  color: #062136;
+  background: linear-gradient(135deg, #a7f3ff, #63c9ef);
+  font-weight: 750;
+  transition: filter 150ms ease, transform 150ms ease;
+}
+
+.pf-v5-c-button.pf-m-primary:hover,
+.pf-c-button.pf-m-primary:hover,
+input[type="submit"]:hover {
+  filter: brightness(1.07);
+  transform: translateY(-1px);
+}
+
+.pf-v5-c-login__main-footer-band,
+.pf-c-login__main-footer-band {
+  color: var(--aga-muted);
+  border-top: 1px solid var(--aga-line);
+  background: rgba(4, 19, 31, 0.36);
+}
+
+a,
+.pf-v5-c-button.pf-m-link,
+.pf-c-button.pf-m-link {
+  color: var(--aga-sky);
+}
+
+.pf-v5-c-alert,
+.pf-c-alert {
+  border-radius: 12px;
+}
+
+@media (max-width: 480px) {
+  .pf-v5-c-login__main,
+  .pf-c-login__main {
+    border-radius: 18px;
+  }
+}
