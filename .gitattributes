@@ -1,0 +1,3 @@
+# Frozen evaluation sets: keep exact bytes so their SHA-256 stays valid
+rag_service/evaluation/router_holdout_v1.json -text
+rag_service/evaluation/router_holdout_v1.json.sha256 -text

@@ -1,0 +1,14 @@
+# Local experiment override (exp/reranker). Not for shared or production use.
+# - Mounts the current rag_service code, so the expansion switch and /rerank
+#   can be tested without rebuilding the image.
+# - Publishes the RAG service on 127.0.0.1:8002 for scripts/evaluate_pipeline.py.
+# - RAG_QUERY_EXPANSION can be set from the shell (default true).
+#   docker compose -f docker-compose.yml -f docker-compose.exp.yml up -d rag
+services:
+  rag:
+    environment:
+      RAG_QUERY_EXPANSION: ${RAG_QUERY_EXPANSION:-true}
+    ports:
+      - "127.0.0.1:8002:8002"
+    volumes:
+      - ./rag_service/app:/app/rag_service/app:ro

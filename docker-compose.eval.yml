@@ -1,0 +1,9 @@
+# Local evaluation override ONLY. Never use in a shared or production setup.
+# Bypasses Keycloak so eval/run_generation.py can call /chat without a token.
+# The API honours AUTH_DISABLED only when ENVIRONMENT=development.
+#   docker compose -f docker-compose.yml -f docker-compose.eval.yml up -d
+services:
+  api:
+    environment:
+      ENVIRONMENT: development
+      AUTH_DISABLED: "true"

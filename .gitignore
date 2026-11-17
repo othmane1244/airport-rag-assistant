@@ -1,0 +1,59 @@
+# Secrets: keep only the *.example templates
+.env
+.env.*
+*.env
+**/.env
+**/.env.*
+!.env.example
+!.env.*.example
+!**/.env.example
+!**/.env.*.example
+!*.env.example
+
+# Vector index and model caches
+backend/chroma_data/
+**/chroma_data/
+.cache/
+huggingface/
+**/.cache/huggingface/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+**/.venv/
+**/venv/
+.pytest_cache/
+
+# Node / build
+node_modules/
+dist/
+
+# Logs
+*.log
+
+# Local browser profiles used for testing
+.edge-*/
+
+# Local scratch material (not part of the project)
+draft/
+
+# Source documents and anything derived from them never go into Git:
+# PDFs, CAD plans and office files (airport documents are not ours to publish),
+# vector indexes and their backups.
+rag_service/data/pdfs/
+backend/data/
+*.pdf
+*.dwg
+*.doc
+*.docx
+*.ppt
+*.pptx
+**/chroma_data*/
+*.sqlite3
+aga-backups/
+# Generated answers and annotation grids (quote source documents; regenerated locally)
+eval/results/
+# Chunking experiment: local index and the list of indexed source files
+rag_service/evaluation/chunking/
