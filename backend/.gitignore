@@ -1,0 +1,8 @@
+.env
+venv/
+.venv/
+__pycache__/
+*.pyc
+api_service/.venv/
+rag_service/.venv/
+chroma_data/
