@@ -1,0 +1,544 @@
+{
+  "source_benchmark": "aga-rag-v2-150",
+  "seed": 20261108,
+  "counts": {
+    "total": 40,
+    "answerable": 30,
+    "unanswerable": 10,
+    "double_annotation": 10
+  },
+  "cases": [
+    {
+      "id": "fr_parking_info",
+      "lang": "fr",
+      "category": "transport",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "Quelles sont la capacité du parking et les modalités de paiement pour plusieurs heures ?",
+      "expected_source_groups": [
+        [
+          "Parkings"
+        ]
+      ],
+      "double_annotation": false
+    },
+    {
+      "id": "fr_rental_contacts",
+      "lang": "fr",
+      "category": "transport",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "Quelles agences de location sont présentes et quelles coordonnées de réservation sont publiées ?",
+      "expected_source_groups": [
+        [
+          "Car rent"
+        ]
+      ],
+      "double_annotation": false
+    },
+    {
+      "id": "fr_park_leave",
+      "lang": "fr",
+      "category": "transport",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Je pars quelques jours : où laisser ma voiture et où payer en sortant ?",
+      "expected_source_groups": [
+        [
+          "Parkings"
+        ]
+      ],
+      "double_annotation": true
+    },
+    {
+      "id": "fr_play_area",
+      "lang": "fr",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Où se trouve l’espace de jeux pour enfants ?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "double_annotation": false
+    },
+    {
+      "id": "fr_prayer_place",
+      "lang": "fr",
+      "category": "services",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Y a-t-il un lieu de prière avant le départ ?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "double_annotation": false
+    },
+    {
+      "id": "fr_shops",
+      "lang": "fr",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Quelles boutiques trouve-t-on dans le terminal ?",
+      "expected_source_groups": [
+        [
+          "Boutiques"
+        ]
+      ],
+      "double_annotation": false
+    },
+    {
+      "id": "fr_doctor",
+      "lang": "fr",
+      "category": "medical",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Où aller si un voyageur a besoin d’un médecin ?",
+      "expected_source_groups": [
+        [
+          "Medical Assistance"
+        ]
+      ],
+      "double_annotation": false
+    },
+    {
+      "id": "fr_wheelchair",
+      "lang": "fr",
+      "category": "accessibility",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Comment demander un fauteuil roulant ?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "double_annotation": false
+    },
+    {
+      "id": "fr_call_center",
+      "lang": "fr",
+      "category": "airport_info",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Comment contacter le centre d’appel ?",
+      "expected_source_groups": [
+        [
+          "Call center"
+        ]
+      ],
+      "double_annotation": false
+    },
+    {
+      "id": "fr_travel_customs",
+      "lang": "fr",
+      "category": "formalites",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "Quels documents préparer et quelles règles de sécurité ou de douane consulter ?",
+      "expected_source_groups": [
+        [
+          "Travel documents"
+        ],
+        [
+          "Security and Customs"
+        ]
+      ],
+      "double_annotation": false
+    },
+    {
+      "id": "en_taxi_queue",
+      "lang": "en",
+      "category": "transport",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Where do taxis wait outside arrivals?",
+      "expected_source_groups": [
+        [
+          "Taxis",
+          "Taxi & Bus"
+        ]
+      ],
+      "double_annotation": false
+    },
+    {
+      "id": "en_bus_stops",
+      "lang": "en",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Which stops do the airport shuttles serve?",
+      "expected_source_groups": [
+        [
+          "Taxi & Bus"
+        ]
+      ],
+      "double_annotation": false
+    },
+    {
+      "id": "en_bus_route",
+      "lang": "en",
+      "category": "transport",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Is there a shuttle to Inezgane or Aït Melloul?",
+      "expected_source_groups": [
+        [
+          "Taxi & Bus"
+        ]
+      ],
+      "double_annotation": true
+    },
+    {
+      "id": "en_prayer",
+      "lang": "en",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Where are the prayer rooms?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "double_annotation": false
+    },
+    {
+      "id": "en_play_area",
+      "lang": "en",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Where is the children’s play area?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "double_annotation": false
+    },
+    {
+      "id": "en_prayer_place",
+      "lang": "en",
+      "category": "services",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Is there a place to pray before departure?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "double_annotation": false
+    },
+    {
+      "id": "en_emergency",
+      "lang": "en",
+      "category": "medical",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "In an emergency, where can I see a doctor, and at what times?",
+      "expected_source_groups": [
+        [
+          "Medical Assistance"
+        ]
+      ],
+      "double_annotation": true
+    },
+    {
+      "id": "en_accessible_toilets",
+      "lang": "en",
+      "category": "accessibility",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Are accessible toilets available?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "double_annotation": true
+    },
+    {
+      "id": "en_info_contact",
+      "lang": "en",
+      "category": "airport_info",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "Where can I ask for information, and what phone contact is listed?",
+      "expected_source_groups": [
+        [
+          "Informations points"
+        ],
+        [
+          "Phone"
+        ]
+      ],
+      "double_annotation": false
+    },
+    {
+      "id": "en_papers",
+      "lang": "en",
+      "category": "formalites",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "What papers should I prepare before flying from Morocco?",
+      "expected_source_groups": [
+        [
+          "Travel documents"
+        ]
+      ],
+      "double_annotation": false
+    },
+    {
+      "id": "ar_taxi_queue",
+      "lang": "ar",
+      "category": "transport",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "أين تنتظر سيارات الأجرة عند مخرج الوصول؟",
+      "expected_source_groups": [
+        [
+          "Taxis",
+          "Taxi & Bus"
+        ]
+      ],
+      "double_annotation": true
+    },
+    {
+      "id": "ar_rental",
+      "lang": "ar",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "ما وكالات كراء السيارات في المطار؟",
+      "expected_source_groups": [
+        [
+          "Car rent"
+        ]
+      ],
+      "double_annotation": false
+    },
+    {
+      "id": "ar_bus_route",
+      "lang": "ar",
+      "category": "transport",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "هل توجد حافلة إلى إنزكان أو أيت ملول؟",
+      "expected_source_groups": [
+        [
+          "Taxi & Bus"
+        ]
+      ],
+      "double_annotation": false
+    },
+    {
+      "id": "ar_prayer_place",
+      "lang": "ar",
+      "category": "services",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "هل يوجد مكان للصلاة قبل المغادرة؟",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "double_annotation": false
+    },
+    {
+      "id": "ar_smoking",
+      "lang": "ar",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "أين يمكن التدخين في المطار؟",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "double_annotation": true
+    },
+    {
+      "id": "ar_prayer",
+      "lang": "ar",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "أين توجد قاعات الصلاة؟",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "double_annotation": false
+    },
+    {
+      "id": "ar_doctor",
+      "lang": "ar",
+      "category": "medical",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "أين أذهب إذا احتاج مسافر إلى طبيب؟",
+      "expected_source_groups": [
+        [
+          "Medical Assistance"
+        ]
+      ],
+      "double_annotation": false
+    },
+    {
+      "id": "ar_wheelchair",
+      "lang": "ar",
+      "category": "accessibility",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "كيف أطلب كرسيًا متحركًا؟",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "double_annotation": false
+    },
+    {
+      "id": "ar_phone_number",
+      "lang": "ar",
+      "category": "airport_info",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "ما الرقم الذي أتصل به للوصول إلى المطار؟",
+      "expected_source_groups": [
+        [
+          "Phone",
+          "Call center"
+        ]
+      ],
+      "double_annotation": true
+    },
+    {
+      "id": "ar_travel_customs",
+      "lang": "ar",
+      "category": "formalites",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "ما الوثائق التي أعدها وما قواعد الأمن أو الجمارك التي أراجعها؟",
+      "expected_source_groups": [
+        [
+          "Travel documents"
+        ],
+        [
+          "Security and Customs"
+        ]
+      ],
+      "double_annotation": false
+    },
+    {
+      "id": "fr_flight_gate",
+      "lang": "fr",
+      "category": "flight_live",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "Quelle porte est attribuée maintenant au prochain vol pour Paris ?",
+      "expected_source_groups": [],
+      "double_annotation": true
+    },
+    {
+      "id": "fr_baggage_allowance",
+      "lang": "fr",
+      "category": "airline_policy",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "Quel poids de bagage cabine autorise mon billet Royal Air Maroc ?",
+      "expected_source_groups": [],
+      "double_annotation": false
+    },
+    {
+      "id": "fr_restaurant_now",
+      "lang": "fr",
+      "category": "live_hours",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "Quel restaurant est ouvert à cette minute dans la zone d’embarquement ?",
+      "expected_source_groups": [],
+      "double_annotation": false
+    },
+    {
+      "id": "en_security_wait",
+      "lang": "en",
+      "category": "live_operations",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "How long is the security-check queue right now?",
+      "expected_source_groups": [],
+      "double_annotation": false
+    },
+    {
+      "id": "en_flight_delays",
+      "lang": "en",
+      "category": "flight_live",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "Which flights are delayed right now?",
+      "expected_source_groups": [],
+      "double_annotation": true
+    },
+    {
+      "id": "en_weather_now",
+      "lang": "en",
+      "category": "live_weather",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "What is the current weather on the apron?",
+      "expected_source_groups": [],
+      "double_annotation": true
+    },
+    {
+      "id": "ar_security_wait",
+      "lang": "ar",
+      "category": "live_operations",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "كم مدة الانتظار في التفتيش الأمني حاليًا؟",
+      "expected_source_groups": [],
+      "double_annotation": false
+    },
+    {
+      "id": "ar_weather_now",
+      "lang": "ar",
+      "category": "live_weather",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "كيف الطقس الآن على ساحة المطار؟",
+      "expected_source_groups": [],
+      "double_annotation": false
+    },
+    {
+      "id": "ar_flight_delays",
+      "lang": "ar",
+      "category": "flight_live",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "ما الرحلات المتأخرة الآن؟",
+      "expected_source_groups": [],
+      "double_annotation": false
+    },
+    {
+      "id": "ar_restaurant_now",
+      "lang": "ar",
+      "category": "live_hours",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "أي مطعم مفتوح الآن في منطقة الصعود؟",
+      "expected_source_groups": [],
+      "double_annotation": false
+    }
+  ]
+}
