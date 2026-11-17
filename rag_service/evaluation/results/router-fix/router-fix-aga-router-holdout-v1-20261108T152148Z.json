@@ -1,0 +1,828 @@
+{
+  "dataset": "aga-router-holdout-v1",
+  "run_at_utc": "2026-11-08T15:21:48.178160+00:00",
+  "threshold": 1.18,
+  "threshold_rule": "fixed (set on benchmark v2)",
+  "router_before": {
+    "correct": 34,
+    "n": 60,
+    "rate": 0.5667,
+    "wilson95": [
+      0.441,
+      0.6843
+    ]
+  },
+  "router_after": {
+    "correct": 36,
+    "n": 60,
+    "rate": 0.6,
+    "wilson95": [
+      0.4737,
+      0.7143
+    ]
+  },
+  "router_before_vs_after": {
+    "only_before": 11,
+    "only_after": 13,
+    "mcnemar_exact_p": 0.8388
+  },
+  "decision_after_with_gate": {
+    "correct": 39,
+    "n": 60,
+    "rate": 0.65,
+    "wilson95": [
+      0.5236,
+      0.7583
+    ]
+  },
+  "before_vs_decision_after": {
+    "only_before": 9,
+    "only_after": 14,
+    "mcnemar_exact_p": 0.4049
+  },
+  "by_language": {
+    "fr": {
+      "router_before": {
+        "correct": 12,
+        "n": 20,
+        "rate": 0.6,
+        "wilson95": [
+          0.3866,
+          0.7812
+        ]
+      },
+      "router_after": {
+        "correct": 11,
+        "n": 20,
+        "rate": 0.55,
+        "wilson95": [
+          0.3421,
+          0.7418
+        ]
+      },
+      "decision_after_with_gate": {
+        "correct": 12,
+        "n": 20,
+        "rate": 0.6,
+        "wilson95": [
+          0.3866,
+          0.7812
+        ]
+      }
+    },
+    "en": {
+      "router_before": {
+        "correct": 10,
+        "n": 20,
+        "rate": 0.5,
+        "wilson95": [
+          0.2993,
+          0.7007
+        ]
+      },
+      "router_after": {
+        "correct": 13,
+        "n": 20,
+        "rate": 0.65,
+        "wilson95": [
+          0.4329,
+          0.8188
+        ]
+      },
+      "decision_after_with_gate": {
+        "correct": 13,
+        "n": 20,
+        "rate": 0.65,
+        "wilson95": [
+          0.4329,
+          0.8188
+        ]
+      }
+    },
+    "ar": {
+      "router_before": {
+        "correct": 12,
+        "n": 20,
+        "rate": 0.6,
+        "wilson95": [
+          0.3866,
+          0.7812
+        ]
+      },
+      "router_after": {
+        "correct": 12,
+        "n": 20,
+        "rate": 0.6,
+        "wilson95": [
+          0.3866,
+          0.7812
+        ]
+      },
+      "decision_after_with_gate": {
+        "correct": 14,
+        "n": 20,
+        "rate": 0.7,
+        "wilson95": [
+          0.481,
+          0.8545
+        ]
+      }
+    }
+  },
+  "confusion_before": {
+    "out_of_scope -> out_of_scope": 18,
+    "out_of_scope -> documentary": 12,
+    "documentary -> out_of_scope": 8,
+    "documentary -> documentary": 16,
+    "flight_status -> documentary": 3,
+    "flight_status -> out_of_scope": 3
+  },
+  "confusion_after": {
+    "out_of_scope -> out_of_scope": 9,
+    "out_of_scope -> documentary": 21,
+    "documentary -> documentary": 23,
+    "documentary -> out_of_scope": 1,
+    "flight_status -> flight_status": 4,
+    "flight_status -> documentary": 2
+  },
+  "confusion_decision_after": {
+    "out_of_scope -> out_of_scope": 9,
+    "out_of_scope -> distance_threshold": 5,
+    "out_of_scope -> documentary": 16,
+    "documentary -> documentary": 21,
+    "documentary -> out_of_scope": 1,
+    "documentary -> distance_threshold": 2,
+    "flight_status -> flight_status": 4,
+    "flight_status -> documentary": 2
+  },
+  "gate": {
+    "blocked_answerable": 0,
+    "blocked_unanswerable": 0,
+    "blocked_by_expected": {
+      "out_of_scope": 5,
+      "documentary": 2
+    }
+  },
+  "cases": [
+    {
+      "id": "ho_fr_off_01",
+      "lang": "fr",
+      "answerable": null,
+      "kind": "off_topic",
+      "expected": "out_of_scope",
+      "before": "out_of_scope",
+      "after": "out_of_scope",
+      "best_distance": 1.3136849403381348,
+      "decision_after": "out_of_scope"
+    },
+    {
+      "id": "ho_fr_off_02",
+      "lang": "fr",
+      "answerable": null,
+      "kind": "off_topic",
+      "expected": "out_of_scope",
+      "before": "out_of_scope",
+      "after": "documentary",
+      "best_distance": 1.2669318914413452,
+      "decision_after": "distance_threshold"
+    },
+    {
+      "id": "ho_fr_off_03",
+      "lang": "fr",
+      "answerable": null,
+      "kind": "off_topic",
+      "expected": "out_of_scope",
+      "before": "out_of_scope",
+      "after": "out_of_scope",
+      "best_distance": 1.1090199947357178,
+      "decision_after": "out_of_scope"
+    },
+    {
+      "id": "ho_fr_off_04",
+      "lang": "fr",
+      "answerable": null,
+      "kind": "confusable",
+      "expected": "out_of_scope",
+      "before": "documentary",
+      "after": "documentary",
+      "best_distance": 1.0429840087890625,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_fr_off_05",
+      "lang": "fr",
+      "answerable": null,
+      "kind": "confusable",
+      "expected": "out_of_scope",
+      "before": "out_of_scope",
+      "after": "documentary",
+      "best_distance": 1.0217056274414062,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_fr_off_06",
+      "lang": "fr",
+      "answerable": null,
+      "kind": "confusable",
+      "expected": "out_of_scope",
+      "before": "documentary",
+      "after": "documentary",
+      "best_distance": 1.1075389385223389,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_fr_off_07",
+      "lang": "fr",
+      "answerable": null,
+      "kind": "off_topic",
+      "expected": "out_of_scope",
+      "before": "out_of_scope",
+      "after": "documentary",
+      "best_distance": 1.2815580368041992,
+      "decision_after": "distance_threshold"
+    },
+    {
+      "id": "ho_fr_off_08",
+      "lang": "fr",
+      "answerable": null,
+      "kind": "confusable",
+      "expected": "out_of_scope",
+      "before": "documentary",
+      "after": "documentary",
+      "best_distance": 0.8628054261207581,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_fr_off_09",
+      "lang": "fr",
+      "answerable": null,
+      "kind": "off_topic",
+      "expected": "out_of_scope",
+      "before": "out_of_scope",
+      "after": "documentary",
+      "best_distance": 1.0498263835906982,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_fr_off_10",
+      "lang": "fr",
+      "answerable": null,
+      "kind": "confusable",
+      "expected": "out_of_scope",
+      "before": "documentary",
+      "after": "documentary",
+      "best_distance": 1.126646876335144,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_en_off_01",
+      "lang": "en",
+      "answerable": null,
+      "kind": "off_topic",
+      "expected": "out_of_scope",
+      "before": "documentary",
+      "after": "out_of_scope",
+      "best_distance": 1.34488046169281,
+      "decision_after": "out_of_scope"
+    },
+    {
+      "id": "ho_en_off_02",
+      "lang": "en",
+      "answerable": null,
+      "kind": "off_topic",
+      "expected": "out_of_scope",
+      "before": "out_of_scope",
+      "after": "out_of_scope",
+      "best_distance": 1.287819504737854,
+      "decision_after": "out_of_scope"
+    },
+    {
+      "id": "ho_en_off_03",
+      "lang": "en",
+      "answerable": null,
+      "kind": "off_topic",
+      "expected": "out_of_scope",
+      "before": "out_of_scope",
+      "after": "out_of_scope",
+      "best_distance": 1.2558097839355469,
+      "decision_after": "out_of_scope"
+    },
+    {
+      "id": "ho_en_off_04",
+      "lang": "en",
+      "answerable": null,
+      "kind": "confusable",
+      "expected": "out_of_scope",
+      "before": "documentary",
+      "after": "documentary",
+      "best_distance": 1.1036913394927979,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_en_off_05",
+      "lang": "en",
+      "answerable": null,
+      "kind": "confusable",
+      "expected": "out_of_scope",
+      "before": "documentary",
+      "after": "documentary",
+      "best_distance": 0.9662641882896423,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_en_off_06",
+      "lang": "en",
+      "answerable": null,
+      "kind": "confusable",
+      "expected": "out_of_scope",
+      "before": "documentary",
+      "after": "documentary",
+      "best_distance": 0.8816947937011719,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_en_off_07",
+      "lang": "en",
+      "answerable": null,
+      "kind": "off_topic",
+      "expected": "out_of_scope",
+      "before": "documentary",
+      "after": "documentary",
+      "best_distance": 1.1801631450653076,
+      "decision_after": "distance_threshold"
+    },
+    {
+      "id": "ho_en_off_08",
+      "lang": "en",
+      "answerable": null,
+      "kind": "confusable",
+      "expected": "out_of_scope",
+      "before": "documentary",
+      "after": "documentary",
+      "best_distance": 1.0402426719665527,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_en_off_09",
+      "lang": "en",
+      "answerable": null,
+      "kind": "off_topic",
+      "expected": "out_of_scope",
+      "before": "out_of_scope",
+      "after": "out_of_scope",
+      "best_distance": 1.1546030044555664,
+      "decision_after": "out_of_scope"
+    },
+    {
+      "id": "ho_en_off_10",
+      "lang": "en",
+      "answerable": null,
+      "kind": "confusable",
+      "expected": "out_of_scope",
+      "before": "documentary",
+      "after": "documentary",
+      "best_distance": 1.1337946653366089,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_ar_off_01",
+      "lang": "ar",
+      "answerable": null,
+      "kind": "off_topic",
+      "expected": "out_of_scope",
+      "before": "out_of_scope",
+      "after": "out_of_scope",
+      "best_distance": 1.3916869163513184,
+      "decision_after": "out_of_scope"
+    },
+    {
+      "id": "ho_ar_off_02",
+      "lang": "ar",
+      "answerable": null,
+      "kind": "off_topic",
+      "expected": "out_of_scope",
+      "before": "out_of_scope",
+      "after": "out_of_scope",
+      "best_distance": 1.3107261657714844,
+      "decision_after": "out_of_scope"
+    },
+    {
+      "id": "ho_ar_off_03",
+      "lang": "ar",
+      "answerable": null,
+      "kind": "off_topic",
+      "expected": "out_of_scope",
+      "before": "out_of_scope",
+      "after": "documentary",
+      "best_distance": 1.0930547714233398,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_ar_off_04",
+      "lang": "ar",
+      "answerable": null,
+      "kind": "confusable",
+      "expected": "out_of_scope",
+      "before": "out_of_scope",
+      "after": "documentary",
+      "best_distance": 1.031246542930603,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_ar_off_05",
+      "lang": "ar",
+      "answerable": null,
+      "kind": "confusable",
+      "expected": "out_of_scope",
+      "before": "out_of_scope",
+      "after": "documentary",
+      "best_distance": 1.1584144830703735,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_ar_off_06",
+      "lang": "ar",
+      "answerable": null,
+      "kind": "confusable",
+      "expected": "out_of_scope",
+      "before": "documentary",
+      "after": "documentary",
+      "best_distance": 1.072782039642334,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_ar_off_07",
+      "lang": "ar",
+      "answerable": null,
+      "kind": "off_topic",
+      "expected": "out_of_scope",
+      "before": "out_of_scope",
+      "after": "documentary",
+      "best_distance": 1.2540771961212158,
+      "decision_after": "distance_threshold"
+    },
+    {
+      "id": "ho_ar_off_08",
+      "lang": "ar",
+      "answerable": null,
+      "kind": "off_topic",
+      "expected": "out_of_scope",
+      "before": "out_of_scope",
+      "after": "documentary",
+      "best_distance": 1.2109017372131348,
+      "decision_after": "distance_threshold"
+    },
+    {
+      "id": "ho_ar_off_09",
+      "lang": "ar",
+      "answerable": null,
+      "kind": "confusable",
+      "expected": "out_of_scope",
+      "before": "out_of_scope",
+      "after": "documentary",
+      "best_distance": 1.07009756565094,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_ar_off_10",
+      "lang": "ar",
+      "answerable": null,
+      "kind": "off_topic",
+      "expected": "out_of_scope",
+      "before": "out_of_scope",
+      "after": "out_of_scope",
+      "best_distance": 1.1399422883987427,
+      "decision_after": "out_of_scope"
+    },
+    {
+      "id": "ho_fr_in_01",
+      "lang": "fr",
+      "answerable": null,
+      "kind": "in_scope_documentary",
+      "expected": "documentary",
+      "before": "out_of_scope",
+      "after": "documentary",
+      "best_distance": 0.8219760656356812,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_fr_in_02",
+      "lang": "fr",
+      "answerable": null,
+      "kind": "in_scope_documentary",
+      "expected": "documentary",
+      "before": "out_of_scope",
+      "after": "documentary",
+      "best_distance": 0.925728440284729,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_fr_in_03",
+      "lang": "fr",
+      "answerable": null,
+      "kind": "in_scope_documentary",
+      "expected": "documentary",
+      "before": "documentary",
+      "after": "out_of_scope",
+      "best_distance": 0.9021104574203491,
+      "decision_after": "out_of_scope"
+    },
+    {
+      "id": "ho_fr_in_04",
+      "lang": "fr",
+      "answerable": null,
+      "kind": "in_scope_documentary",
+      "expected": "documentary",
+      "before": "documentary",
+      "after": "documentary",
+      "best_distance": 0.8153707981109619,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_fr_in_05",
+      "lang": "fr",
+      "answerable": null,
+      "kind": "in_scope_documentary",
+      "expected": "documentary",
+      "before": "documentary",
+      "after": "documentary",
+      "best_distance": 0.8200415372848511,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_fr_in_06",
+      "lang": "fr",
+      "answerable": null,
+      "kind": "in_scope_documentary",
+      "expected": "documentary",
+      "before": "documentary",
+      "after": "documentary",
+      "best_distance": 1.210044503211975,
+      "decision_after": "distance_threshold"
+    },
+    {
+      "id": "ho_fr_in_07",
+      "lang": "fr",
+      "answerable": null,
+      "kind": "in_scope_documentary",
+      "expected": "documentary",
+      "before": "documentary",
+      "after": "documentary",
+      "best_distance": 0.8197534084320068,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_fr_in_08",
+      "lang": "fr",
+      "answerable": null,
+      "kind": "in_scope_documentary",
+      "expected": "documentary",
+      "before": "documentary",
+      "after": "documentary",
+      "best_distance": 0.7525250911712646,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_fr_in_09",
+      "lang": "fr",
+      "answerable": null,
+      "kind": "in_scope_flight_no_number",
+      "expected": "flight_status",
+      "before": "documentary",
+      "after": "flight_status",
+      "best_distance": 0.8915258049964905,
+      "decision_after": "flight_status"
+    },
+    {
+      "id": "ho_fr_in_10",
+      "lang": "fr",
+      "answerable": null,
+      "kind": "in_scope_flight_no_number",
+      "expected": "flight_status",
+      "before": "documentary",
+      "after": "flight_status",
+      "best_distance": 0.9321169257164001,
+      "decision_after": "flight_status"
+    },
+    {
+      "id": "ho_en_in_01",
+      "lang": "en",
+      "answerable": null,
+      "kind": "in_scope_documentary",
+      "expected": "documentary",
+      "before": "documentary",
+      "after": "documentary",
+      "best_distance": 0.8615534901618958,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_en_in_02",
+      "lang": "en",
+      "answerable": null,
+      "kind": "in_scope_documentary",
+      "expected": "documentary",
+      "before": "documentary",
+      "after": "documentary",
+      "best_distance": 0.8180416822433472,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_en_in_03",
+      "lang": "en",
+      "answerable": null,
+      "kind": "in_scope_documentary",
+      "expected": "documentary",
+      "before": "documentary",
+      "after": "documentary",
+      "best_distance": 1.210526943206787,
+      "decision_after": "distance_threshold"
+    },
+    {
+      "id": "ho_en_in_04",
+      "lang": "en",
+      "answerable": null,
+      "kind": "in_scope_documentary",
+      "expected": "documentary",
+      "before": "documentary",
+      "after": "documentary",
+      "best_distance": 0.9112765789031982,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_en_in_05",
+      "lang": "en",
+      "answerable": null,
+      "kind": "in_scope_documentary",
+      "expected": "documentary",
+      "before": "documentary",
+      "after": "documentary",
+      "best_distance": 0.8237730264663696,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_en_in_06",
+      "lang": "en",
+      "answerable": null,
+      "kind": "in_scope_documentary",
+      "expected": "documentary",
+      "before": "documentary",
+      "after": "documentary",
+      "best_distance": 0.8528859615325928,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_en_in_07",
+      "lang": "en",
+      "answerable": null,
+      "kind": "in_scope_documentary",
+      "expected": "documentary",
+      "before": "out_of_scope",
+      "after": "documentary",
+      "best_distance": 1.023815393447876,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_en_in_08",
+      "lang": "en",
+      "answerable": null,
+      "kind": "in_scope_documentary",
+      "expected": "documentary",
+      "before": "documentary",
+      "after": "documentary",
+      "best_distance": 0.8775692582130432,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_en_in_09",
+      "lang": "en",
+      "answerable": null,
+      "kind": "in_scope_flight_no_number",
+      "expected": "flight_status",
+      "before": "documentary",
+      "after": "flight_status",
+      "best_distance": 0.9882439374923706,
+      "decision_after": "flight_status"
+    },
+    {
+      "id": "ho_en_in_10",
+      "lang": "en",
+      "answerable": null,
+      "kind": "in_scope_flight_no_number",
+      "expected": "flight_status",
+      "before": "out_of_scope",
+      "after": "documentary",
+      "best_distance": 1.025033712387085,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_ar_in_01",
+      "lang": "ar",
+      "answerable": null,
+      "kind": "in_scope_documentary",
+      "expected": "documentary",
+      "before": "documentary",
+      "after": "documentary",
+      "best_distance": 0.7565819025039673,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_ar_in_02",
+      "lang": "ar",
+      "answerable": null,
+      "kind": "in_scope_documentary",
+      "expected": "documentary",
+      "before": "out_of_scope",
+      "after": "documentary",
+      "best_distance": 0.9155706167221069,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_ar_in_03",
+      "lang": "ar",
+      "answerable": null,
+      "kind": "in_scope_documentary",
+      "expected": "documentary",
+      "before": "out_of_scope",
+      "after": "documentary",
+      "best_distance": 1.1652004718780518,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_ar_in_04",
+      "lang": "ar",
+      "answerable": null,
+      "kind": "in_scope_documentary",
+      "expected": "documentary",
+      "before": "out_of_scope",
+      "after": "documentary",
+      "best_distance": 1.0519269704818726,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_ar_in_05",
+      "lang": "ar",
+      "answerable": null,
+      "kind": "in_scope_documentary",
+      "expected": "documentary",
+      "before": "documentary",
+      "after": "documentary",
+      "best_distance": 0.7884143590927124,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_ar_in_06",
+      "lang": "ar",
+      "answerable": null,
+      "kind": "in_scope_documentary",
+      "expected": "documentary",
+      "before": "out_of_scope",
+      "after": "documentary",
+      "best_distance": 0.8296931385993958,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_ar_in_07",
+      "lang": "ar",
+      "answerable": null,
+      "kind": "in_scope_documentary",
+      "expected": "documentary",
+      "before": "out_of_scope",
+      "after": "documentary",
+      "best_distance": 0.9517797231674194,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_ar_in_08",
+      "lang": "ar",
+      "answerable": null,
+      "kind": "in_scope_documentary",
+      "expected": "documentary",
+      "before": "documentary",
+      "after": "documentary",
+      "best_distance": 0.9384019374847412,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_ar_in_09",
+      "lang": "ar",
+      "answerable": null,
+      "kind": "in_scope_flight_no_number",
+      "expected": "flight_status",
+      "before": "out_of_scope",
+      "after": "documentary",
+      "best_distance": 0.990664541721344,
+      "decision_after": "documentary"
+    },
+    {
+      "id": "ho_ar_in_10",
+      "lang": "ar",
+      "answerable": null,
+      "kind": "in_scope_flight_no_number",
+      "expected": "flight_status",
+      "before": "out_of_scope",
+      "after": "flight_status",
+      "best_distance": 0.9395297765731812,
+      "decision_after": "flight_status"
+    }
+  ]
+}

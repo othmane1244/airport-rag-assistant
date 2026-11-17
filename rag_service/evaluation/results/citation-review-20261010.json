@@ -1,0 +1,448 @@
+{
+  "benchmark_id": "aga-rag-v1",
+  "reviewed_at_utc": "2026-10-10T16:07:59.330088+00:00",
+  "retrieval_limit": 3,
+  "expected_source_preserved": 30,
+  "questions": 30,
+  "citation_count_before": 88,
+  "citation_count_after": 45,
+  "cases": [
+    {
+      "id": "fr_wifi",
+      "lang": "fr",
+      "expected_source_found_before_filter": true,
+      "expected_source_found_after_filter": true,
+      "sources_before": [
+        "Office National des aéroports -Our Airports - Internet.pdf",
+        "Office National des aéroports -Our Airports - Présentation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "sources_after": [
+        "Office National des aéroports -Our Airports - Internet.pdf"
+      ]
+    },
+    {
+      "id": "fr_taxi",
+      "lang": "fr",
+      "expected_source_found_before_filter": true,
+      "expected_source_found_after_filter": true,
+      "sources_before": [
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "sources_after": [
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf"
+      ]
+    },
+    {
+      "id": "fr_documents",
+      "lang": "fr",
+      "expected_source_found_before_filter": true,
+      "expected_source_found_after_filter": true,
+      "sources_before": [
+        "Office National des aéroports -I am passenger - 8Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 3Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 4Travel documents.pdf"
+      ],
+      "sources_after": [
+        "Office National des aéroports -I am passenger - 8Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 3Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 4Travel documents.pdf"
+      ]
+    },
+    {
+      "id": "fr_parking",
+      "lang": "fr",
+      "expected_source_found_before_filter": true,
+      "expected_source_found_after_filter": true,
+      "sources_before": [
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Parkings.pdf"
+      ],
+      "sources_after": [
+        "Office National des aéroports -Our Airports - Parkings.pdf"
+      ]
+    },
+    {
+      "id": "fr_code_iata",
+      "lang": "fr",
+      "expected_source_found_before_filter": true,
+      "expected_source_found_after_filter": true,
+      "sources_before": [
+        "Office National des aéroports -Our Airports - Présentation.pdf",
+        "Office National des aéroports -Nos Aéroports - 3Guide des Compagnies.pdf",
+        "Office National des aéroports -Nos Aéroports - 2Guide des Compagnies.pdf"
+      ],
+      "sources_after": [
+        "Office National des aéroports -Our Airports - Présentation.pdf"
+      ]
+    },
+    {
+      "id": "fr_prayer",
+      "lang": "fr",
+      "expected_source_found_before_filter": true,
+      "expected_source_found_after_filter": true,
+      "sources_before": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Check-in & Boarding.pdf",
+        "Office National des aéroports -Our Airports - Présentation.pdf"
+      ],
+      "sources_after": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ]
+    },
+    {
+      "id": "fr_wheelchair",
+      "lang": "fr",
+      "expected_source_found_before_filter": true,
+      "expected_source_found_after_filter": true,
+      "sources_before": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf"
+      ],
+      "sources_after": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ]
+    },
+    {
+      "id": "fr_medical",
+      "lang": "fr",
+      "expected_source_found_before_filter": true,
+      "expected_source_found_after_filter": true,
+      "sources_before": [
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf",
+        "Office National des aéroports -Nos Aéroports - Assistance médicale.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "sources_after": [
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf"
+      ]
+    },
+    {
+      "id": "fr_restaurants",
+      "lang": "fr",
+      "expected_source_found_before_filter": true,
+      "expected_source_found_after_filter": true,
+      "sources_before": [
+        "Office National des aéroports -Our Airports - Cafes and restaurants.pdf",
+        "Office National des aéroports -Nos Aéroports - Cafés & restaurants.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "sources_after": [
+        "Office National des aéroports -Our Airports - Cafes and restaurants.pdf",
+        "Office National des aéroports -Nos Aéroports - Cafés & restaurants.pdf"
+      ]
+    },
+    {
+      "id": "fr_boutiques",
+      "lang": "fr",
+      "expected_source_found_before_filter": true,
+      "expected_source_found_after_filter": true,
+      "sources_before": [
+        "Office National des aéroports -Our Airports - Boutiques.pdf",
+        "Office National des aéroports -Nos Aéroports - Boutiques.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "sources_after": [
+        "Office National des aéroports -Our Airports - Boutiques.pdf",
+        "Office National des aéroports -Nos Aéroports - Boutiques.pdf"
+      ]
+    },
+    {
+      "id": "en_wifi",
+      "lang": "en",
+      "expected_source_found_before_filter": true,
+      "expected_source_found_after_filter": true,
+      "sources_before": [
+        "Office National des aéroports -Our Airports - Internet.pdf",
+        "Office National des aéroports -Our Airports - Présentation.pdf",
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf"
+      ],
+      "sources_after": [
+        "Office National des aéroports -Our Airports - Internet.pdf"
+      ]
+    },
+    {
+      "id": "en_taxi",
+      "lang": "en",
+      "expected_source_found_before_filter": true,
+      "expected_source_found_after_filter": true,
+      "sources_before": [
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "sources_after": [
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf"
+      ]
+    },
+    {
+      "id": "en_documents",
+      "lang": "en",
+      "expected_source_found_before_filter": true,
+      "expected_source_found_after_filter": true,
+      "sources_before": [
+        "Office National des aéroports -I am passenger - 8Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 3Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 7Travel documents.pdf"
+      ],
+      "sources_after": [
+        "Office National des aéroports -I am passenger - 8Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 3Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 7Travel documents.pdf"
+      ]
+    },
+    {
+      "id": "en_parking",
+      "lang": "en",
+      "expected_source_found_before_filter": true,
+      "expected_source_found_after_filter": true,
+      "sources_before": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf"
+      ],
+      "sources_after": [
+        "Office National des aéroports -Our Airports - Parkings.pdf"
+      ]
+    },
+    {
+      "id": "en_code_iata",
+      "lang": "en",
+      "expected_source_found_before_filter": true,
+      "expected_source_found_after_filter": true,
+      "sources_before": [
+        "Office National des aéroports -Our Airports - Présentation.pdf",
+        "Office National des aéroports -Nos Aéroports - 3Guide des Compagnies.pdf",
+        "Office National des aéroports -Nos Aéroports - Guide des Compagnies.pdf"
+      ],
+      "sources_after": [
+        "Office National des aéroports -Our Airports - Présentation.pdf"
+      ]
+    },
+    {
+      "id": "en_prayer",
+      "lang": "en",
+      "expected_source_found_before_filter": true,
+      "expected_source_found_after_filter": true,
+      "sources_before": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Check-in & Boarding.pdf",
+        "Office National des aéroports -Our Airports - Présentation.pdf"
+      ],
+      "sources_after": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ]
+    },
+    {
+      "id": "en_wheelchair",
+      "lang": "en",
+      "expected_source_found_before_filter": true,
+      "expected_source_found_after_filter": true,
+      "sources_before": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Check-in & Boarding.pdf",
+        "Office National des aéroports -Our Airports - Présentation.pdf"
+      ],
+      "sources_after": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ]
+    },
+    {
+      "id": "en_medical",
+      "lang": "en",
+      "expected_source_found_before_filter": true,
+      "expected_source_found_after_filter": true,
+      "sources_before": [
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Nos Aéroports - Assistance médicale.pdf"
+      ],
+      "sources_after": [
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf"
+      ]
+    },
+    {
+      "id": "en_restaurants",
+      "lang": "en",
+      "expected_source_found_before_filter": true,
+      "expected_source_found_after_filter": true,
+      "sources_before": [
+        "Office National des aéroports -Our Airports - Cafes and restaurants.pdf",
+        "Office National des aéroports -Nos Aéroports - Cafés & restaurants.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "sources_after": [
+        "Office National des aéroports -Our Airports - Cafes and restaurants.pdf",
+        "Office National des aéroports -Nos Aéroports - Cafés & restaurants.pdf"
+      ]
+    },
+    {
+      "id": "en_boutiques",
+      "lang": "en",
+      "expected_source_found_before_filter": true,
+      "expected_source_found_after_filter": true,
+      "sources_before": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Boutiques.pdf",
+        "Office National des aéroports -Nos Aéroports - Boutiques.pdf"
+      ],
+      "sources_after": [
+        "Office National des aéroports -Our Airports - Boutiques.pdf",
+        "Office National des aéroports -Nos Aéroports - Boutiques.pdf"
+      ]
+    },
+    {
+      "id": "ar_wifi",
+      "lang": "ar",
+      "expected_source_found_before_filter": true,
+      "expected_source_found_after_filter": true,
+      "sources_before": [
+        "Office National des aéroports -Our Airports - Internet.pdf",
+        "Office National des aéroports -Our Airports - Présentation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "sources_after": [
+        "Office National des aéroports -Our Airports - Internet.pdf"
+      ]
+    },
+    {
+      "id": "ar_taxi",
+      "lang": "ar",
+      "expected_source_found_before_filter": true,
+      "expected_source_found_after_filter": true,
+      "sources_before": [
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf"
+      ],
+      "sources_after": [
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf"
+      ]
+    },
+    {
+      "id": "ar_documents",
+      "lang": "ar",
+      "expected_source_found_before_filter": true,
+      "expected_source_found_after_filter": true,
+      "sources_before": [
+        "Office National des aéroports -I am passenger - 8Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 5Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 7Travel documents.pdf"
+      ],
+      "sources_after": [
+        "Office National des aéroports -I am passenger - 8Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 5Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 7Travel documents.pdf"
+      ]
+    },
+    {
+      "id": "ar_parking",
+      "lang": "ar",
+      "expected_source_found_before_filter": true,
+      "expected_source_found_after_filter": true,
+      "sources_before": [
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -Our Airports - Parkings.pdf"
+      ],
+      "sources_after": [
+        "Office National des aéroports -Our Airports - Parkings.pdf"
+      ]
+    },
+    {
+      "id": "ar_code_iata",
+      "lang": "ar",
+      "expected_source_found_before_filter": true,
+      "expected_source_found_after_filter": true,
+      "sources_before": [
+        "Office National des aéroports -Nos Aéroports - 3Guide des Compagnies.pdf",
+        "Office National des aéroports -Our Airports - Présentation.pdf",
+        "Office National des aéroports -Nos Aéroports - 4Guide des Compagnies.pdf"
+      ],
+      "sources_after": [
+        "Office National des aéroports -Our Airports - Présentation.pdf"
+      ]
+    },
+    {
+      "id": "ar_prayer",
+      "lang": "ar",
+      "expected_source_found_before_filter": true,
+      "expected_source_found_after_filter": true,
+      "sources_before": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Check-in & Boarding.pdf",
+        "Office National des aéroports -Our Airports - Présentation.pdf"
+      ],
+      "sources_after": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ]
+    },
+    {
+      "id": "ar_wheelchair",
+      "lang": "ar",
+      "expected_source_found_before_filter": true,
+      "expected_source_found_after_filter": true,
+      "sources_before": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf"
+      ],
+      "sources_after": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ]
+    },
+    {
+      "id": "ar_medical",
+      "lang": "ar",
+      "expected_source_found_before_filter": true,
+      "expected_source_found_after_filter": true,
+      "sources_before": [
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf",
+        "Office National des aéroports -Nos Aéroports - Assistance médicale.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "sources_after": [
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf"
+      ]
+    },
+    {
+      "id": "ar_restaurants",
+      "lang": "ar",
+      "expected_source_found_before_filter": true,
+      "expected_source_found_after_filter": true,
+      "sources_before": [
+        "Office National des aéroports -Nos Aéroports - Cafés & restaurants.pdf",
+        "Office National des aéroports -Our Airports - Cafes and restaurants.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "sources_after": [
+        "Office National des aéroports -Nos Aéroports - Cafés & restaurants.pdf",
+        "Office National des aéroports -Our Airports - Cafes and restaurants.pdf"
+      ]
+    },
+    {
+      "id": "ar_boutiques",
+      "lang": "ar",
+      "expected_source_found_before_filter": true,
+      "expected_source_found_after_filter": true,
+      "sources_before": [
+        "Office National des aéroports -Our Airports - Boutiques.pdf",
+        "Office National des aéroports -Nos Aéroports - Boutiques.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "sources_after": [
+        "Office National des aéroports -Our Airports - Boutiques.pdf",
+        "Office National des aéroports -Nos Aéroports - Boutiques.pdf"
+      ]
+    }
+  ],
+  "limitations": [
+    "Checks expected-source preservation and citation filtering, not generated-answer factuality.",
+    "The benchmark is a manually authored 30-question pilot and needs domain review."
+  ]
+}

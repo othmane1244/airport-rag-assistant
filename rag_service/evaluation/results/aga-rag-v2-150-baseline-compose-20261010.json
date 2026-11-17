@@ -1,0 +1,4815 @@
+{
+  "benchmark_id": "aga-rag-v2-150",
+  "dataset_description": "Draft retrieval benchmark: 150 manually authored questions, 50 each in French, English and Arabic. Balanced by subtype: 60 factual, 30 complex, 30 unanswerable, 30 paraphrases. Answerable cases specify required source groups. Unanswerable cases are diagnostic only. Questions, translations and expected sources require airport-domain expert review before formal reporting.",
+  "run_at_utc": "2026-10-10T17:44:09.363877+00:00",
+  "rag_url": "http://127.0.0.1:8002",
+  "top_k": 5,
+  "audience_filter": "voyageur",
+  "query_expansion_enabled": false,
+  "metrics": {
+    "questions": 150,
+    "answerable_questions": 120,
+    "unanswerable_questions": 30,
+    "hit_at_3": 0.925,
+    "mrr_at_5": 0.8236111111111111,
+    "required_source_recall_at_5": 0.9015151515151515,
+    "all_required_sources_hit_at_5": 0.8916666666666667,
+    "unanswerable_nonempty_retrieval_rate": 1.0,
+    "unanswerable_mean_top1_distance": 0.9801286260286967,
+    "mean_retrieval_latency_ms": 114.38653333333333,
+    "median_retrieval_latency_ms": 109.61500000000001
+  },
+  "by_language": {
+    "ar": {
+      "questions": 50,
+      "answerable_questions": 40,
+      "unanswerable_questions": 10,
+      "hit_at_3": 0.9,
+      "mrr_at_5": 0.7916666666666667,
+      "required_source_recall_at_5": 0.8863636363636364,
+      "all_required_sources_hit_at_5": 0.875,
+      "unanswerable_nonempty_retrieval_rate": 1.0,
+      "unanswerable_mean_top1_distance": 0.9761887550354004,
+      "mean_retrieval_latency_ms": 110.7852,
+      "median_retrieval_latency_ms": 107.47
+    },
+    "en": {
+      "questions": 50,
+      "answerable_questions": 40,
+      "unanswerable_questions": 10,
+      "hit_at_3": 0.95,
+      "mrr_at_5": 0.8541666666666666,
+      "required_source_recall_at_5": 0.9090909090909091,
+      "all_required_sources_hit_at_5": 0.9,
+      "unanswerable_nonempty_retrieval_rate": 1.0,
+      "unanswerable_mean_top1_distance": 0.9830514669418335,
+      "mean_retrieval_latency_ms": 112.3542,
+      "median_retrieval_latency_ms": 108.575
+    },
+    "fr": {
+      "questions": 50,
+      "answerable_questions": 40,
+      "unanswerable_questions": 10,
+      "hit_at_3": 0.925,
+      "mrr_at_5": 0.825,
+      "required_source_recall_at_5": 0.9090909090909091,
+      "all_required_sources_hit_at_5": 0.9,
+      "unanswerable_nonempty_retrieval_rate": 1.0,
+      "unanswerable_mean_top1_distance": 0.9811456561088562,
+      "mean_retrieval_latency_ms": 120.0202,
+      "median_retrieval_latency_ms": 113.73
+    }
+  },
+  "by_category": {
+    "accessibility": {
+      "questions": 12,
+      "answerable_questions": 12,
+      "unanswerable_questions": 0,
+      "hit_at_3": 1.0,
+      "mrr_at_5": 1.0,
+      "required_source_recall_at_5": 1.0,
+      "all_required_sources_hit_at_5": 1.0,
+      "unanswerable_nonempty_retrieval_rate": 0.0,
+      "unanswerable_mean_top1_distance": null,
+      "mean_retrieval_latency_ms": 113.10333333333332,
+      "median_retrieval_latency_ms": 108.155
+    },
+    "airline_policy": {
+      "questions": 6,
+      "answerable_questions": 0,
+      "unanswerable_questions": 6,
+      "hit_at_3": 0.0,
+      "mrr_at_5": 0.0,
+      "required_source_recall_at_5": 0.0,
+      "all_required_sources_hit_at_5": 0.0,
+      "unanswerable_nonempty_retrieval_rate": 1.0,
+      "unanswerable_mean_top1_distance": 0.8701833188533783,
+      "mean_retrieval_latency_ms": 117.65666666666667,
+      "median_retrieval_latency_ms": 119.82499999999999
+    },
+    "airport_info": {
+      "questions": 12,
+      "answerable_questions": 12,
+      "unanswerable_questions": 0,
+      "hit_at_3": 1.0,
+      "mrr_at_5": 0.8194444444444443,
+      "required_source_recall_at_5": 0.8,
+      "all_required_sources_hit_at_5": 0.75,
+      "unanswerable_nonempty_retrieval_rate": 0.0,
+      "unanswerable_mean_top1_distance": null,
+      "mean_retrieval_latency_ms": 111.27583333333334,
+      "median_retrieval_latency_ms": 109.565
+    },
+    "flight_live": {
+      "questions": 9,
+      "answerable_questions": 0,
+      "unanswerable_questions": 9,
+      "hit_at_3": 0.0,
+      "mrr_at_5": 0.0,
+      "required_source_recall_at_5": 0.0,
+      "all_required_sources_hit_at_5": 0.0,
+      "unanswerable_nonempty_retrieval_rate": 1.0,
+      "unanswerable_mean_top1_distance": 0.993165910243988,
+      "mean_retrieval_latency_ms": 113.99666666666667,
+      "median_retrieval_latency_ms": 108.5
+    },
+    "formalites": {
+      "questions": 15,
+      "answerable_questions": 15,
+      "unanswerable_questions": 0,
+      "hit_at_3": 0.7333333333333333,
+      "mrr_at_5": 0.7333333333333333,
+      "required_source_recall_at_5": 0.7222222222222222,
+      "all_required_sources_hit_at_5": 0.6666666666666666,
+      "unanswerable_nonempty_retrieval_rate": 0.0,
+      "unanswerable_mean_top1_distance": null,
+      "mean_retrieval_latency_ms": 117.78399999999999,
+      "median_retrieval_latency_ms": 111.66
+    },
+    "live_hours": {
+      "questions": 3,
+      "answerable_questions": 0,
+      "unanswerable_questions": 3,
+      "hit_at_3": 0.0,
+      "mrr_at_5": 0.0,
+      "required_source_recall_at_5": 0.0,
+      "all_required_sources_hit_at_5": 0.0,
+      "unanswerable_nonempty_retrieval_rate": 1.0,
+      "unanswerable_mean_top1_distance": 1.0176033973693848,
+      "mean_retrieval_latency_ms": 102.31666666666666,
+      "median_retrieval_latency_ms": 97.37
+    },
+    "live_operations": {
+      "questions": 3,
+      "answerable_questions": 0,
+      "unanswerable_questions": 3,
+      "hit_at_3": 0.0,
+      "mrr_at_5": 0.0,
+      "required_source_recall_at_5": 0.0,
+      "all_required_sources_hit_at_5": 0.0,
+      "unanswerable_nonempty_retrieval_rate": 1.0,
+      "unanswerable_mean_top1_distance": 1.0629230340321858,
+      "mean_retrieval_latency_ms": 103.04,
+      "median_retrieval_latency_ms": 101.39
+    },
+    "live_weather": {
+      "questions": 3,
+      "answerable_questions": 0,
+      "unanswerable_questions": 3,
+      "hit_at_3": 0.0,
+      "mrr_at_5": 0.0,
+      "required_source_recall_at_5": 0.0,
+      "all_required_sources_hit_at_5": 0.0,
+      "unanswerable_nonempty_retrieval_rate": 1.0,
+      "unanswerable_mean_top1_distance": 1.0275693734486897,
+      "mean_retrieval_latency_ms": 95.93,
+      "median_retrieval_latency_ms": 95.88
+    },
+    "medical": {
+      "questions": 9,
+      "answerable_questions": 9,
+      "unanswerable_questions": 0,
+      "hit_at_3": 1.0,
+      "mrr_at_5": 0.7777777777777778,
+      "required_source_recall_at_5": 1.0,
+      "all_required_sources_hit_at_5": 1.0,
+      "unanswerable_nonempty_retrieval_rate": 0.0,
+      "unanswerable_mean_top1_distance": null,
+      "mean_retrieval_latency_ms": 124.55222222222221,
+      "median_retrieval_latency_ms": 120.7
+    },
+    "services": {
+      "questions": 36,
+      "answerable_questions": 36,
+      "unanswerable_questions": 0,
+      "hit_at_3": 0.9722222222222222,
+      "mrr_at_5": 0.8703703703703703,
+      "required_source_recall_at_5": 0.9743589743589743,
+      "all_required_sources_hit_at_5": 0.9722222222222222,
+      "unanswerable_nonempty_retrieval_rate": 0.0,
+      "unanswerable_mean_top1_distance": null,
+      "mean_retrieval_latency_ms": 109.68222222222222,
+      "median_retrieval_latency_ms": 107.57
+    },
+    "transport": {
+      "questions": 36,
+      "answerable_questions": 36,
+      "unanswerable_questions": 0,
+      "hit_at_3": 0.8888888888888888,
+      "mrr_at_5": 0.7685185185185186,
+      "required_source_recall_at_5": 0.8974358974358975,
+      "all_required_sources_hit_at_5": 0.8888888888888888,
+      "unanswerable_nonempty_retrieval_rate": 0.0,
+      "unanswerable_mean_top1_distance": null,
+      "mean_retrieval_latency_ms": 119.65694444444445,
+      "median_retrieval_latency_ms": 113.28999999999999
+    },
+    "transport_live": {
+      "questions": 6,
+      "answerable_questions": 0,
+      "unanswerable_questions": 6,
+      "hit_at_3": 0.0,
+      "mrr_at_5": 0.0,
+      "required_source_recall_at_5": 0.0,
+      "all_required_sources_hit_at_5": 0.0,
+      "unanswerable_nonempty_retrieval_rate": 1.0,
+      "unanswerable_mean_top1_distance": 0.9866630434989929,
+      "mean_retrieval_latency_ms": 114.28666666666666,
+      "median_retrieval_latency_ms": 115.89
+    }
+  },
+  "by_subtype": {
+    "complex": {
+      "questions": 30,
+      "answerable_questions": 30,
+      "unanswerable_questions": 0,
+      "hit_at_3": 0.9,
+      "mrr_at_5": 0.8055555555555556,
+      "required_source_recall_at_5": 0.8333333333333334,
+      "all_required_sources_hit_at_5": 0.7666666666666667,
+      "unanswerable_nonempty_retrieval_rate": 0.0,
+      "unanswerable_mean_top1_distance": null,
+      "mean_retrieval_latency_ms": 116.008,
+      "median_retrieval_latency_ms": 110.82499999999999
+    },
+    "factual": {
+      "questions": 60,
+      "answerable_questions": 60,
+      "unanswerable_questions": 0,
+      "hit_at_3": 0.95,
+      "mrr_at_5": 0.8472222222222222,
+      "required_source_recall_at_5": 0.95,
+      "all_required_sources_hit_at_5": 0.95,
+      "unanswerable_nonempty_retrieval_rate": 0.0,
+      "unanswerable_mean_top1_distance": null,
+      "mean_retrieval_latency_ms": 114.45933333333333,
+      "median_retrieval_latency_ms": 107.13
+    },
+    "paraphrase": {
+      "questions": 30,
+      "answerable_questions": 30,
+      "unanswerable_questions": 0,
+      "hit_at_3": 0.9,
+      "mrr_at_5": 0.7944444444444444,
+      "required_source_recall_at_5": 0.9,
+      "all_required_sources_hit_at_5": 0.9,
+      "unanswerable_nonempty_retrieval_rate": 0.0,
+      "unanswerable_mean_top1_distance": null,
+      "mean_retrieval_latency_ms": 116.28966666666666,
+      "median_retrieval_latency_ms": 112.05
+    },
+    "unanswerable": {
+      "questions": 30,
+      "answerable_questions": 0,
+      "unanswerable_questions": 30,
+      "hit_at_3": 0.0,
+      "mrr_at_5": 0.0,
+      "required_source_recall_at_5": 0.0,
+      "all_required_sources_hit_at_5": 0.0,
+      "unanswerable_nonempty_retrieval_rate": 1.0,
+      "unanswerable_mean_top1_distance": 0.9801286260286967,
+      "mean_retrieval_latency_ms": 110.71633333333334,
+      "median_retrieval_latency_ms": 107.61
+    }
+  },
+  "cases": [
+    {
+      "id": "fr_parking",
+      "lang": "fr",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Où stationner et payer le ticket à l’aéroport ?",
+      "expected_source_groups": [
+        [
+          "Parkings"
+        ]
+      ],
+      "retrieval_query": "Où stationner et payer le ticket à l’aéroport ?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 264.18,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf"
+      ],
+      "top_distances": [
+        0.5599437952041626,
+        0.611339271068573,
+        0.6392701268196106
+      ]
+    },
+    {
+      "id": "en_parking",
+      "lang": "en",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Where can I park and pay the ticket at the airport?",
+      "expected_source_groups": [
+        [
+          "Parkings"
+        ]
+      ],
+      "retrieval_query": "Where can I park and pay the ticket at the airport?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 190.88,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -I am passenger - What is an airport_.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf"
+      ],
+      "top_distances": [
+        0.7083090543746948,
+        0.809136152267456,
+        0.8541109561920166
+      ]
+    },
+    {
+      "id": "ar_parking",
+      "lang": "ar",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "أين أركن السيارة وأدفع التذكرة في المطار؟",
+      "expected_source_groups": [
+        [
+          "Parkings"
+        ]
+      ],
+      "retrieval_query": "أين أركن السيارة وأدفع التذكرة في المطار؟",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 115.83,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf"
+      ],
+      "top_distances": [
+        0.604833722114563,
+        0.6736940145492554,
+        0.6814287304878235
+      ]
+    },
+    {
+      "id": "fr_taxi",
+      "lang": "fr",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Où est la station de taxis ?",
+      "expected_source_groups": [
+        [
+          "Taxis",
+          "Taxi & Bus"
+        ]
+      ],
+      "retrieval_query": "Où est la station de taxis ?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 123.94,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Parkings.pdf"
+      ],
+      "top_distances": [
+        0.7339785695075989,
+        0.7444023489952087,
+        1.0220685005187988
+      ]
+    },
+    {
+      "id": "en_taxi",
+      "lang": "en",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Where is the taxi stand?",
+      "expected_source_groups": [
+        [
+          "Taxis",
+          "Taxi & Bus"
+        ]
+      ],
+      "retrieval_query": "Where is the taxi stand?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 100.7,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.8833794593811035,
+        0.8924123644828796,
+        1.0621651411056519
+      ]
+    },
+    {
+      "id": "ar_taxi",
+      "lang": "ar",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "أين موقف سيارات الأجرة؟",
+      "expected_source_groups": [
+        [
+          "Taxis",
+          "Taxi & Bus"
+        ]
+      ],
+      "retrieval_query": "أين موقف سيارات الأجرة؟",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 131.52,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf"
+      ],
+      "top_distances": [
+        0.5975630283355713,
+        0.6077977418899536,
+        0.647028923034668
+      ]
+    },
+    {
+      "id": "fr_taxi_hours",
+      "lang": "fr",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Quels sont les horaires du service de taxis ?",
+      "expected_source_groups": [
+        [
+          "Taxis"
+        ]
+      ],
+      "retrieval_query": "Quels sont les horaires du service de taxis ?",
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "hit_at_3": true,
+      "latency_ms": 133.88,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Parkings.pdf"
+      ],
+      "top_distances": [
+        0.7570189237594604,
+        0.7818344235420227,
+        0.8545289039611816
+      ]
+    },
+    {
+      "id": "en_taxi_hours",
+      "lang": "en",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "What are the taxi service hours?",
+      "expected_source_groups": [
+        [
+          "Taxis"
+        ]
+      ],
+      "retrieval_query": "What are the taxi service hours?",
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "hit_at_3": true,
+      "latency_ms": 101.42,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Parkings.pdf"
+      ],
+      "top_distances": [
+        0.7884029150009155,
+        0.7886384129524231,
+        0.8676624298095703
+      ]
+    },
+    {
+      "id": "ar_taxi_hours",
+      "lang": "ar",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "ما أوقات خدمة سيارات الأجرة؟",
+      "expected_source_groups": [
+        [
+          "Taxis"
+        ]
+      ],
+      "retrieval_query": "ما أوقات خدمة سيارات الأجرة؟",
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "hit_at_3": true,
+      "latency_ms": 90.17,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf"
+      ],
+      "top_distances": [
+        0.8514543771743774,
+        0.8884091377258301,
+        0.8906273245811462
+      ]
+    },
+    {
+      "id": "fr_taxi_fare",
+      "lang": "fr",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Quel tarif est indiqué pour un taxi vers Agadir-Bensergao ?",
+      "expected_source_groups": [
+        [
+          "Taxis"
+        ]
+      ],
+      "retrieval_query": "Quel tarif est indiqué pour un taxi vers Agadir-Bensergao ?",
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "hit_at_3": true,
+      "latency_ms": 113.95,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Parkings.pdf"
+      ],
+      "top_distances": [
+        0.6980293393135071,
+        0.7528528571128845,
+        0.7974420785903931
+      ]
+    },
+    {
+      "id": "en_taxi_fare",
+      "lang": "en",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "What taxi fare is listed for Agadir-Bensergao?",
+      "expected_source_groups": [
+        [
+          "Taxis"
+        ]
+      ],
+      "retrieval_query": "What taxi fare is listed for Agadir-Bensergao?",
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "hit_at_3": true,
+      "latency_ms": 105.7,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Parkings.pdf"
+      ],
+      "top_distances": [
+        0.7397659420967102,
+        0.7407392859458923,
+        0.816643238067627
+      ]
+    },
+    {
+      "id": "ar_taxi_fare",
+      "lang": "ar",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "ما تعريفة سيارة الأجرة إلى أكادير بنسركاو؟",
+      "expected_source_groups": [
+        [
+          "Taxis"
+        ]
+      ],
+      "retrieval_query": "ما تعريفة سيارة الأجرة إلى أكادير بنسركاو؟",
+      "expected_rank": 3,
+      "expected_group_ranks": [
+        3
+      ],
+      "hit_at_3": true,
+      "latency_ms": 136.6,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf"
+      ],
+      "top_distances": [
+        1.1062250137329102,
+        1.1794456243515015,
+        1.1794748306274414
+      ]
+    },
+    {
+      "id": "fr_bus_stops",
+      "lang": "fr",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Quels arrêts desservent les navettes vers l’aéroport ?",
+      "expected_source_groups": [
+        [
+          "Taxi & Bus"
+        ]
+      ],
+      "retrieval_query": "Quels arrêts desservent les navettes vers l’aéroport ?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 103.07,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -I am passenger 2- Airport network.pdf"
+      ],
+      "top_distances": [
+        0.8356371521949768,
+        0.8701975345611572,
+        0.9036613702774048
+      ]
+    },
+    {
+      "id": "en_bus_stops",
+      "lang": "en",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Which stops do the airport shuttles serve?",
+      "expected_source_groups": [
+        [
+          "Taxi & Bus"
+        ]
+      ],
+      "retrieval_query": "Which stops do the airport shuttles serve?",
+      "expected_rank": null,
+      "expected_group_ranks": [
+        null
+      ],
+      "hit_at_3": false,
+      "latency_ms": 122.23,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -Our Airports - Présentation.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "top_distances": [
+        0.9649871587753296,
+        0.9725897312164307,
+        0.9796807169914246
+      ]
+    },
+    {
+      "id": "ar_bus_stops",
+      "lang": "ar",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "ما المحطات التي تخدمها حافلات المطار؟",
+      "expected_source_groups": [
+        [
+          "Taxi & Bus"
+        ]
+      ],
+      "retrieval_query": "ما المحطات التي تخدمها حافلات المطار؟",
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "hit_at_3": true,
+      "latency_ms": 103.39,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.8543975353240967,
+        0.8586393594741821,
+        0.8826298713684082
+      ]
+    },
+    {
+      "id": "fr_rental",
+      "lang": "fr",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Quelles agences louent des voitures à l’aéroport ?",
+      "expected_source_groups": [
+        [
+          "Car rent"
+        ]
+      ],
+      "retrieval_query": "Quelles agences louent des voitures à l’aéroport ?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 124.05,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf"
+      ],
+      "top_distances": [
+        0.7488791942596436,
+        0.8656768202781677,
+        0.8892174959182739
+      ]
+    },
+    {
+      "id": "en_rental",
+      "lang": "en",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Which agencies rent cars at the airport?",
+      "expected_source_groups": [
+        [
+          "Car rent"
+        ]
+      ],
+      "retrieval_query": "Which agencies rent cars at the airport?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 106.71,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf"
+      ],
+      "top_distances": [
+        0.7058395147323608,
+        0.8758512735366821,
+        0.9040594100952148
+      ]
+    },
+    {
+      "id": "ar_rental",
+      "lang": "ar",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "ما وكالات كراء السيارات في المطار؟",
+      "expected_source_groups": [
+        [
+          "Car rent"
+        ]
+      ],
+      "retrieval_query": "ما وكالات كراء السيارات في المطار؟",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 122.53,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.8469380736351013,
+        0.8883310556411743,
+        0.9010233283042908
+      ]
+    },
+    {
+      "id": "fr_wifi",
+      "lang": "fr",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Le Wi-Fi est-il disponible à l’aéroport ?",
+      "expected_source_groups": [
+        [
+          "Internet"
+        ]
+      ],
+      "retrieval_query": "Le Wi-Fi est-il disponible à l’aéroport ?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 102.24,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Internet.pdf",
+        "Office National des aéroports -I am passenger 2- Airport network.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "top_distances": [
+        0.630418062210083,
+        0.7935451865196228,
+        0.7942870855331421
+      ]
+    },
+    {
+      "id": "en_wifi",
+      "lang": "en",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Is Wi-Fi available at the airport?",
+      "expected_source_groups": [
+        [
+          "Internet"
+        ]
+      ],
+      "retrieval_query": "Is Wi-Fi available at the airport?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 117.82,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Internet.pdf",
+        "Office National des aéroports -I am passenger 2- Airport network.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "top_distances": [
+        0.6364951133728027,
+        0.8012193441390991,
+        0.8022980690002441
+      ]
+    },
+    {
+      "id": "ar_wifi",
+      "lang": "ar",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "هل تتوفر خدمة الواي فاي في المطار؟",
+      "expected_source_groups": [
+        [
+          "Internet"
+        ]
+      ],
+      "retrieval_query": "هل تتوفر خدمة الواي فاي في المطار؟",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 94.95,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Internet.pdf",
+        "Office National des aéroports -I am passenger 2- Airport network.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.6953381299972534,
+        0.7968894839286804,
+        0.8063857555389404
+      ]
+    },
+    {
+      "id": "fr_medical",
+      "lang": "fr",
+      "category": "medical",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Où se trouve l’unité médicale et quand est-elle ouverte ?",
+      "expected_source_groups": [
+        [
+          "Medical Assistance"
+        ]
+      ],
+      "retrieval_query": "Où se trouve l’unité médicale et quand est-elle ouverte ?",
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "hit_at_3": true,
+      "latency_ms": 120.74,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Nos Aéroports - Assistance médicale.pdf",
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.7566130757331848,
+        0.807147204875946,
+        1.142726182937622
+      ]
+    },
+    {
+      "id": "en_medical",
+      "lang": "en",
+      "category": "medical",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Where is the medical unit, and when is it open?",
+      "expected_source_groups": [
+        [
+          "Medical Assistance"
+        ]
+      ],
+      "retrieval_query": "Where is the medical unit, and when is it open?",
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "hit_at_3": true,
+      "latency_ms": 129.98,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Nos Aéroports - Assistance médicale.pdf",
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.7573428153991699,
+        0.7615495920181274,
+        1.0892879962921143
+      ]
+    },
+    {
+      "id": "ar_medical",
+      "lang": "ar",
+      "category": "medical",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "أين توجد الوحدة الطبية ومتى تعمل؟",
+      "expected_source_groups": [
+        [
+          "Medical Assistance"
+        ]
+      ],
+      "retrieval_query": "أين توجد الوحدة الطبية ومتى تعمل؟",
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "hit_at_3": true,
+      "latency_ms": 108.84,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Nos Aéroports - Assistance médicale.pdf",
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "top_distances": [
+        0.7049901485443115,
+        0.7680087089538574,
+        1.1873074769973755
+      ]
+    },
+    {
+      "id": "fr_prayer",
+      "lang": "fr",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Où se trouvent les salles de prière ?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "retrieval_query": "Où se trouvent les salles de prière ?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 119.94,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Nos Aéroports - Boutiques.pdf"
+      ],
+      "top_distances": [
+        1.0353482961654663,
+        1.116523265838623,
+        1.1600703001022339
+      ]
+    },
+    {
+      "id": "en_prayer",
+      "lang": "en",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Where are the prayer rooms?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "retrieval_query": "Where are the prayer rooms?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 94.1,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "top_distances": [
+        1.0139844417572021,
+        1.0400853157043457,
+        1.1639002561569214
+      ]
+    },
+    {
+      "id": "ar_prayer",
+      "lang": "ar",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "أين توجد قاعات الصلاة؟",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "retrieval_query": "أين توجد قاعات الصلاة؟",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 93.95,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        1.0329216718673706,
+        1.0941276550292969,
+        1.1164138317108154
+      ]
+    },
+    {
+      "id": "fr_wheelchair",
+      "lang": "fr",
+      "category": "accessibility",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Comment demander un fauteuil roulant ?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "retrieval_query": "Comment demander un fauteuil roulant ?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 103.38,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -I am passenger - 11Travel documents.pdf"
+      ],
+      "top_distances": [
+        0.8863124251365662,
+        0.9809772372245789,
+        1.0447330474853516
+      ]
+    },
+    {
+      "id": "en_wheelchair",
+      "lang": "en",
+      "category": "accessibility",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "How can I request a wheelchair?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "retrieval_query": "How can I request a wheelchair?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 132.04,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "top_distances": [
+        0.883161187171936,
+        1.053978443145752,
+        1.0614383220672607
+      ]
+    },
+    {
+      "id": "ar_wheelchair",
+      "lang": "ar",
+      "category": "accessibility",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "كيف أطلب كرسيًا متحركًا؟",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "retrieval_query": "كيف أطلب كرسيًا متحركًا؟",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 94.22,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf"
+      ],
+      "top_distances": [
+        0.9178441762924194,
+        0.9701837301254272,
+        1.0514942407608032
+      ]
+    },
+    {
+      "id": "fr_accessible_toilets",
+      "lang": "fr",
+      "category": "accessibility",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Y a-t-il des toilettes accessibles aux personnes à mobilité réduite ?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "retrieval_query": "Y a-t-il des toilettes accessibles aux personnes à mobilité réduite ?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 106.93,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - Security and Customs.pdf"
+      ],
+      "top_distances": [
+        0.8938498497009277,
+        0.9504060745239258,
+        1.0854885578155518
+      ]
+    },
+    {
+      "id": "en_accessible_toilets",
+      "lang": "en",
+      "category": "accessibility",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Are accessible toilets available?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "retrieval_query": "Are accessible toilets available?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 104.82,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "top_distances": [
+        0.84834223985672,
+        0.9475846290588379,
+        1.0685193538665771
+      ]
+    },
+    {
+      "id": "ar_accessible_toilets",
+      "lang": "ar",
+      "category": "accessibility",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "هل توجد مراحيض مهيأة لذوي الحركة المحدودة؟",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "retrieval_query": "هل توجد مراحيض مهيأة لذوي الحركة المحدودة؟",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 116.63,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - Security and Customs.pdf"
+      ],
+      "top_distances": [
+        1.0144342184066772,
+        1.0304268598556519,
+        1.1033011674880981
+      ]
+    },
+    {
+      "id": "fr_trolleys",
+      "lang": "fr",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Où trouver des chariots à bagages ?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "retrieval_query": "Où trouver des chariots à bagages ?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 118.71,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Parkings.pdf"
+      ],
+      "top_distances": [
+        0.9843761920928955,
+        1.0125480890274048,
+        1.0134382247924805
+      ]
+    },
+    {
+      "id": "en_trolleys",
+      "lang": "en",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Where can I find luggage trolleys?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "retrieval_query": "Where can I find luggage trolleys?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 107.23,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - Luggage.pdf",
+        "Office National des aéroports -I am passenger - Luggage.pdf"
+      ],
+      "top_distances": [
+        0.7874149680137634,
+        0.9201082587242126,
+        0.9362145662307739
+      ]
+    },
+    {
+      "id": "ar_trolleys",
+      "lang": "ar",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "أين أجد عربات الأمتعة؟",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "retrieval_query": "أين أجد عربات الأمتعة؟",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 106.76,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf"
+      ],
+      "top_distances": [
+        0.9257602691650391,
+        0.9631689190864563,
+        0.9674094915390015
+      ]
+    },
+    {
+      "id": "fr_play_area",
+      "lang": "fr",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Où se trouve l’espace de jeux pour enfants ?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "retrieval_query": "Où se trouve l’espace de jeux pour enfants ?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 148.79,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - What is an airport_.pdf",
+        "Office National des aéroports -I am passenger - aeronautical terms.pdf"
+      ],
+      "top_distances": [
+        1.1007250547409058,
+        1.18903648853302,
+        1.2497124671936035
+      ]
+    },
+    {
+      "id": "en_play_area",
+      "lang": "en",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Where is the children’s play area?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "retrieval_query": "Where is the children’s play area?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 88.06,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - What is an airport_.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf"
+      ],
+      "top_distances": [
+        1.1251338720321655,
+        1.1780762672424316,
+        1.2017364501953125
+      ]
+    },
+    {
+      "id": "ar_play_area",
+      "lang": "ar",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "أين توجد منطقة ألعاب الأطفال؟",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "retrieval_query": "أين توجد منطقة ألعاب الأطفال؟",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 103.85,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - What is an airport_.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "top_distances": [
+        1.1025738716125488,
+        1.2252545356750488,
+        1.2503533363342285
+      ]
+    },
+    {
+      "id": "fr_smoking",
+      "lang": "fr",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Où peut-on fumer dans l’aéroport ?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "retrieval_query": "Où peut-on fumer dans l’aéroport ?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 97.07,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf"
+      ],
+      "top_distances": [
+        0.8061336278915405,
+        0.8244317173957825,
+        0.8813378214836121
+      ]
+    },
+    {
+      "id": "en_smoking",
+      "lang": "en",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Where can passengers smoke at the airport?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "retrieval_query": "Where can passengers smoke at the airport?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 97.06,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.8236919641494751,
+        0.835361123085022,
+        0.8372634649276733
+      ]
+    },
+    {
+      "id": "ar_smoking",
+      "lang": "ar",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "أين يمكن التدخين في المطار؟",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "retrieval_query": "أين يمكن التدخين في المطار؟",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 98.57,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf"
+      ],
+      "top_distances": [
+        0.8202958106994629,
+        0.8272892236709595,
+        0.8529558777809143
+      ]
+    },
+    {
+      "id": "fr_food",
+      "lang": "fr",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Quels bars et restaurants sont proposés ?",
+      "expected_source_groups": [
+        [
+          "Cafes and restaurants"
+        ]
+      ],
+      "retrieval_query": "Quels bars et restaurants sont proposés ?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 110.79,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Cafes and restaurants.pdf",
+        "Office National des aéroports -Nos Aéroports - Cafés & restaurants.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.8657582998275757,
+        0.8869580626487732,
+        0.9286458492279053
+      ]
+    },
+    {
+      "id": "en_food",
+      "lang": "en",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Which bars and restaurants are available?",
+      "expected_source_groups": [
+        [
+          "Cafes and restaurants"
+        ]
+      ],
+      "retrieval_query": "Which bars and restaurants are available?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 96.66,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Cafes and restaurants.pdf",
+        "Office National des aéroports -Nos Aéroports - Cafés & restaurants.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.8338256478309631,
+        0.8558166027069092,
+        0.8783957958221436
+      ]
+    },
+    {
+      "id": "ar_food",
+      "lang": "ar",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "ما المقاهي والمطاعم المتوفرة؟",
+      "expected_source_groups": [
+        [
+          "Cafes and restaurants"
+        ]
+      ],
+      "retrieval_query": "ما المقاهي والمطاعم المتوفرة؟",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 129.96,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Cafes and restaurants.pdf",
+        "Office National des aéroports -Nos Aéroports - Cafés & restaurants.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.7872461080551147,
+        0.8193033337593079,
+        0.9119350910186768
+      ]
+    },
+    {
+      "id": "fr_shops",
+      "lang": "fr",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Quelles boutiques trouve-t-on dans le terminal ?",
+      "expected_source_groups": [
+        [
+          "Boutiques"
+        ]
+      ],
+      "retrieval_query": "Quelles boutiques trouve-t-on dans le terminal ?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 102.3,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Boutiques.pdf",
+        "Office National des aéroports -Nos Aéroports - Boutiques.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.7785126566886902,
+        0.7850672602653503,
+        0.8500555753707886
+      ]
+    },
+    {
+      "id": "en_shops",
+      "lang": "en",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Which shops are in the terminal?",
+      "expected_source_groups": [
+        [
+          "Boutiques"
+        ]
+      ],
+      "retrieval_query": "Which shops are in the terminal?",
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "hit_at_3": true,
+      "latency_ms": 97.97,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Boutiques.pdf",
+        "Office National des aéroports -Nos Aéroports - Boutiques.pdf"
+      ],
+      "top_distances": [
+        0.8788906335830688,
+        0.8801394701004028,
+        0.883018434047699
+      ]
+    },
+    {
+      "id": "ar_shops",
+      "lang": "ar",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "ما المتاجر الموجودة في مبنى المطار؟",
+      "expected_source_groups": [
+        [
+          "Boutiques"
+        ]
+      ],
+      "retrieval_query": "ما المتاجر الموجودة في مبنى المطار؟",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 107.03,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Boutiques.pdf",
+        "Office National des aéroports -Nos Aéroports - Boutiques.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.7906445264816284,
+        0.8059468865394592,
+        0.8917593955993652
+      ]
+    },
+    {
+      "id": "fr_iata",
+      "lang": "fr",
+      "category": "airport_info",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Quel est le code IATA d’Agadir Al Massira ?",
+      "expected_source_groups": [
+        [
+          "Présentation",
+          "AGADIR AL MASSIRA AIRPORT"
+        ]
+      ],
+      "retrieval_query": "Quel est le code IATA d’Agadir Al Massira ?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 109.76,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Présentation.pdf",
+        "Office National des aéroports -Nos Aéroports - 3Guide des Compagnies.pdf",
+        "Office National des aéroports -Nos Aéroports - 2Guide des Compagnies.pdf"
+      ],
+      "top_distances": [
+        0.6859027147293091,
+        0.7683906555175781,
+        0.7908772230148315
+      ]
+    },
+    {
+      "id": "en_iata",
+      "lang": "en",
+      "category": "airport_info",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "What is the IATA code for Agadir Al Massira?",
+      "expected_source_groups": [
+        [
+          "Présentation",
+          "AGADIR AL MASSIRA AIRPORT"
+        ]
+      ],
+      "retrieval_query": "What is the IATA code for Agadir Al Massira?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 105.44,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Présentation.pdf",
+        "Office National des aéroports -Nos Aéroports - 3Guide des Compagnies.pdf",
+        "Office National des aéroports -Nos Aéroports - 4Guide des Compagnies.pdf"
+      ],
+      "top_distances": [
+        0.6871061325073242,
+        0.7913821935653687,
+        0.808879554271698
+      ]
+    },
+    {
+      "id": "ar_iata",
+      "lang": "ar",
+      "category": "airport_info",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "ما رمز إياتا لمطار أكادير المسيرة؟",
+      "expected_source_groups": [
+        [
+          "Présentation",
+          "AGADIR AL MASSIRA AIRPORT"
+        ]
+      ],
+      "retrieval_query": "ما رمز إياتا لمطار أكادير المسيرة؟",
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "hit_at_3": true,
+      "latency_ms": 119.62,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Nos Aéroports - 3Guide des Compagnies.pdf",
+        "Office National des aéroports -Our Airports - Présentation.pdf",
+        "Office National des aéroports -Nos Aéroports - 4Guide des Compagnies.pdf"
+      ],
+      "top_distances": [
+        0.6813674569129944,
+        0.6855150461196899,
+        0.7091618776321411
+      ]
+    },
+    {
+      "id": "fr_call_center",
+      "lang": "fr",
+      "category": "airport_info",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Comment contacter le centre d’appel ?",
+      "expected_source_groups": [
+        [
+          "Call center"
+        ]
+      ],
+      "retrieval_query": "Comment contacter le centre d’appel ?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 104.47,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Call center.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf"
+      ],
+      "top_distances": [
+        0.7307621836662292,
+        0.8759177923202515,
+        0.8767054080963135
+      ]
+    },
+    {
+      "id": "en_call_center",
+      "lang": "en",
+      "category": "airport_info",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "How can I contact the call center?",
+      "expected_source_groups": [
+        [
+          "Call center"
+        ]
+      ],
+      "retrieval_query": "How can I contact the call center?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 106.73,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Call center.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf"
+      ],
+      "top_distances": [
+        0.7200486660003662,
+        0.907260000705719,
+        0.9087247848510742
+      ]
+    },
+    {
+      "id": "ar_call_center",
+      "lang": "ar",
+      "category": "airport_info",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "كيف أتواصل مع مركز الاتصال؟",
+      "expected_source_groups": [
+        [
+          "Call center"
+        ]
+      ],
+      "retrieval_query": "كيف أتواصل مع مركز الاتصال؟",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 109.99,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Call center.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "top_distances": [
+        0.8869214057922363,
+        0.9507149457931519,
+        0.9738966226577759
+      ]
+    },
+    {
+      "id": "fr_checkin",
+      "lang": "fr",
+      "category": "formalites",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Où trouver les informations sur l’enregistrement et l’embarquement ?",
+      "expected_source_groups": [
+        [
+          "Check-in & Boarding"
+        ]
+      ],
+      "retrieval_query": "Où trouver les informations sur l’enregistrement et l’embarquement ?",
+      "expected_rank": null,
+      "expected_group_ranks": [
+        null
+      ],
+      "hit_at_3": false,
+      "latency_ms": 125.98,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - 9Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 11Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 6Travel documents.pdf"
+      ],
+      "top_distances": [
+        0.7722942233085632,
+        0.8532140254974365,
+        0.8550064563751221
+      ]
+    },
+    {
+      "id": "en_checkin",
+      "lang": "en",
+      "category": "formalites",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Where can I find check-in and boarding information?",
+      "expected_source_groups": [
+        [
+          "Check-in & Boarding"
+        ]
+      ],
+      "retrieval_query": "Where can I find check-in and boarding information?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 108.68,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Check-in & Boarding.pdf",
+        "Office National des aéroports -I am passenger - 9Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 4Travel documents.pdf"
+      ],
+      "top_distances": [
+        0.7275509834289551,
+        0.8112029433250427,
+        0.8379072546958923
+      ]
+    },
+    {
+      "id": "ar_checkin",
+      "lang": "ar",
+      "category": "formalites",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "أين أجد معلومات تسجيل الوصول والصعود؟",
+      "expected_source_groups": [
+        [
+          "Check-in & Boarding"
+        ]
+      ],
+      "retrieval_query": "أين أجد معلومات تسجيل الوصول والصعود؟",
+      "expected_rank": null,
+      "expected_group_ranks": [
+        null
+      ],
+      "hit_at_3": false,
+      "latency_ms": 106.44,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - 9Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 4Travel documents.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "top_distances": [
+        0.9317319989204407,
+        0.9432019591331482,
+        0.9734939336776733
+      ]
+    },
+    {
+      "id": "fr_travel_docs",
+      "lang": "fr",
+      "category": "formalites",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Quels documents faut-il pour quitter le Maroc ?",
+      "expected_source_groups": [
+        [
+          "Travel documents"
+        ]
+      ],
+      "retrieval_query": "Quels documents faut-il pour quitter le Maroc ?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 112.75,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - 8Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 5Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 4Travel documents.pdf"
+      ],
+      "top_distances": [
+        0.6181660294532776,
+        0.6454916596412659,
+        0.6624206304550171
+      ]
+    },
+    {
+      "id": "en_travel_docs",
+      "lang": "en",
+      "category": "formalites",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Which travel documents are needed to leave Morocco?",
+      "expected_source_groups": [
+        [
+          "Travel documents"
+        ]
+      ],
+      "retrieval_query": "Which travel documents are needed to leave Morocco?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 108.53,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - 8Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 3Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 5Travel documents.pdf"
+      ],
+      "top_distances": [
+        0.4476020336151123,
+        0.5181199312210083,
+        0.5346829891204834
+      ]
+    },
+    {
+      "id": "ar_travel_docs",
+      "lang": "ar",
+      "category": "formalites",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "ما وثائق السفر اللازمة لمغادرة المغرب؟",
+      "expected_source_groups": [
+        [
+          "Travel documents"
+        ]
+      ],
+      "retrieval_query": "ما وثائق السفر اللازمة لمغادرة المغرب؟",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 107.03,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - 8Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 5Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 6Travel documents.pdf"
+      ],
+      "top_distances": [
+        0.6562697887420654,
+        0.7134334444999695,
+        0.7165650129318237
+      ]
+    },
+    {
+      "id": "fr_city_access",
+      "lang": "fr",
+      "category": "transport",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "Comment rejoindre Agadir : où prendre un taxi et quels arrêts de bus sont desservis ?",
+      "expected_source_groups": [
+        [
+          "Taxis",
+          "Taxi & Bus"
+        ],
+        [
+          "Taxi & Bus"
+        ]
+      ],
+      "retrieval_query": "Comment rejoindre Agadir : où prendre un taxi et quels arrêts de bus sont desservis ?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1,
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 104.47,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf"
+      ],
+      "top_distances": [
+        0.5536805391311646,
+        0.6495959758758545,
+        0.8223845958709717
+      ]
+    },
+    {
+      "id": "en_city_access",
+      "lang": "en",
+      "category": "transport",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "How can I reach Agadir: where are taxis, and which bus stops are served?",
+      "expected_source_groups": [
+        [
+          "Taxis",
+          "Taxi & Bus"
+        ],
+        [
+          "Taxi & Bus"
+        ]
+      ],
+      "retrieval_query": "How can I reach Agadir: where are taxis, and which bus stops are served?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1,
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 109.45,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.5453879833221436,
+        0.6222026348114014,
+        0.7420756220817566
+      ]
+    },
+    {
+      "id": "ar_city_access",
+      "lang": "ar",
+      "category": "transport",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "كيف أصل إلى أكادير: أين أجد سيارات الأجرة وما محطات الحافلات؟",
+      "expected_source_groups": [
+        [
+          "Taxis",
+          "Taxi & Bus"
+        ],
+        [
+          "Taxi & Bus"
+        ]
+      ],
+      "retrieval_query": "كيف أصل إلى أكادير: أين أجد سيارات الأجرة وما محطات الحافلات؟",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1,
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 108.33,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf"
+      ],
+      "top_distances": [
+        0.8811743855476379,
+        0.906463623046875,
+        0.9312120676040649
+      ]
+    },
+    {
+      "id": "fr_parking_info",
+      "lang": "fr",
+      "category": "transport",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "Quelles sont la capacité du parking et les modalités de paiement pour plusieurs heures ?",
+      "expected_source_groups": [
+        [
+          "Parkings"
+        ]
+      ],
+      "retrieval_query": "Quelles sont la capacité du parking et les modalités de paiement pour plusieurs heures ?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 100.67,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf"
+      ],
+      "top_distances": [
+        0.7852531671524048,
+        1.0249385833740234,
+        1.0299137830734253
+      ]
+    },
+    {
+      "id": "en_parking_info",
+      "lang": "en",
+      "category": "transport",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "What are the parking capacity and payment terms for several hours?",
+      "expected_source_groups": [
+        [
+          "Parkings"
+        ]
+      ],
+      "retrieval_query": "What are the parking capacity and payment terms for several hours?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 114.25,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.7811617255210876,
+        1.059880018234253,
+        1.067177653312683
+      ]
+    },
+    {
+      "id": "ar_parking_info",
+      "lang": "ar",
+      "category": "transport",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "ما سعة الموقف وكيف يتم الدفع عند الوقوف عدة ساعات؟",
+      "expected_source_groups": [
+        [
+          "Parkings"
+        ]
+      ],
+      "retrieval_query": "ما سعة الموقف وكيف يتم الدفع عند الوقوف عدة ساعات؟",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 116.31,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf"
+      ],
+      "top_distances": [
+        0.5363845229148865,
+        0.7186537981033325,
+        0.7290915250778198
+      ]
+    },
+    {
+      "id": "fr_departure",
+      "lang": "fr",
+      "category": "formalites",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "Pour un départ international, où trouver les consignes d’enregistrement et d’embarquement ?",
+      "expected_source_groups": [
+        [
+          "Check-in & Boarding"
+        ]
+      ],
+      "retrieval_query": "Pour un départ international, où trouver les consignes d’enregistrement et d’embarquement ?",
+      "expected_rank": null,
+      "expected_group_ranks": [
+        null
+      ],
+      "hit_at_3": false,
+      "latency_ms": 109.99,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - 9Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 6Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 5Travel documents.pdf"
+      ],
+      "top_distances": [
+        0.7921022176742554,
+        0.8263315558433533,
+        0.8503277897834778
+      ]
+    },
+    {
+      "id": "en_departure",
+      "lang": "en",
+      "category": "formalites",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "For an international departure, where can I find check-in and boarding guidance?",
+      "expected_source_groups": [
+        [
+          "Check-in & Boarding"
+        ]
+      ],
+      "retrieval_query": "For an international departure, where can I find check-in and boarding guidance?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 143.29,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Check-in & Boarding.pdf",
+        "Office National des aéroports -I am passenger - 9Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 6Travel documents.pdf"
+      ],
+      "top_distances": [
+        0.7389890551567078,
+        0.7866472005844116,
+        0.8317753672599792
+      ]
+    },
+    {
+      "id": "ar_departure",
+      "lang": "ar",
+      "category": "formalites",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "لرحلة دولية، أين أجد إرشادات تسجيل الوصول والصعود؟",
+      "expected_source_groups": [
+        [
+          "Check-in & Boarding"
+        ]
+      ],
+      "retrieval_query": "لرحلة دولية، أين أجد إرشادات تسجيل الوصول والصعود؟",
+      "expected_rank": null,
+      "expected_group_ranks": [
+        null
+      ],
+      "hit_at_3": false,
+      "latency_ms": 101.74,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - 9Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 4Travel documents.pdf",
+        "Office National des aéroports -I am passenger - Travel documents.pdf"
+      ],
+      "top_distances": [
+        0.7821946144104004,
+        0.8129222393035889,
+        0.8393546342849731
+      ]
+    },
+    {
+      "id": "fr_prm",
+      "lang": "fr",
+      "category": "accessibility",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "Quelles aides sont prévues pour un passager à mobilité réduite, dont fauteuil et toilettes ?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "retrieval_query": "Quelles aides sont prévues pour un passager à mobilité réduite, dont fauteuil et toilettes ?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 120.74,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf"
+      ],
+      "top_distances": [
+        0.8175861835479736,
+        0.8842265009880066,
+        0.944464921951294
+      ]
+    },
+    {
+      "id": "en_prm",
+      "lang": "en",
+      "category": "accessibility",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "What support is available to a passenger with reduced mobility, including a wheelchair and toilets?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "retrieval_query": "What support is available to a passenger with reduced mobility, including a wheelchair and toilets?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 109.38,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf"
+      ],
+      "top_distances": [
+        0.8070878982543945,
+        0.8479659557342529,
+        0.9129545092582703
+      ]
+    },
+    {
+      "id": "ar_prm",
+      "lang": "ar",
+      "category": "accessibility",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "ما المساعدة المتاحة لراكب محدود الحركة، مثل الكرسي المتحرك والمراحيض؟",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "retrieval_query": "ما المساعدة المتاحة لراكب محدود الحركة، مثل الكرسي المتحرك والمراحيض؟",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 103.61,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf"
+      ],
+      "top_distances": [
+        0.9106175899505615,
+        0.9144444465637207,
+        0.9476498365402222
+      ]
+    },
+    {
+      "id": "fr_emergency",
+      "lang": "fr",
+      "category": "medical",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "En urgence, où aller pour voir le médecin et à quels horaires ?",
+      "expected_source_groups": [
+        [
+          "Medical Assistance"
+        ]
+      ],
+      "retrieval_query": "En urgence, où aller pour voir le médecin et à quels horaires ?",
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "hit_at_3": true,
+      "latency_ms": 105.49,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Nos Aéroports - Assistance médicale.pdf",
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.7489380836486816,
+        0.7925442457199097,
+        1.0814539194107056
+      ]
+    },
+    {
+      "id": "en_emergency",
+      "lang": "en",
+      "category": "medical",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "In an emergency, where can I see a doctor, and at what times?",
+      "expected_source_groups": [
+        [
+          "Medical Assistance"
+        ]
+      ],
+      "retrieval_query": "In an emergency, where can I see a doctor, and at what times?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 122.65,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf",
+        "Office National des aéroports -Nos Aéroports - Assistance médicale.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.7999123334884644,
+        0.8214174509048462,
+        1.1063263416290283
+      ]
+    },
+    {
+      "id": "ar_emergency",
+      "lang": "ar",
+      "category": "medical",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "في حالة الطوارئ، أين أجد الطبيب وما أوقات توفره؟",
+      "expected_source_groups": [
+        [
+          "Medical Assistance"
+        ]
+      ],
+      "retrieval_query": "في حالة الطوارئ، أين أجد الطبيب وما أوقات توفره؟",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 120.7,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf",
+        "Office National des aéroports -Nos Aéroports - Assistance médicale.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.7998950481414795,
+        0.8154501914978027,
+        1.0848100185394287
+      ]
+    },
+    {
+      "id": "fr_info_contact",
+      "lang": "fr",
+      "category": "airport_info",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "Où demander des renseignements et quel contact téléphonique est indiqué ?",
+      "expected_source_groups": [
+        [
+          "Informations points"
+        ],
+        [
+          "Phone"
+        ]
+      ],
+      "retrieval_query": "Où demander des renseignements et quel contact téléphonique est indiqué ?",
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2,
+        null
+      ],
+      "hit_at_3": true,
+      "latency_ms": 112.76,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -Our Airports - Informations points.pdf",
+        "Office National des aéroports -Our Airports - Call center.pdf"
+      ],
+      "top_distances": [
+        0.7965131998062134,
+        0.7967507839202881,
+        0.8033610582351685
+      ]
+    },
+    {
+      "id": "en_info_contact",
+      "lang": "en",
+      "category": "airport_info",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "Where can I ask for information, and what phone contact is listed?",
+      "expected_source_groups": [
+        [
+          "Informations points"
+        ],
+        [
+          "Phone"
+        ]
+      ],
+      "retrieval_query": "Where can I ask for information, and what phone contact is listed?",
+      "expected_rank": 3,
+      "expected_group_ranks": [
+        3,
+        null
+      ],
+      "hit_at_3": true,
+      "latency_ms": 108.62,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -Our Airports - Call center.pdf",
+        "Office National des aéroports -Our Airports - Informations points.pdf"
+      ],
+      "top_distances": [
+        0.8081024885177612,
+        0.8084936141967773,
+        0.821022629737854
+      ]
+    },
+    {
+      "id": "ar_info_contact",
+      "lang": "ar",
+      "category": "airport_info",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "أين أطلب المعلومات وما رقم الهاتف المذكور؟",
+      "expected_source_groups": [
+        [
+          "Informations points"
+        ],
+        [
+          "Phone"
+        ]
+      ],
+      "retrieval_query": "أين أطلب المعلومات وما رقم الهاتف المذكور؟",
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2,
+        null
+      ],
+      "hit_at_3": true,
+      "latency_ms": 96.13,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -Our Airports - Informations points.pdf",
+        "Office National des aéroports -Our Airports - Call center.pdf"
+      ],
+      "top_distances": [
+        0.8016818761825562,
+        0.8267396688461304,
+        0.8380035161972046
+      ]
+    },
+    {
+      "id": "fr_rental_contacts",
+      "lang": "fr",
+      "category": "transport",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "Quelles agences de location sont présentes et quelles coordonnées de réservation sont publiées ?",
+      "expected_source_groups": [
+        [
+          "Car rent"
+        ]
+      ],
+      "retrieval_query": "Quelles agences de location sont présentes et quelles coordonnées de réservation sont publiées ?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 120.9,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -I am passenger 2- Airport network.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "top_distances": [
+        0.8543798923492432,
+        0.9480332136154175,
+        0.9584981799125671
+      ]
+    },
+    {
+      "id": "en_rental_contacts",
+      "lang": "en",
+      "category": "transport",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "Which rental agencies are present, and what booking contacts are listed?",
+      "expected_source_groups": [
+        [
+          "Car rent"
+        ]
+      ],
+      "retrieval_query": "Which rental agencies are present, and what booking contacts are listed?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 109.47,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.8799655437469482,
+        0.9732832908630371,
+        1.0270185470581055
+      ]
+    },
+    {
+      "id": "ar_rental_contacts",
+      "lang": "ar",
+      "category": "transport",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "ما وكالات الكراء الموجودة وما بيانات الحجز المنشورة؟",
+      "expected_source_groups": [
+        [
+          "Car rent"
+        ]
+      ],
+      "retrieval_query": "ما وكالات الكراء الموجودة وما بيانات الحجز المنشورة؟",
+      "expected_rank": 3,
+      "expected_group_ranks": [
+        3
+      ],
+      "hit_at_3": true,
+      "latency_ms": 127.95,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf"
+      ],
+      "top_distances": [
+        1.022217869758606,
+        1.0328956842422485,
+        1.0371239185333252
+      ]
+    },
+    {
+      "id": "fr_food_shops",
+      "lang": "fr",
+      "category": "services",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "Quelles options de restauration et quelles boutiques sont indiquées ?",
+      "expected_source_groups": [
+        [
+          "Cafes and restaurants"
+        ],
+        [
+          "Boutiques"
+        ]
+      ],
+      "retrieval_query": "Quelles options de restauration et quelles boutiques sont indiquées ?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        5,
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 148.57,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Boutiques.pdf",
+        "Office National des aéroports -Nos Aéroports - Boutiques.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.9831368923187256,
+        0.9972858428955078,
+        1.0268726348876953
+      ]
+    },
+    {
+      "id": "en_food_shops",
+      "lang": "en",
+      "category": "services",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "What dining options and shops are listed?",
+      "expected_source_groups": [
+        [
+          "Cafes and restaurants"
+        ],
+        [
+          "Boutiques"
+        ]
+      ],
+      "retrieval_query": "What dining options and shops are listed?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1,
+        4
+      ],
+      "hit_at_3": true,
+      "latency_ms": 111.77,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Cafes and restaurants.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Nos Aéroports - Cafés & restaurants.pdf"
+      ],
+      "top_distances": [
+        0.9412896633148193,
+        0.9763174057006836,
+        0.9764003157615662
+      ]
+    },
+    {
+      "id": "ar_food_shops",
+      "lang": "ar",
+      "category": "services",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "ما خيارات الطعام والمتاجر المذكورة؟",
+      "expected_source_groups": [
+        [
+          "Cafes and restaurants"
+        ],
+        [
+          "Boutiques"
+        ]
+      ],
+      "retrieval_query": "ما خيارات الطعام والمتاجر المذكورة؟",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1,
+        2
+      ],
+      "hit_at_3": true,
+      "latency_ms": 109.97,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Cafes and restaurants.pdf",
+        "Office National des aéroports -Our Airports - Boutiques.pdf",
+        "Office National des aéroports -Nos Aéroports - Boutiques.pdf"
+      ],
+      "top_distances": [
+        0.9826524257659912,
+        0.994747519493103,
+        0.9985394477844238
+      ]
+    },
+    {
+      "id": "fr_currency_post",
+      "lang": "fr",
+      "category": "services",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "Quels services de change et services postaux sont mentionnés ?",
+      "expected_source_groups": [
+        [
+          "Change & poste"
+        ]
+      ],
+      "retrieval_query": "Quels services de change et services postaux sont mentionnés ?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 109.2,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Change & poste.pdf",
+        "Office National des aéroports -I am passenger - 11Travel documents.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.7849730253219604,
+        1.0221807956695557,
+        1.0444573163986206
+      ]
+    },
+    {
+      "id": "en_currency_post",
+      "lang": "en",
+      "category": "services",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "Which currency-exchange and postal services are mentioned?",
+      "expected_source_groups": [
+        [
+          "Change & poste"
+        ]
+      ],
+      "retrieval_query": "Which currency-exchange and postal services are mentioned?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 135.88,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Change & poste.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - 11Travel documents.pdf"
+      ],
+      "top_distances": [
+        0.9620203375816345,
+        1.0984537601470947,
+        1.1109726428985596
+      ]
+    },
+    {
+      "id": "ar_currency_post",
+      "lang": "ar",
+      "category": "services",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "ما خدمات الصرف والبريد المذكورة؟",
+      "expected_source_groups": [
+        [
+          "Change & poste"
+        ]
+      ],
+      "retrieval_query": "ما خدمات الصرف والبريد المذكورة؟",
+      "expected_rank": null,
+      "expected_group_ranks": [
+        null
+      ],
+      "hit_at_3": false,
+      "latency_ms": 107.91,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger 2- Airport network.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "top_distances": [
+        1.13675057888031,
+        1.1582117080688477,
+        1.165000319480896
+      ]
+    },
+    {
+      "id": "fr_travel_customs",
+      "lang": "fr",
+      "category": "formalites",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "Quels documents préparer et quelles règles de sécurité ou de douane consulter ?",
+      "expected_source_groups": [
+        [
+          "Travel documents"
+        ],
+        [
+          "Security and Customs"
+        ]
+      ],
+      "retrieval_query": "Quels documents préparer et quelles règles de sécurité ou de douane consulter ?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1,
+        5
+      ],
+      "hit_at_3": true,
+      "latency_ms": 111.66,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - 6Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 5Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 4Travel documents.pdf"
+      ],
+      "top_distances": [
+        0.6565600633621216,
+        0.7227361798286438,
+        0.7700931429862976
+      ]
+    },
+    {
+      "id": "en_travel_customs",
+      "lang": "en",
+      "category": "formalites",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "Which documents should I prepare, and what security or customs rules should I consult?",
+      "expected_source_groups": [
+        [
+          "Travel documents"
+        ],
+        [
+          "Security and Customs"
+        ]
+      ],
+      "retrieval_query": "Which documents should I prepare, and what security or customs rules should I consult?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1,
+        null
+      ],
+      "hit_at_3": true,
+      "latency_ms": 133.1,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - 6Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 5Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 8Travel documents.pdf"
+      ],
+      "top_distances": [
+        0.6931108832359314,
+        0.7421550750732422,
+        0.761926531791687
+      ]
+    },
+    {
+      "id": "ar_travel_customs",
+      "lang": "ar",
+      "category": "formalites",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "ما الوثائق التي أعدها وما قواعد الأمن أو الجمارك التي أراجعها؟",
+      "expected_source_groups": [
+        [
+          "Travel documents"
+        ],
+        [
+          "Security and Customs"
+        ]
+      ],
+      "retrieval_query": "ما الوثائق التي أعدها وما قواعد الأمن أو الجمارك التي أراجعها؟",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1,
+        4
+      ],
+      "hit_at_3": true,
+      "latency_ms": 145.28,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - 6Travel documents.pdf",
+        "Office National des aéroports -I am passenger - LAW and Legalization.pdf",
+        "Office National des aéroports -I am passenger - 4Travel documents.pdf"
+      ],
+      "top_distances": [
+        0.9626699686050415,
+        0.9640358686447144,
+        0.9677385687828064
+      ]
+    },
+    {
+      "id": "fr_flight_status",
+      "lang": "fr",
+      "category": "flight_live",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "Le vol FR5545 est-il à l’heure aujourd’hui ?",
+      "expected_source_groups": [],
+      "retrieval_query": "Le vol FR5545 est-il à l’heure aujourd’hui ?",
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "hit_at_3": false,
+      "latency_ms": 126.25,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -I am passenger - Airport network.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "top_distances": [
+        0.9950218200683594,
+        1.1049714088439941,
+        1.1120569705963135
+      ]
+    },
+    {
+      "id": "en_flight_status",
+      "lang": "en",
+      "category": "flight_live",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "Is flight FR5545 on time today?",
+      "expected_source_groups": [],
+      "retrieval_query": "Is flight FR5545 on time today?",
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "hit_at_3": false,
+      "latency_ms": 93.44,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -I am passenger 2- Airport network.pdf",
+        "Office National des aéroports -I am passenger - Airport network.pdf"
+      ],
+      "top_distances": [
+        0.9327785968780518,
+        1.0901089906692505,
+        1.1020209789276123
+      ]
+    },
+    {
+      "id": "ar_flight_status",
+      "lang": "ar",
+      "category": "flight_live",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "هل رحلة FR5545 في موعدها اليوم؟",
+      "expected_source_groups": [],
+      "retrieval_query": "هل رحلة FR5545 في موعدها اليوم؟",
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "hit_at_3": false,
+      "latency_ms": 101.72,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -I am passenger - Airport network.pdf",
+        "Office National des aéroports -I am passenger 2- Airport network.pdf"
+      ],
+      "top_distances": [
+        1.0170254707336426,
+        1.1010425090789795,
+        1.1310746669769287
+      ]
+    },
+    {
+      "id": "fr_flight_gate",
+      "lang": "fr",
+      "category": "flight_live",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "Quelle porte est attribuée maintenant au prochain vol pour Paris ?",
+      "expected_source_groups": [],
+      "retrieval_query": "Quelle porte est attribuée maintenant au prochain vol pour Paris ?",
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "hit_at_3": false,
+      "latency_ms": 118.79,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -Nos Aéroports - 4Guide des Compagnies.pdf",
+        "Office National des aéroports -Nos Aéroports - 2Guide des Compagnies.pdf"
+      ],
+      "top_distances": [
+        1.041115641593933,
+        1.0757944583892822,
+        1.0960345268249512
+      ]
+    },
+    {
+      "id": "en_flight_gate",
+      "lang": "en",
+      "category": "flight_live",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "Which gate is currently assigned to the next Paris flight?",
+      "expected_source_groups": [],
+      "retrieval_query": "Which gate is currently assigned to the next Paris flight?",
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "hit_at_3": false,
+      "latency_ms": 108.5,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Nos Aéroports - 4Guide des Compagnies.pdf",
+        "Office National des aéroports -Nos Aéroports - 2Guide des Compagnies.pdf",
+        "Office National des aéroports -Nos Aéroports - Guide des Compagnies.pdf"
+      ],
+      "top_distances": [
+        1.0093188285827637,
+        1.016416311264038,
+        1.0234994888305664
+      ]
+    },
+    {
+      "id": "ar_flight_gate",
+      "lang": "ar",
+      "category": "flight_live",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "ما بوابة الرحلة القادمة إلى باريس حاليًا؟",
+      "expected_source_groups": [],
+      "retrieval_query": "ما بوابة الرحلة القادمة إلى باريس حاليًا؟",
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "hit_at_3": false,
+      "latency_ms": 156.84,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Nos Aéroports - 4Guide des Compagnies.pdf",
+        "Office National des aéroports -Our Airports - Présentation.pdf",
+        "Office National des aéroports -Nos Aéroports - Guide des Compagnies.pdf"
+      ],
+      "top_distances": [
+        1.001065731048584,
+        1.0062353610992432,
+        1.030970811843872
+      ]
+    },
+    {
+      "id": "fr_flight_delays",
+      "lang": "fr",
+      "category": "flight_live",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "Quels vols sont retardés en ce moment ?",
+      "expected_source_groups": [],
+      "retrieval_query": "Quels vols sont retardés en ce moment ?",
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "hit_at_3": false,
+      "latency_ms": 103.85,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -I am passenger - Security and Customs.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "top_distances": [
+        0.972393810749054,
+        0.9853252172470093,
+        1.042826771736145
+      ]
+    },
+    {
+      "id": "en_flight_delays",
+      "lang": "en",
+      "category": "flight_live",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "Which flights are delayed right now?",
+      "expected_source_groups": [],
+      "retrieval_query": "Which flights are delayed right now?",
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "hit_at_3": false,
+      "latency_ms": 106.54,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -Our Airports - Présentation.pdf",
+        "Office National des aéroports -Nos Aéroports - 4Guide des Compagnies.pdf"
+      ],
+      "top_distances": [
+        0.9731153249740601,
+        1.0053822994232178,
+        1.0247665643692017
+      ]
+    },
+    {
+      "id": "ar_flight_delays",
+      "lang": "ar",
+      "category": "flight_live",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "ما الرحلات المتأخرة الآن؟",
+      "expected_source_groups": [],
+      "retrieval_query": "ما الرحلات المتأخرة الآن؟",
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "hit_at_3": false,
+      "latency_ms": 110.04,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -I am passenger - Security and Customs.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "top_distances": [
+        0.9966579675674438,
+        1.090914249420166,
+        1.0924752950668335
+      ]
+    },
+    {
+      "id": "fr_next_bus",
+      "lang": "fr",
+      "category": "transport_live",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "À quelle heure part le prochain bus vers le centre aujourd’hui ?",
+      "expected_source_groups": [],
+      "retrieval_query": "À quelle heure part le prochain bus vers le centre aujourd’hui ?",
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "hit_at_3": false,
+      "latency_ms": 119.82,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf"
+      ],
+      "top_distances": [
+        1.0772054195404053,
+        1.1200228929519653,
+        1.1242069005966187
+      ]
+    },
+    {
+      "id": "en_next_bus",
+      "lang": "en",
+      "category": "transport_live",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "What time does the next bus downtown leave today?",
+      "expected_source_groups": [],
+      "retrieval_query": "What time does the next bus downtown leave today?",
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "hit_at_3": false,
+      "latency_ms": 103.0,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf"
+      ],
+      "top_distances": [
+        1.0819511413574219,
+        1.1235713958740234,
+        1.124704360961914
+      ]
+    },
+    {
+      "id": "ar_next_bus",
+      "lang": "ar",
+      "category": "transport_live",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "متى تنطلق الحافلة القادمة إلى وسط المدينة اليوم؟",
+      "expected_source_groups": [],
+      "retrieval_query": "متى تنطلق الحافلة القادمة إلى وسط المدينة اليوم؟",
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "hit_at_3": false,
+      "latency_ms": 116.76,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf"
+      ],
+      "top_distances": [
+        1.094142198562622,
+        1.1009314060211182,
+        1.1288295984268188
+      ]
+    },
+    {
+      "id": "fr_parking_spaces",
+      "lang": "fr",
+      "category": "transport_live",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "Combien de places de parking sont libres actuellement ?",
+      "expected_source_groups": [],
+      "retrieval_query": "Combien de places de parking sont libres actuellement ?",
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "hit_at_3": false,
+      "latency_ms": 129.42,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Présentation.pdf",
+        "Office National des aéroports -I am passenger - Airport network.pdf"
+      ],
+      "top_distances": [
+        0.9658017158508301,
+        1.0415704250335693,
+        1.0601074695587158
+      ]
+    },
+    {
+      "id": "en_parking_spaces",
+      "lang": "en",
+      "category": "transport_live",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "How many parking spaces are free right now?",
+      "expected_source_groups": [],
+      "retrieval_query": "How many parking spaces are free right now?",
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "hit_at_3": false,
+      "latency_ms": 101.7,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Présentation.pdf",
+        "Office National des aéroports -I am passenger - Airport network.pdf"
+      ],
+      "top_distances": [
+        1.0267815589904785,
+        1.1192350387573242,
+        1.1396515369415283
+      ]
+    },
+    {
+      "id": "ar_parking_spaces",
+      "lang": "ar",
+      "category": "transport_live",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "كم مكانًا شاغرًا في الموقف الآن؟",
+      "expected_source_groups": [],
+      "retrieval_query": "كم مكانًا شاغرًا في الموقف الآن؟",
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "hit_at_3": false,
+      "latency_ms": 115.02,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Check-in & Boarding.pdf"
+      ],
+      "top_distances": [
+        0.6740962266921997,
+        0.6855546236038208,
+        0.6973708868026733
+      ]
+    },
+    {
+      "id": "fr_baggage_allowance",
+      "lang": "fr",
+      "category": "airline_policy",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "Quel poids de bagage cabine autorise mon billet Royal Air Maroc ?",
+      "expected_source_groups": [],
+      "retrieval_query": "Quel poids de bagage cabine autorise mon billet Royal Air Maroc ?",
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "hit_at_3": false,
+      "latency_ms": 126.26,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - Luggage.pdf",
+        "Office National des aéroports -I am passenger - Airport network.pdf"
+      ],
+      "top_distances": [
+        0.8513402342796326,
+        0.9121707677841187,
+        0.9235159754753113
+      ]
+    },
+    {
+      "id": "en_baggage_allowance",
+      "lang": "en",
+      "category": "airline_policy",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "What cabin-bag weight does my Royal Air Maroc ticket allow?",
+      "expected_source_groups": [],
+      "retrieval_query": "What cabin-bag weight does my Royal Air Maroc ticket allow?",
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "hit_at_3": false,
+      "latency_ms": 111.7,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - Airport network.pdf",
+        "Office National des aéroports -I am passenger - Luggage.pdf"
+      ],
+      "top_distances": [
+        0.8360887169837952,
+        0.8807844519615173,
+        0.8855394124984741
+      ]
+    },
+    {
+      "id": "ar_baggage_allowance",
+      "lang": "ar",
+      "category": "airline_policy",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "ما وزن حقيبة المقصورة المسموح به في تذكرة الخطوط الملكية المغربية؟",
+      "expected_source_groups": [],
+      "retrieval_query": "ما وزن حقيبة المقصورة المسموح به في تذكرة الخطوط الملكية المغربية؟",
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "hit_at_3": false,
+      "latency_ms": 104.64,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - Luggage.pdf",
+        "Office National des aéroports -I am passenger 2- Airport network.pdf",
+        "Office National des aéroports -I am passenger - Luggage.pdf"
+      ],
+      "top_distances": [
+        0.9813154935836792,
+        1.003509759902954,
+        1.0096230506896973
+      ]
+    },
+    {
+      "id": "fr_ticket_price",
+      "lang": "fr",
+      "category": "airline_policy",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "Quel est aujourd’hui le prix d’un billet Agadir-Paris avec bagage en soute ?",
+      "expected_source_groups": [],
+      "retrieval_query": "Quel est aujourd’hui le prix d’un billet Agadir-Paris avec bagage en soute ?",
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "hit_at_3": false,
+      "latency_ms": 123.69,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Présentation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.8628453016281128,
+        0.9648241996765137,
+        0.9811426401138306
+      ]
+    },
+    {
+      "id": "en_ticket_price",
+      "lang": "en",
+      "category": "airline_policy",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "What is today’s price for an Agadir–Paris ticket with checked baggage?",
+      "expected_source_groups": [],
+      "retrieval_query": "What is today’s price for an Agadir–Paris ticket with checked baggage?",
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "hit_at_3": false,
+      "latency_ms": 122.96,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Présentation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.8021138310432434,
+        0.8883520364761353,
+        0.8901525735855103
+      ]
+    },
+    {
+      "id": "ar_ticket_price",
+      "lang": "ar",
+      "category": "airline_policy",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "كم سعر تذكرة أكادير باريس مع أمتعة مشحونة اليوم؟",
+      "expected_source_groups": [],
+      "retrieval_query": "كم سعر تذكرة أكادير باريس مع أمتعة مشحونة اليوم؟",
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "hit_at_3": false,
+      "latency_ms": 116.69,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Présentation.pdf",
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf"
+      ],
+      "top_distances": [
+        0.8873963356018066,
+        1.0297565460205078,
+        1.0397908687591553
+      ]
+    },
+    {
+      "id": "fr_security_wait",
+      "lang": "fr",
+      "category": "live_operations",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "Combien de temps dure actuellement la file du contrôle de sécurité ?",
+      "expected_source_groups": [],
+      "retrieval_query": "Combien de temps dure actuellement la file du contrôle de sécurité ?",
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "hit_at_3": false,
+      "latency_ms": 101.01,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - Security and Customs.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf",
+        "Office National des aéroports -I am passenger - Security and Customs.pdf"
+      ],
+      "top_distances": [
+        1.0238451957702637,
+        1.05662202835083,
+        1.0701515674591064
+      ]
+    },
+    {
+      "id": "en_security_wait",
+      "lang": "en",
+      "category": "live_operations",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "How long is the security-check queue right now?",
+      "expected_source_groups": [],
+      "retrieval_query": "How long is the security-check queue right now?",
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "hit_at_3": false,
+      "latency_ms": 101.39,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - Security and Customs.pdf",
+        "Office National des aéroports -Our Airports - Check-in & Boarding.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "top_distances": [
+        1.0848579406738281,
+        1.0952783823013306,
+        1.097806692123413
+      ]
+    },
+    {
+      "id": "ar_security_wait",
+      "lang": "ar",
+      "category": "live_operations",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "كم مدة الانتظار في التفتيش الأمني حاليًا؟",
+      "expected_source_groups": [],
+      "retrieval_query": "كم مدة الانتظار في التفتيش الأمني حاليًا؟",
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "hit_at_3": false,
+      "latency_ms": 106.72,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf",
+        "Office National des aéroports -I am passenger - Security and Customs.pdf",
+        "Office National des aéroports -I am passenger - Security and Customs.pdf"
+      ],
+      "top_distances": [
+        1.0800659656524658,
+        1.092921257019043,
+        1.1240789890289307
+      ]
+    },
+    {
+      "id": "fr_restaurant_now",
+      "lang": "fr",
+      "category": "live_hours",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "Quel restaurant est ouvert à cette minute dans la zone d’embarquement ?",
+      "expected_source_groups": [],
+      "retrieval_query": "Quel restaurant est ouvert à cette minute dans la zone d’embarquement ?",
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "hit_at_3": false,
+      "latency_ms": 112.34,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf",
+        "Office National des aéroports -Nos Aéroports - Cafés & restaurants.pdf"
+      ],
+      "top_distances": [
+        0.9685913324356079,
+        0.9726592302322388,
+        0.9970993995666504
+      ]
+    },
+    {
+      "id": "en_restaurant_now",
+      "lang": "en",
+      "category": "live_hours",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "Which restaurant is open this minute in the boarding area?",
+      "expected_source_groups": [],
+      "retrieval_query": "Which restaurant is open this minute in the boarding area?",
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "hit_at_3": false,
+      "latency_ms": 97.24,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf",
+        "Office National des aéroports -Nos Aéroports - Cafés & restaurants.pdf"
+      ],
+      "top_distances": [
+        0.9673011302947998,
+        0.9886772036552429,
+        1.002166509628296
+      ]
+    },
+    {
+      "id": "ar_restaurant_now",
+      "lang": "ar",
+      "category": "live_hours",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "أي مطعم مفتوح الآن في منطقة الصعود؟",
+      "expected_source_groups": [],
+      "retrieval_query": "أي مطعم مفتوح الآن في منطقة الصعود؟",
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "hit_at_3": false,
+      "latency_ms": 97.37,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Nos Aéroports - Cafés & restaurants.pdf",
+        "Office National des aéroports -Our Airports - Cafes and restaurants.pdf",
+        "Office National des aéroports -Our Airports - Boutiques.pdf"
+      ],
+      "top_distances": [
+        1.1169177293777466,
+        1.1304255723953247,
+        1.250502109527588
+      ]
+    },
+    {
+      "id": "fr_weather_now",
+      "lang": "fr",
+      "category": "live_weather",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "Quel temps fait-il actuellement sur le tarmac ?",
+      "expected_source_groups": [],
+      "retrieval_query": "Quel temps fait-il actuellement sur le tarmac ?",
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "hit_at_3": false,
+      "latency_ms": 96.79,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        1.0532960891723633,
+        1.056565284729004,
+        1.1283053159713745
+      ]
+    },
+    {
+      "id": "en_weather_now",
+      "lang": "en",
+      "category": "live_weather",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "What is the current weather on the apron?",
+      "expected_source_groups": [],
+      "retrieval_query": "What is the current weather on the apron?",
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "hit_at_3": false,
+      "latency_ms": 95.88,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Discovery.pdf"
+      ],
+      "top_distances": [
+        1.1162075996398926,
+        1.1719447374343872,
+        1.211230754852295
+      ]
+    },
+    {
+      "id": "ar_weather_now",
+      "lang": "ar",
+      "category": "live_weather",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "كيف الطقس الآن على ساحة المطار؟",
+      "expected_source_groups": [],
+      "retrieval_query": "كيف الطقس الآن على ساحة المطار؟",
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "hit_at_3": false,
+      "latency_ms": 95.12,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -I am passenger - What is an airport_.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.9132044315338135,
+        0.9887465238571167,
+        1.0281734466552734
+      ]
+    },
+    {
+      "id": "fr_park_leave",
+      "lang": "fr",
+      "category": "transport",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Je pars quelques jours : où laisser ma voiture et où payer en sortant ?",
+      "expected_source_groups": [
+        [
+          "Parkings"
+        ]
+      ],
+      "retrieval_query": "Je pars quelques jours : où laisser ma voiture et où payer en sortant ?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 111.1,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -I am passenger - Luggage.pdf"
+      ],
+      "top_distances": [
+        0.7555357217788696,
+        0.9417847394943237,
+        0.9646347165107727
+      ]
+    },
+    {
+      "id": "en_park_leave",
+      "lang": "en",
+      "category": "transport",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "I’m away for a few days: where can I leave my car and pay when exiting?",
+      "expected_source_groups": [
+        [
+          "Parkings"
+        ]
+      ],
+      "retrieval_query": "I’m away for a few days: where can I leave my car and pay when exiting?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 112.63,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -I am passenger - Luggage.pdf"
+      ],
+      "top_distances": [
+        0.8075453639030457,
+        0.9014467000961304,
+        0.9646434783935547
+      ]
+    },
+    {
+      "id": "ar_park_leave",
+      "lang": "ar",
+      "category": "transport",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "سأسافر أيامًا: أين أترك سيارتي وأدفع عند الخروج؟",
+      "expected_source_groups": [
+        [
+          "Parkings"
+        ]
+      ],
+      "retrieval_query": "سأسافر أيامًا: أين أترك سيارتي وأدفع عند الخروج؟",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 103.89,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -I am passenger - Luggage.pdf"
+      ],
+      "top_distances": [
+        0.7858130931854248,
+        0.9219678640365601,
+        0.9270783066749573
+      ]
+    },
+    {
+      "id": "fr_taxi_queue",
+      "lang": "fr",
+      "category": "transport",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Où les taxis attendent-ils à la sortie des arrivées ?",
+      "expected_source_groups": [
+        [
+          "Taxis",
+          "Taxi & Bus"
+        ]
+      ],
+      "retrieval_query": "Où les taxis attendent-ils à la sortie des arrivées ?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 101.18,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Parkings.pdf"
+      ],
+      "top_distances": [
+        0.7651095986366272,
+        0.7970960736274719,
+        0.9059804677963257
+      ]
+    },
+    {
+      "id": "en_taxi_queue",
+      "lang": "en",
+      "category": "transport",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Where do taxis wait outside arrivals?",
+      "expected_source_groups": [
+        [
+          "Taxis",
+          "Taxi & Bus"
+        ]
+      ],
+      "retrieval_query": "Where do taxis wait outside arrivals?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 87.03,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.8052687048912048,
+        0.8556132316589355,
+        0.931640625
+      ]
+    },
+    {
+      "id": "ar_taxi_queue",
+      "lang": "ar",
+      "category": "transport",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "أين تنتظر سيارات الأجرة عند مخرج الوصول؟",
+      "expected_source_groups": [
+        [
+          "Taxis",
+          "Taxi & Bus"
+        ]
+      ],
+      "retrieval_query": "أين تنتظر سيارات الأجرة عند مخرج الوصول؟",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 101.04,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf"
+      ],
+      "top_distances": [
+        0.8648870587348938,
+        0.9031857252120972,
+        0.9095145463943481
+      ]
+    },
+    {
+      "id": "fr_bus_route",
+      "lang": "fr",
+      "category": "transport",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Existe-t-il une navette vers Inezgane ou Aït Melloul ?",
+      "expected_source_groups": [
+        [
+          "Taxi & Bus"
+        ]
+      ],
+      "retrieval_query": "Existe-t-il une navette vers Inezgane ou Aït Melloul ?",
+      "expected_rank": null,
+      "expected_group_ranks": [
+        null
+      ],
+      "hit_at_3": false,
+      "latency_ms": 128.61,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger 2- Airport network.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "top_distances": [
+        0.9711084365844727,
+        0.9758806228637695,
+        1.0004065036773682
+      ]
+    },
+    {
+      "id": "en_bus_route",
+      "lang": "en",
+      "category": "transport",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Is there a shuttle to Inezgane or Aït Melloul?",
+      "expected_source_groups": [
+        [
+          "Taxi & Bus"
+        ]
+      ],
+      "retrieval_query": "Is there a shuttle to Inezgane or Aït Melloul?",
+      "expected_rank": null,
+      "expected_group_ranks": [
+        null
+      ],
+      "hit_at_3": false,
+      "latency_ms": 125.12,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger 2- Airport network.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "top_distances": [
+        1.023484468460083,
+        1.038553237915039,
+        1.0483648777008057
+      ]
+    },
+    {
+      "id": "ar_bus_route",
+      "lang": "ar",
+      "category": "transport",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "هل توجد حافلة إلى إنزكان أو أيت ملول؟",
+      "expected_source_groups": [
+        [
+          "Taxi & Bus"
+        ]
+      ],
+      "retrieval_query": "هل توجد حافلة إلى إنزكان أو أيت ملول؟",
+      "expected_rank": null,
+      "expected_group_ranks": [
+        null
+      ],
+      "hit_at_3": false,
+      "latency_ms": 134.5,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger3 - Airport network.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        1.1078165769577026,
+        1.11201012134552,
+        1.1328407526016235
+      ]
+    },
+    {
+      "id": "fr_internet",
+      "lang": "fr",
+      "category": "services",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Puis-je me connecter en ligne en attendant mon avion ?",
+      "expected_source_groups": [
+        [
+          "Internet"
+        ]
+      ],
+      "retrieval_query": "Puis-je me connecter en ligne en attendant mon avion ?",
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "hit_at_3": true,
+      "latency_ms": 113.51,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -Our Airports - Internet.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "top_distances": [
+        0.7502783536911011,
+        0.8151279091835022,
+        0.8320603370666504
+      ]
+    },
+    {
+      "id": "en_internet",
+      "lang": "en",
+      "category": "services",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Can I get online while waiting for my plane?",
+      "expected_source_groups": [
+        [
+          "Internet"
+        ]
+      ],
+      "retrieval_query": "Can I get online while waiting for my plane?",
+      "expected_rank": 3,
+      "expected_group_ranks": [
+        3
+      ],
+      "hit_at_3": true,
+      "latency_ms": 107.98,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -I am passenger - 11Travel documents.pdf",
+        "Office National des aéroports -Our Airports - Internet.pdf"
+      ],
+      "top_distances": [
+        0.7813335657119751,
+        0.8365021347999573,
+        0.8542237281799316
+      ]
+    },
+    {
+      "id": "ar_internet",
+      "lang": "ar",
+      "category": "services",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "هل يمكنني الاتصال بالإنترنت أثناء انتظار الطائرة؟",
+      "expected_source_groups": [
+        [
+          "Internet"
+        ]
+      ],
+      "retrieval_query": "هل يمكنني الاتصال بالإنترنت أثناء انتظار الطائرة؟",
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "hit_at_3": true,
+      "latency_ms": 98.97,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -Our Airports - Internet.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "top_distances": [
+        0.7444297075271606,
+        0.7786049246788025,
+        0.8404043316841125
+      ]
+    },
+    {
+      "id": "fr_chair",
+      "lang": "fr",
+      "category": "accessibility",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Je marche difficilement : comment obtenir une chaise roulante ?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "retrieval_query": "Je marche difficilement : comment obtenir une chaise roulante ?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 124.07,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "top_distances": [
+        1.0000925064086914,
+        1.02723228931427,
+        1.1112611293792725
+      ]
+    },
+    {
+      "id": "en_chair",
+      "lang": "en",
+      "category": "accessibility",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "I have difficulty walking; how can I get a wheelchair?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "retrieval_query": "I have difficulty walking; how can I get a wheelchair?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 134.59,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -I am passenger - Security and Customs.pdf"
+      ],
+      "top_distances": [
+        1.0208429098129272,
+        1.0583758354187012,
+        1.0763617753982544
+      ]
+    },
+    {
+      "id": "ar_chair",
+      "lang": "ar",
+      "category": "accessibility",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "أجد صعوبة في المشي، كيف أحصل على كرسي متحرك؟",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "retrieval_query": "أجد صعوبة في المشي، كيف أحصل على كرسي متحرك؟",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 106.83,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.9984039664268494,
+        1.0279836654663086,
+        1.097238302230835
+      ]
+    },
+    {
+      "id": "fr_doctor",
+      "lang": "fr",
+      "category": "medical",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Où aller si un voyageur a besoin d’un médecin ?",
+      "expected_source_groups": [
+        [
+          "Medical Assistance"
+        ]
+      ],
+      "retrieval_query": "Où aller si un voyageur a besoin d’un médecin ?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 199.92,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf",
+        "Office National des aéroports -Nos Aéroports - Assistance médicale.pdf",
+        "Office National des aéroports -I am passenger - 6Travel documents.pdf"
+      ],
+      "top_distances": [
+        0.8248414993286133,
+        0.8350353240966797,
+        0.9326583743095398
+      ]
+    },
+    {
+      "id": "en_doctor",
+      "lang": "en",
+      "category": "medical",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Where should a traveler go if they need a doctor?",
+      "expected_source_groups": [
+        [
+          "Medical Assistance"
+        ]
+      ],
+      "retrieval_query": "Where should a traveler go if they need a doctor?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 119.19,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf",
+        "Office National des aéroports -I am passenger - 7Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 6Travel documents.pdf"
+      ],
+      "top_distances": [
+        0.9115921258926392,
+        0.9142857789993286,
+        0.9170704483985901
+      ]
+    },
+    {
+      "id": "ar_doctor",
+      "lang": "ar",
+      "category": "medical",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "أين أذهب إذا احتاج مسافر إلى طبيب؟",
+      "expected_source_groups": [
+        [
+          "Medical Assistance"
+        ]
+      ],
+      "retrieval_query": "أين أذهب إذا احتاج مسافر إلى طبيب؟",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 93.46,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf",
+        "Office National des aéroports -Nos Aéroports - Assistance médicale.pdf",
+        "Office National des aéroports -I am passenger - 6Travel documents.pdf"
+      ],
+      "top_distances": [
+        0.8307499289512634,
+        0.8662857413291931,
+        0.9492658376693726
+      ]
+    },
+    {
+      "id": "fr_prayer_place",
+      "lang": "fr",
+      "category": "services",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Y a-t-il un lieu de prière avant le départ ?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "retrieval_query": "Y a-t-il un lieu de prière avant le départ ?",
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "hit_at_3": true,
+      "latency_ms": 105.24,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.8908801078796387,
+        0.897925078868866,
+        0.9681823253631592
+      ]
+    },
+    {
+      "id": "en_prayer_place",
+      "lang": "en",
+      "category": "services",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Is there a place to pray before departure?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "retrieval_query": "Is there a place to pray before departure?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 105.37,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.918128252029419,
+        0.9532032012939453,
+        0.9847632646560669
+      ]
+    },
+    {
+      "id": "ar_prayer_place",
+      "lang": "ar",
+      "category": "services",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "هل يوجد مكان للصلاة قبل المغادرة؟",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ],
+      "retrieval_query": "هل يوجد مكان للصلاة قبل المغادرة؟",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 120.34,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf"
+      ],
+      "top_distances": [
+        0.8797554969787598,
+        0.9587482810020447,
+        0.9631005525588989
+      ]
+    },
+    {
+      "id": "fr_shopping",
+      "lang": "fr",
+      "category": "services",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Où peut-on faire des achats dans le terminal ?",
+      "expected_source_groups": [
+        [
+          "Boutiques"
+        ]
+      ],
+      "retrieval_query": "Où peut-on faire des achats dans le terminal ?",
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "hit_at_3": true,
+      "latency_ms": 117.11,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Boutiques.pdf",
+        "Office National des aéroports -Nos Aéroports - Boutiques.pdf"
+      ],
+      "top_distances": [
+        0.8228937983512878,
+        0.8788846731185913,
+        0.8881198167800903
+      ]
+    },
+    {
+      "id": "en_shopping",
+      "lang": "en",
+      "category": "services",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Where can I shop in the terminal?",
+      "expected_source_groups": [
+        [
+          "Boutiques"
+        ]
+      ],
+      "retrieval_query": "Where can I shop in the terminal?",
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "hit_at_3": true,
+      "latency_ms": 111.46,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Boutiques.pdf",
+        "Office National des aéroports -Nos Aéroports - Boutiques.pdf"
+      ],
+      "top_distances": [
+        0.8124805688858032,
+        0.8694411516189575,
+        0.875203549861908
+      ]
+    },
+    {
+      "id": "ar_shopping",
+      "lang": "ar",
+      "category": "services",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "أين يمكن التسوق في مبنى المطار؟",
+      "expected_source_groups": [
+        [
+          "Boutiques"
+        ]
+      ],
+      "retrieval_query": "أين يمكن التسوق في مبنى المطار؟",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 111.47,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Boutiques.pdf",
+        "Office National des aéroports -Nos Aéroports - Boutiques.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.7643418312072754,
+        0.7755333185195923,
+        0.8359403014183044
+      ]
+    },
+    {
+      "id": "fr_phone_number",
+      "lang": "fr",
+      "category": "airport_info",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Quel numéro appeler pour joindre l’aéroport ?",
+      "expected_source_groups": [
+        [
+          "Phone",
+          "Call center"
+        ]
+      ],
+      "retrieval_query": "Quel numéro appeler pour joindre l’aéroport ?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 123.99,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Call center.pdf",
+        "Office National des aéroports -Our Airports - Informations points.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf"
+      ],
+      "top_distances": [
+        0.6366159319877625,
+        0.7433075904846191,
+        0.7486583590507507
+      ]
+    },
+    {
+      "id": "en_phone_number",
+      "lang": "en",
+      "category": "airport_info",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "What number should I call to reach the airport?",
+      "expected_source_groups": [
+        [
+          "Phone",
+          "Call center"
+        ]
+      ],
+      "retrieval_query": "What number should I call to reach the airport?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 128.43,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Call center.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -Our Airports - Informations points.pdf"
+      ],
+      "top_distances": [
+        0.6375709176063538,
+        0.750229001045227,
+        0.7600007653236389
+      ]
+    },
+    {
+      "id": "ar_phone_number",
+      "lang": "ar",
+      "category": "airport_info",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "ما الرقم الذي أتصل به للوصول إلى المطار؟",
+      "expected_source_groups": [
+        [
+          "Phone",
+          "Call center"
+        ]
+      ],
+      "retrieval_query": "ما الرقم الذي أتصل به للوصول إلى المطار؟",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 109.37,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Call center.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf"
+      ],
+      "top_distances": [
+        0.7502529621124268,
+        0.8041384220123291,
+        0.8080223202705383
+      ]
+    },
+    {
+      "id": "fr_papers",
+      "lang": "fr",
+      "category": "formalites",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Quels papiers préparer avant de prendre l’avion depuis le Maroc ?",
+      "expected_source_groups": [
+        [
+          "Travel documents"
+        ]
+      ],
+      "retrieval_query": "Quels papiers préparer avant de prendre l’avion depuis le Maroc ?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 126.69,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - 6Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 8Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 5Travel documents.pdf"
+      ],
+      "top_distances": [
+        0.5651119947433472,
+        0.58588707447052,
+        0.6150656938552856
+      ]
+    },
+    {
+      "id": "en_papers",
+      "lang": "en",
+      "category": "formalites",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "What papers should I prepare before flying from Morocco?",
+      "expected_source_groups": [
+        [
+          "Travel documents"
+        ]
+      ],
+      "retrieval_query": "What papers should I prepare before flying from Morocco?",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 122.94,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - 8Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 6Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 4Travel documents.pdf"
+      ],
+      "top_distances": [
+        0.5321605205535889,
+        0.5578908324241638,
+        0.5882676839828491
+      ]
+    },
+    {
+      "id": "ar_papers",
+      "lang": "ar",
+      "category": "formalites",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "ما الأوراق التي أجهزها قبل السفر جوًا من المغرب؟",
+      "expected_source_groups": [
+        [
+          "Travel documents"
+        ]
+      ],
+      "retrieval_query": "ما الأوراق التي أجهزها قبل السفر جوًا من المغرب؟",
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "hit_at_3": true,
+      "latency_ms": 102.66,
+      "retrieved_count": 5,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - 6Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 8Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 5Travel documents.pdf"
+      ],
+      "top_distances": [
+        0.7221919298171997,
+        0.7751865983009338,
+        0.7789654731750488
+      ]
+    }
+  ],
+  "limitations": [
+    "Measures retrieval of an expected source, not answer factuality or citation correctness.",
+    "For unanswerable questions, nonempty retrieval and top-1 distance are diagnostics only; they do not measure whether the assistant abstains.",
+    "The benchmark questions, translations and expected source groups require domain-expert review before formal reporting."
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "benchmark_id": "aga-rag-v2-150",
+  "run_at_utc": "2026-11-08T12:57:57.980389+00:00",
+  "labelling_rule": "flight_live -> flight_status; all other questions -> documentary",
+  "accuracy": 0.8667,
+  "accuracy_by_language": {
+    "fr": 0.88,
+    "en": 0.96,
+    "ar": 0.76
+  },
+  "per_class": {
+    "flight_status": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.3333
+    },
+    "documentary": {
+      "support": 141,
+      "precision": 0.9549,
+      "recall": 0.9007
+    },
+    "out_of_scope": {
+      "support": 0,
+      "precision": 0.0,
+      "recall": null
+    },
+    "greeting": {
+      "support": 0,
+      "precision": null,
+      "recall": null
+    }
+  },
+  "confusion_matrix_expected_rows_predicted_columns": {
+    "flight_status": {
+      "flight_status": 3,
+      "documentary": 6,
+      "out_of_scope": 0,
+      "greeting": 0
+    },
+    "documentary": {
+      "flight_status": 0,
+      "documentary": 127,
+      "out_of_scope": 14,
+      "greeting": 0
+    },
+    "out_of_scope": {
+      "flight_status": 0,
+      "documentary": 0,
+      "out_of_scope": 0,
+      "greeting": 0
+    },
+    "greeting": {
+      "flight_status": 0,
+      "documentary": 0,
+      "out_of_scope": 0,
+      "greeting": 0
+    }
+  },
+  "errors": [
+    {
+      "id": "ar_wheelchair",
+      "lang": "ar",
+      "category": "accessibility",
+      "answerable": true,
+      "expected": "documentary",
+      "predicted": "out_of_scope"
+    },
+    {
+      "id": "fr_accessible_toilets",
+      "lang": "fr",
+      "category": "accessibility",
+      "answerable": true,
+      "expected": "documentary",
+      "predicted": "out_of_scope"
+    },
+    {
+      "id": "ar_parking_info",
+      "lang": "ar",
+      "category": "transport",
+      "answerable": true,
+      "expected": "documentary",
+      "predicted": "out_of_scope"
+    },
+    {
+      "id": "fr_prm",
+      "lang": "fr",
+      "category": "accessibility",
+      "answerable": true,
+      "expected": "documentary",
+      "predicted": "out_of_scope"
+    },
+    {
+      "id": "fr_rental_contacts",
+      "lang": "fr",
+      "category": "transport",
+      "answerable": true,
+      "expected": "documentary",
+      "predicted": "out_of_scope"
+    },
+    {
+      "id": "ar_rental_contacts",
+      "lang": "ar",
+      "category": "transport",
+      "answerable": true,
+      "expected": "documentary",
+      "predicted": "out_of_scope"
+    },
+    {
+      "id": "ar_food_shops",
+      "lang": "ar",
+      "category": "services",
+      "answerable": true,
+      "expected": "documentary",
+      "predicted": "out_of_scope"
+    },
+    {
+      "id": "fr_flight_gate",
+      "lang": "fr",
+      "category": "flight_live",
+      "answerable": false,
+      "expected": "flight_status",
+      "predicted": "documentary"
+    },
+    {
+      "id": "en_flight_gate",
+      "lang": "en",
+      "category": "flight_live",
+      "answerable": false,
+      "expected": "flight_status",
+      "predicted": "documentary"
+    },
+    {
+      "id": "ar_flight_gate",
+      "lang": "ar",
+      "category": "flight_live",
+      "answerable": false,
+      "expected": "flight_status",
+      "predicted": "documentary"
+    },
+    {
+      "id": "fr_flight_delays",
+      "lang": "fr",
+      "category": "flight_live",
+      "answerable": false,
+      "expected": "flight_status",
+      "predicted": "documentary"
+    },
+    {
+      "id": "en_flight_delays",
+      "lang": "en",
+      "category": "flight_live",
+      "answerable": false,
+      "expected": "flight_status",
+      "predicted": "documentary"
+    },
+    {
+      "id": "ar_flight_delays",
+      "lang": "ar",
+      "category": "flight_live",
+      "answerable": false,
+      "expected": "flight_status",
+      "predicted": "documentary"
+    },
+    {
+      "id": "ar_next_bus",
+      "lang": "ar",
+      "category": "transport_live",
+      "answerable": false,
+      "expected": "documentary",
+      "predicted": "out_of_scope"
+    },
+    {
+      "id": "ar_parking_spaces",
+      "lang": "ar",
+      "category": "transport_live",
+      "answerable": false,
+      "expected": "documentary",
+      "predicted": "out_of_scope"
+    },
+    {
+      "id": "ar_security_wait",
+      "lang": "ar",
+      "category": "live_operations",
+      "answerable": false,
+      "expected": "documentary",
+      "predicted": "out_of_scope"
+    },
+    {
+      "id": "fr_weather_now",
+      "lang": "fr",
+      "category": "live_weather",
+      "answerable": false,
+      "expected": "documentary",
+      "predicted": "out_of_scope"
+    },
+    {
+      "id": "ar_park_leave",
+      "lang": "ar",
+      "category": "transport",
+      "answerable": true,
+      "expected": "documentary",
+      "predicted": "out_of_scope"
+    },
+    {
+      "id": "ar_internet",
+      "lang": "ar",
+      "category": "services",
+      "answerable": true,
+      "expected": "documentary",
+      "predicted": "out_of_scope"
+    },
+    {
+      "id": "ar_papers",
+      "lang": "ar",
+      "category": "formalites",
+      "answerable": true,
+      "expected": "documentary",
+      "predicted": "out_of_scope"
+    }
+  ],
+  "limitations": [
+    "No out-of-scope question in the benchmark: rejection of off-topic messages is not measured.",
+    "The keyword lists were written while looking at airport questions similar to these."
+  ]
+}

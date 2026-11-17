@@ -1,0 +1,789 @@
+{
+  "benchmark_id": "aga-rag-v1",
+  "dataset_description": "Initial retrieval benchmark: 30 manually authored questions, balanced across French, English and Arabic. Measures source retrieval only, not generated-answer correctness.",
+  "run_at_utc": "2026-10-10T15:34:27.145596+00:00",
+  "rag_url": "http://127.0.0.1:8002",
+  "top_k": 5,
+  "audience_filter": "voyageur",
+  "query_expansion_enabled": true,
+  "metrics": {
+    "questions": 30,
+    "hit_at_3": 1.0,
+    "mrr_at_5": 0.9055555555555556,
+    "mean_retrieval_latency_ms": 367.377,
+    "median_retrieval_latency_ms": 362.755
+  },
+  "by_language": {
+    "ar": {
+      "questions": 10,
+      "hit_at_3": 1.0,
+      "mrr_at_5": 0.8333333333333334,
+      "mean_retrieval_latency_ms": 347.129,
+      "median_retrieval_latency_ms": 361.775
+    },
+    "en": {
+      "questions": 10,
+      "hit_at_3": 1.0,
+      "mrr_at_5": 0.95,
+      "mean_retrieval_latency_ms": 353.108,
+      "median_retrieval_latency_ms": 331.745
+    },
+    "fr": {
+      "questions": 10,
+      "hit_at_3": 1.0,
+      "mrr_at_5": 0.9333333333333333,
+      "mean_retrieval_latency_ms": 401.894,
+      "median_retrieval_latency_ms": 395.325
+    }
+  },
+  "by_category": {
+    "accessibility": {
+      "questions": 3,
+      "hit_at_3": 1.0,
+      "mrr_at_5": 1.0,
+      "mean_retrieval_latency_ms": 385.6766666666667,
+      "median_retrieval_latency_ms": 362.54
+    },
+    "airport_info": {
+      "questions": 3,
+      "hit_at_3": 1.0,
+      "mrr_at_5": 0.8333333333333334,
+      "mean_retrieval_latency_ms": 375.1433333333333,
+      "median_retrieval_latency_ms": 378.5
+    },
+    "formalites": {
+      "questions": 3,
+      "hit_at_3": 1.0,
+      "mrr_at_5": 1.0,
+      "mean_retrieval_latency_ms": 333.84,
+      "median_retrieval_latency_ms": 316.25
+    },
+    "medical": {
+      "questions": 3,
+      "hit_at_3": 1.0,
+      "mrr_at_5": 1.0,
+      "mean_retrieval_latency_ms": 369.4,
+      "median_retrieval_latency_ms": 362.8
+    },
+    "services": {
+      "questions": 12,
+      "hit_at_3": 1.0,
+      "mrr_at_5": 0.9583333333333334,
+      "mean_retrieval_latency_ms": 363.6275,
+      "median_retrieval_latency_ms": 333.84000000000003
+    },
+    "transport": {
+      "questions": 6,
+      "hit_at_3": 1.0,
+      "mrr_at_5": 0.6944444444444445,
+      "mean_retrieval_latency_ms": 377.6,
+      "median_retrieval_latency_ms": 373.75
+    }
+  },
+  "cases": [
+    {
+      "id": "fr_wifi",
+      "lang": "fr",
+      "category": "services",
+      "query": "Le Wi-Fi est-il disponible à l’aéroport d’Agadir ?",
+      "expected_sources": [
+        "Internet"
+      ],
+      "retrieval_query": "Le Wi-Fi est-il disponible à l’aéroport d’Agadir ?",
+      "expected_rank": 1,
+      "hit_at_3": true,
+      "latency_ms": 451.19,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Internet.pdf",
+        "Office National des aéroports -Our Airports - Présentation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.5253880620002747,
+        0.6903954148292542,
+        0.7059833407402039
+      ]
+    },
+    {
+      "id": "fr_taxi",
+      "lang": "fr",
+      "category": "transport",
+      "query": "Où se trouve la station des taxis à l’aéroport d’Agadir ?",
+      "expected_sources": [
+        "Taxi & Bus",
+        "Taxis"
+      ],
+      "retrieval_query": "Où se trouve la station des taxis à l’aéroport d’Agadir ?",
+      "expected_rank": 1,
+      "hit_at_3": true,
+      "latency_ms": 364.51,
+      "top_sources": [
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.5433219075202942,
+        0.5798426866531372,
+        0.7046966552734375
+      ]
+    },
+    {
+      "id": "fr_documents",
+      "lang": "fr",
+      "category": "formalites",
+      "query": "Quels documents faut-il pour voyager à l’étranger depuis le Maroc ?",
+      "expected_sources": [
+        "Travel documents"
+      ],
+      "retrieval_query": "Quels documents faut-il pour voyager à l’étranger depuis le Maroc ?",
+      "expected_rank": 1,
+      "hit_at_3": true,
+      "latency_ms": 371.01,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - 8Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 3Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 4Travel documents.pdf"
+      ],
+      "top_distances": [
+        0.5426837205886841,
+        0.5489240288734436,
+        0.565833330154419
+      ]
+    },
+    {
+      "id": "fr_parking",
+      "lang": "fr",
+      "category": "transport",
+      "query": "Où peut-on stationner une voiture à l’aéroport Agadir Al Massira ?",
+      "expected_sources": [
+        "Parkings"
+      ],
+      "retrieval_query": "Où peut-on stationner une voiture à l’aéroport Agadir Al Massira ? Agadir airport car parking",
+      "expected_rank": 3,
+      "hit_at_3": true,
+      "latency_ms": 457.82,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Parkings.pdf"
+      ],
+      "top_distances": [
+        0.6217002868652344,
+        0.6456834077835083,
+        0.655820906162262
+      ]
+    },
+    {
+      "id": "fr_code_iata",
+      "lang": "fr",
+      "category": "airport_info",
+      "query": "Quel est le code IATA de l’aéroport d’Agadir Al Massira ?",
+      "expected_sources": [
+        "Présentation",
+        "AGADIR AL MASSIRA AIRPORT"
+      ],
+      "retrieval_query": "Quel est le code IATA de l’aéroport d’Agadir Al Massira ?",
+      "expected_rank": 1,
+      "hit_at_3": true,
+      "latency_ms": 365.1,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Présentation.pdf",
+        "Office National des aéroports -Nos Aéroports - 3Guide des Compagnies.pdf",
+        "Office National des aéroports -Nos Aéroports - 2Guide des Compagnies.pdf"
+      ],
+      "top_distances": [
+        0.6195952296257019,
+        0.6996164917945862,
+        0.7368501424789429
+      ]
+    },
+    {
+      "id": "fr_prayer",
+      "lang": "fr",
+      "category": "services",
+      "query": "Où se trouvent les salles de prière à l’aéroport d’Agadir ?",
+      "expected_sources": [
+        "Assistance & Facilitation"
+      ],
+      "retrieval_query": "Où se trouvent les salles de prière à l’aéroport d’Agadir ?",
+      "expected_rank": 1,
+      "hit_at_3": true,
+      "latency_ms": 466.58,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Check-in & Boarding.pdf",
+        "Office National des aéroports -Our Airports - Présentation.pdf"
+      ],
+      "top_distances": [
+        0.6625205278396606,
+        0.7536070346832275,
+        0.7893157601356506
+      ]
+    },
+    {
+      "id": "fr_wheelchair",
+      "lang": "fr",
+      "category": "accessibility",
+      "query": "Comment demander un fauteuil roulant à l’aéroport d’Agadir ?",
+      "expected_sources": [
+        "Assistance & Facilitation"
+      ],
+      "retrieval_query": "Comment demander un fauteuil roulant à l’aéroport d’Agadir ?",
+      "expected_rank": 1,
+      "hit_at_3": true,
+      "latency_ms": 433.61,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.6942567229270935,
+        0.7843872308731079,
+        0.8051076531410217
+      ]
+    },
+    {
+      "id": "fr_medical",
+      "lang": "fr",
+      "category": "medical",
+      "query": "Y a-t-il une assistance médicale d’urgence à l’aéroport d’Agadir ?",
+      "expected_sources": [
+        "Medical Assistance"
+      ],
+      "retrieval_query": "Y a-t-il une assistance médicale d’urgence à l’aéroport d’Agadir ?",
+      "expected_rank": 1,
+      "hit_at_3": true,
+      "latency_ms": 419.64,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf",
+        "Office National des aéroports -Nos Aéroports - Assistance médicale.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.5879075527191162,
+        0.6148043870925903,
+        0.7054959535598755
+      ]
+    },
+    {
+      "id": "fr_restaurants",
+      "lang": "fr",
+      "category": "services",
+      "query": "Quels cafés et restaurants se trouvent à l’aéroport d’Agadir ?",
+      "expected_sources": [
+        "Cafés & restaurants",
+        "Cafes and restaurants"
+      ],
+      "retrieval_query": "Quels cafés et restaurants se trouvent à l’aéroport d’Agadir ?",
+      "expected_rank": 1,
+      "hit_at_3": true,
+      "latency_ms": 363.65,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Cafes and restaurants.pdf",
+        "Office National des aéroports -Nos Aéroports - Cafés & restaurants.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.6468642950057983,
+        0.6479716300964355,
+        0.6999027729034424
+      ]
+    },
+    {
+      "id": "fr_boutiques",
+      "lang": "fr",
+      "category": "services",
+      "query": "Quelles boutiques sont présentes dans l’aéroport d’Agadir ?",
+      "expected_sources": [
+        "Boutiques"
+      ],
+      "retrieval_query": "Quelles boutiques sont présentes dans l’aéroport d’Agadir ?",
+      "expected_rank": 1,
+      "hit_at_3": true,
+      "latency_ms": 325.83,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Boutiques.pdf",
+        "Office National des aéroports -Nos Aéroports - Boutiques.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.607279896736145,
+        0.6536379456520081,
+        0.6766408085823059
+      ]
+    },
+    {
+      "id": "en_wifi",
+      "lang": "en",
+      "category": "services",
+      "query": "Does Agadir Al Massira Airport provide Wi-Fi access?",
+      "expected_sources": [
+        "Internet"
+      ],
+      "retrieval_query": "Does Agadir Al Massira Airport provide Wi-Fi access?",
+      "expected_rank": 1,
+      "hit_at_3": true,
+      "latency_ms": 331.87,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Internet.pdf",
+        "Office National des aéroports -Our Airports - Présentation.pdf",
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf"
+      ],
+      "top_distances": [
+        0.5370263457298279,
+        0.6912964582443237,
+        0.7368403673171997
+      ]
+    },
+    {
+      "id": "en_taxi",
+      "lang": "en",
+      "category": "transport",
+      "query": "Where is the taxi stand at Agadir Airport?",
+      "expected_sources": [
+        "Taxi & Bus",
+        "Taxis"
+      ],
+      "retrieval_query": "Where is the taxi stand at Agadir Airport?",
+      "expected_rank": 1,
+      "hit_at_3": true,
+      "latency_ms": 294.66,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.5828572511672974,
+        0.5897273421287537,
+        0.6800979375839233
+      ]
+    },
+    {
+      "id": "en_documents",
+      "lang": "en",
+      "category": "formalites",
+      "query": "Which travel documents are needed when leaving Morocco?",
+      "expected_sources": [
+        "Travel documents"
+      ],
+      "retrieval_query": "Which travel documents are needed when leaving Morocco?",
+      "expected_rank": 1,
+      "hit_at_3": true,
+      "latency_ms": 316.25,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - 8Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 3Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 7Travel documents.pdf"
+      ],
+      "top_distances": [
+        0.4260469377040863,
+        0.5112370252609253,
+        0.5144613981246948
+      ]
+    },
+    {
+      "id": "en_parking",
+      "lang": "en",
+      "category": "transport",
+      "query": "Where can I park my car at Agadir Al Massira Airport?",
+      "expected_sources": [
+        "Parkings"
+      ],
+      "retrieval_query": "Where can I park my car at Agadir Al Massira Airport?",
+      "expected_rank": 1,
+      "hit_at_3": true,
+      "latency_ms": 382.99,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf"
+      ],
+      "top_distances": [
+        0.6665735244750977,
+        0.6786767840385437,
+        0.6805734634399414
+      ]
+    },
+    {
+      "id": "en_code_iata",
+      "lang": "en",
+      "category": "airport_info",
+      "query": "What is the IATA code of Agadir Al Massira Airport?",
+      "expected_sources": [
+        "Présentation",
+        "AGADIR AL MASSIRA AIRPORT"
+      ],
+      "retrieval_query": "What is the IATA code of Agadir Al Massira Airport?",
+      "expected_rank": 1,
+      "hit_at_3": true,
+      "latency_ms": 378.5,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Présentation.pdf",
+        "Office National des aéroports -Nos Aéroports - 3Guide des Compagnies.pdf",
+        "Office National des aéroports -Nos Aéroports - Guide des Compagnies.pdf"
+      ],
+      "top_distances": [
+        0.5967210531234741,
+        0.7035841345787048,
+        0.7356178164482117
+      ]
+    },
+    {
+      "id": "en_prayer",
+      "lang": "en",
+      "category": "services",
+      "query": "Where are the prayer rooms at Agadir Airport?",
+      "expected_sources": [
+        "Assistance & Facilitation"
+      ],
+      "retrieval_query": "Where are the prayer rooms at Agadir Airport?",
+      "expected_rank": 1,
+      "hit_at_3": true,
+      "latency_ms": 287.18,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Check-in & Boarding.pdf",
+        "Office National des aéroports -Our Airports - Présentation.pdf"
+      ],
+      "top_distances": [
+        0.664812445640564,
+        0.7681336402893066,
+        0.8168407678604126
+      ]
+    },
+    {
+      "id": "en_wheelchair",
+      "lang": "en",
+      "category": "accessibility",
+      "query": "How can a passenger request a wheelchair at Agadir Airport?",
+      "expected_sources": [
+        "Assistance & Facilitation"
+      ],
+      "retrieval_query": "How can a passenger request a wheelchair at Agadir Airport?",
+      "expected_rank": 1,
+      "hit_at_3": true,
+      "latency_ms": 362.54,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Check-in & Boarding.pdf",
+        "Office National des aéroports -Our Airports - Présentation.pdf"
+      ],
+      "top_distances": [
+        0.6645659804344177,
+        0.7393263578414917,
+        0.7936734557151794
+      ]
+    },
+    {
+      "id": "en_medical",
+      "lang": "en",
+      "category": "medical",
+      "query": "Is emergency medical assistance available at Agadir Airport?",
+      "expected_sources": [
+        "Medical Assistance"
+      ],
+      "retrieval_query": "Is emergency medical assistance available at Agadir Airport?",
+      "expected_rank": 1,
+      "hit_at_3": true,
+      "latency_ms": 325.76,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Nos Aéroports - Assistance médicale.pdf"
+      ],
+      "top_distances": [
+        0.5645760297775269,
+        0.6498981714248657,
+        0.6618998646736145
+      ]
+    },
+    {
+      "id": "en_restaurants",
+      "lang": "en",
+      "category": "services",
+      "query": "What cafés and restaurants are available at Agadir Airport?",
+      "expected_sources": [
+        "Cafés & restaurants",
+        "Cafes and restaurants"
+      ],
+      "retrieval_query": "What cafés and restaurants are available at Agadir Airport?",
+      "expected_rank": 1,
+      "hit_at_3": true,
+      "latency_ms": 519.71,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Cafes and restaurants.pdf",
+        "Office National des aéroports -Nos Aéroports - Cafés & restaurants.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.6290955543518066,
+        0.6583887934684753,
+        0.6675024032592773
+      ]
+    },
+    {
+      "id": "en_boutiques",
+      "lang": "en",
+      "category": "services",
+      "query": "Which shops can passengers find at Agadir Airport?",
+      "expected_sources": [
+        "Boutiques"
+      ],
+      "retrieval_query": "Which shops can passengers find at Agadir Airport?",
+      "expected_rank": 2,
+      "hit_at_3": true,
+      "latency_ms": 331.62,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Boutiques.pdf",
+        "Office National des aéroports -Nos Aéroports - Boutiques.pdf"
+      ],
+      "top_distances": [
+        0.6444861888885498,
+        0.6768594980239868,
+        0.7475111484527588
+      ]
+    },
+    {
+      "id": "ar_wifi",
+      "lang": "ar",
+      "category": "services",
+      "query": "هل تتوفر خدمة الواي فاي في مطار أكادير المسيرة؟",
+      "expected_sources": [
+        "Internet"
+      ],
+      "retrieval_query": "هل تتوفر خدمة الواي فاي في مطار أكادير المسيرة؟",
+      "expected_rank": 1,
+      "hit_at_3": true,
+      "latency_ms": 362.67,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Internet.pdf",
+        "Office National des aéroports -Our Airports - Présentation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.7168323397636414,
+        0.8101922869682312,
+        0.8336806297302246
+      ]
+    },
+    {
+      "id": "ar_taxi",
+      "lang": "ar",
+      "category": "transport",
+      "query": "أين يوجد موقف سيارات الأجرة في مطار أكادير؟",
+      "expected_sources": [
+        "Taxi & Bus",
+        "Taxis"
+      ],
+      "retrieval_query": "أين يوجد موقف سيارات الأجرة في مطار أكادير؟ Agadir airport car parking",
+      "expected_rank": 2,
+      "hit_at_3": true,
+      "latency_ms": 362.71,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf"
+      ],
+      "top_distances": [
+        0.6434153318405151,
+        0.6620861291885376,
+        0.6935478448867798
+      ]
+    },
+    {
+      "id": "ar_documents",
+      "lang": "ar",
+      "category": "formalites",
+      "query": "ما هي وثائق السفر المطلوبة لمغادرة المغرب؟",
+      "expected_sources": [
+        "Travel documents"
+      ],
+      "retrieval_query": "ما هي وثائق السفر المطلوبة لمغادرة المغرب؟",
+      "expected_rank": 1,
+      "hit_at_3": true,
+      "latency_ms": 314.26,
+      "top_sources": [
+        "Office National des aéroports -I am passenger - 8Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 5Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 7Travel documents.pdf"
+      ],
+      "top_distances": [
+        0.6616884469985962,
+        0.7186941504478455,
+        0.7190648913383484
+      ]
+    },
+    {
+      "id": "ar_parking",
+      "lang": "ar",
+      "category": "transport",
+      "query": "أين يمكنني ركن سيارتي في مطار أكادير المسيرة؟",
+      "expected_sources": [
+        "Parkings"
+      ],
+      "retrieval_query": "أين يمكنني ركن سيارتي في مطار أكادير المسيرة؟ Agadir airport car parking",
+      "expected_rank": 3,
+      "hit_at_3": true,
+      "latency_ms": 402.91,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -Our Airports - Parkings.pdf"
+      ],
+      "top_distances": [
+        0.6771226525306702,
+        0.6798559427261353,
+        0.6950429081916809
+      ]
+    },
+    {
+      "id": "ar_code_iata",
+      "lang": "ar",
+      "category": "airport_info",
+      "query": "ما هو رمز إياتا لمطار أكادير المسيرة؟",
+      "expected_sources": [
+        "Présentation",
+        "AGADIR AL MASSIRA AIRPORT"
+      ],
+      "retrieval_query": "ما هو رمز إياتا لمطار أكادير المسيرة؟ Agadir airport IATA code",
+      "expected_rank": 2,
+      "hit_at_3": true,
+      "latency_ms": 381.83,
+      "top_sources": [
+        "Office National des aéroports -Nos Aéroports - 3Guide des Compagnies.pdf",
+        "Office National des aéroports -Our Airports - Présentation.pdf",
+        "Office National des aéroports -Nos Aéroports - 4Guide des Compagnies.pdf"
+      ],
+      "top_distances": [
+        0.6848755478858948,
+        0.6896457076072693,
+        0.7072203755378723
+      ]
+    },
+    {
+      "id": "ar_prayer",
+      "lang": "ar",
+      "category": "services",
+      "query": "أين توجد قاعات الصلاة في مطار أكادير؟",
+      "expected_sources": [
+        "Assistance & Facilitation"
+      ],
+      "retrieval_query": "أين توجد قاعات الصلاة في مطار أكادير؟",
+      "expected_rank": 1,
+      "hit_at_3": true,
+      "latency_ms": 286.83,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Check-in & Boarding.pdf",
+        "Office National des aéroports -Our Airports - Présentation.pdf"
+      ],
+      "top_distances": [
+        0.8026424050331116,
+        0.8980549573898315,
+        0.9264227747917175
+      ]
+    },
+    {
+      "id": "ar_wheelchair",
+      "lang": "ar",
+      "category": "accessibility",
+      "query": "كيف أطلب كرسياً متحركاً في مطار أكادير؟",
+      "expected_sources": [
+        "Assistance & Facilitation"
+      ],
+      "retrieval_query": "كيف أطلب كرسياً متحركاً في مطار أكادير؟",
+      "expected_rank": 1,
+      "hit_at_3": true,
+      "latency_ms": 360.88,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -Our Airports - Check-in & Boarding.pdf"
+      ],
+      "top_distances": [
+        0.7833393812179565,
+        0.8095642924308777,
+        0.8415772914886475
+      ]
+    },
+    {
+      "id": "ar_medical",
+      "lang": "ar",
+      "category": "medical",
+      "query": "هل توجد مساعدة طبية طارئة في مطار أكادير؟",
+      "expected_sources": [
+        "Medical Assistance"
+      ],
+      "retrieval_query": "هل توجد مساعدة طبية طارئة في مطار أكادير؟",
+      "expected_rank": 1,
+      "hit_at_3": true,
+      "latency_ms": 362.8,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf",
+        "Office National des aéroports -Nos Aéroports - Assistance médicale.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.7253720164299011,
+        0.7415663003921509,
+        0.780341625213623
+      ]
+    },
+    {
+      "id": "ar_restaurants",
+      "lang": "ar",
+      "category": "services",
+      "query": "ما هي المقاهي والمطاعم الموجودة في مطار أكادير؟",
+      "expected_sources": [
+        "Cafés & restaurants",
+        "Cafes and restaurants"
+      ],
+      "retrieval_query": "ما هي المقاهي والمطاعم الموجودة في مطار أكادير؟",
+      "expected_rank": 1,
+      "hit_at_3": true,
+      "latency_ms": 335.81,
+      "top_sources": [
+        "Office National des aéroports -Nos Aéroports - Cafés & restaurants.pdf",
+        "Office National des aéroports -Our Airports - Cafes and restaurants.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.7491382360458374,
+        0.7614185214042664,
+        0.8334705233573914
+      ]
+    },
+    {
+      "id": "ar_boutiques",
+      "lang": "ar",
+      "category": "services",
+      "query": "ما هي المحلات التجارية الموجودة في مطار أكادير؟",
+      "expected_sources": [
+        "Boutiques"
+      ],
+      "retrieval_query": "ما هي المحلات التجارية الموجودة في مطار أكادير؟",
+      "expected_rank": 1,
+      "hit_at_3": true,
+      "latency_ms": 300.59,
+      "top_sources": [
+        "Office National des aéroports -Our Airports - Boutiques.pdf",
+        "Office National des aéroports -Nos Aéroports - Boutiques.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "top_distances": [
+        0.7505865097045898,
+        0.7535046339035034,
+        0.8513767123222351
+      ]
+    }
+  ],
+  "limitations": [
+    "Measures retrieval of an expected source, not answer factuality or citation correctness.",
+    "The 30 manually authored questions are an initial pilot, not a statistically representative benchmark.",
+    "Expected source labels require domain review before this result is treated as final."
+  ]
+}

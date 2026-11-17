@@ -1,0 +1,186 @@
+{
+  "holdout": "aga-router-holdout-v1",
+  "kind": "confusable",
+  "run_at_utc": "2026-11-08T17:28:32.190808+00:00",
+  "rows": [
+    {
+      "id": "ho_fr_off_04",
+      "lang": "fr",
+      "question": "Le bus de mon quartier est encore en retard ce matin, c'est normal ?",
+      "http_status": 200,
+      "engine": "gemini",
+      "sources": [
+        "Nos Aéroports - Taxi & Bus.pdf"
+      ],
+      "reply": "Je suis spécialisé dans les informations concernant l'aéroport Agadir Al Massira. Votre question sur le bus de votre quartier ne relève pas de mon périmètre.\n\nN'hésitez pas si vous avez des questions sur les services de transport depuis ou vers l'aéroport d'Agadir Al Massira !",
+      "latency_ms": 6571
+    },
+    {
+      "id": "ho_fr_off_05",
+      "lang": "fr",
+      "question": "Quel temps fera-t-il à Marrakech ce week-end ?",
+      "http_status": 200,
+      "engine": "gemini",
+      "sources": [
+        "I am passenger 2- Airport network.pdf",
+        "I am passenger - Airport network.pdf"
+      ],
+      "reply": "Je suis spécialisé dans les informations concernant l'aéroport Agadir Al Massira (AGA). Je ne peux malheureusement pas vous fournir de prévisions météorologiques pour Marrakech.\n\nSi vous avez d'autres questions sur l'aéroport d'Agadir, n'hésitez pas !",
+      "latency_ms": 1767
+    },
+    {
+      "id": "ho_fr_off_06",
+      "lang": "fr",
+      "question": "Comment réserver un hôtel pas cher à Taghazout ?",
+      "http_status": 200,
+      "engine": "groq",
+      "sources": [
+        "Our Airports - Car rent.pdf",
+        "Our Airports - Taxis.pdf",
+        "I am passenger3 - Airport network.pdf"
+      ],
+      "reply": "Je suis spécialisé dans les informations relatives à l’aéroport d’Agadir‑Al Massira (vols, services, transports, formalités, contacts, etc.).  \n\nJe ne dispose malheureusement pas d’informations sur la réservation d’hôtels à Taghazout.  \n\nSi vous avez une question concernant l’aéroport d’Agadir, n’hésitez pas à la reformuler !",
+      "latency_ms": 1874
+    },
+    {
+      "id": "ho_fr_off_08",
+      "lang": "fr",
+      "question": "Combien coûte un abonnement de salle de sport à Agadir ?",
+      "http_status": 200,
+      "engine": "groq",
+      "sources": [
+        "Our Airports - Discovery.pdf",
+        "Our Airports - Parkings.pdf",
+        "Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "reply": "Je suis spécialisé dans les informations relatives à l'aéroport d'Agadir Al Massira (vols, services aéroportuaires, accès, formalités, etc.). Le coût d’un abonnement à une salle de sport à Agadir ne relève pas de ce domaine.  \n\nJe vous invite à reformuler votre question en lien avec l’aéroport ou les services qu’il propose.",
+      "latency_ms": 1559
+    },
+    {
+      "id": "ho_fr_off_10",
+      "lang": "fr",
+      "question": "Où acheter un téléphone d'occasion en ville ?",
+      "http_status": 200,
+      "engine": "groq",
+      "sources": [
+        "Our Airports - Phone.pdf",
+        "Nos Aéroports - Téléphone.pdf",
+        "Our Airports - Call center.pdf"
+      ],
+      "reply": "Je suis spécialisé dans les informations relatives à l'aéroport Agadir Al Massira (vols, services, accès, formalités, contacts, etc.). Votre question porte sur l'achat d'un téléphone d'occasion en ville, ce qui ne relève pas de mon domaine d'expertise.  \n\nJe vous invite à reformuler votre demande en lien avec l'aéroport — par exemple : informations sur les cabines téléphoniques, le centre d’appels ou tout autre service disponible à l’aéroport.",
+      "latency_ms": 1759
+    },
+    {
+      "id": "ho_en_off_04",
+      "lang": "en",
+      "question": "How do I reset my home Wi-Fi router?",
+      "http_status": 200,
+      "engine": "no_result",
+      "sources": [],
+      "reply": "I don't have that information right now. Please contact the airport directly to be sure.",
+      "latency_ms": 258
+    },
+    {
+      "id": "ho_en_off_05",
+      "lang": "en",
+      "question": "Which train goes from Casablanca to Rabat in the morning?",
+      "http_status": 200,
+      "engine": "groq",
+      "sources": [
+        "I am passenger3 - Airport network.pdf",
+        "I am passenger - Airport network.pdf"
+      ],
+      "reply": "I’m sorry, but I can only provide information related to Agadir Al Massira Airport (AGA). If you have a question about flights, services, transport, or other matters concerning that airport, feel free to ask!",
+      "latency_ms": 1480
+    },
+    {
+      "id": "ho_en_off_06",
+      "lang": "en",
+      "question": "What is the best beach for surfing near Agadir?",
+      "http_status": 200,
+      "engine": "groq",
+      "sources": [
+        "Our Airports - Discovery.pdf",
+        "Our Airports - Présentation.pdf",
+        "Our Airports - Taxis.pdf"
+      ],
+      "reply": "I’m sorry, but I can only provide information related to Agadir Al Massira Airport (flights, services, transport, etc.). If you have a question about the airport, feel free to ask!",
+      "latency_ms": 1329
+    },
+    {
+      "id": "ho_en_off_08",
+      "lang": "en",
+      "question": "Can I park my car on the street overnight in my neighbourhood?",
+      "http_status": 200,
+      "engine": "groq",
+      "sources": [
+        "Our Airports - Parkings.pdf"
+      ],
+      "reply": "I’m sorry, but I can only help with questions related to Agadir Al Massira Airport (flights, airport services, parking at the airport, transport, travel formalities, etc.). If you have a question about the airport, feel free to ask!",
+      "latency_ms": 1714
+    },
+    {
+      "id": "ho_en_off_10",
+      "lang": "en",
+      "question": "What time does the post office in my town close?",
+      "http_status": 200,
+      "engine": "groq",
+      "sources": [
+        "Our Airports - Change & poste.pdf"
+      ],
+      "reply": "I’m sorry, but I can only provide information related to Agadir Al Massira Airport. If you have a question about services, flights, transport, or other details concerning this airport, please let me know!",
+      "latency_ms": 1594
+    },
+    {
+      "id": "ho_ar_off_04",
+      "lang": "ar",
+      "question": "الحافلة في حيّنا تتأخر كل صباح، ماذا أفعل؟",
+      "http_status": 200,
+      "engine": "no_result",
+      "sources": [],
+      "reply": "ليست لدي هذه المعلومة حاليًا. يرجى التواصل مباشرة مع المطار للتأكد.",
+      "latency_ms": 241
+    },
+    {
+      "id": "ho_ar_off_05",
+      "lang": "ar",
+      "question": "كيف سيكون الطقس في الرباط غدًا؟",
+      "http_status": 200,
+      "engine": "groq",
+      "sources": [
+        "I am passenger3 - Airport network.pdf",
+        "I am passenger - How does an airplane fly_.pdf"
+      ],
+      "reply": "عذرًا، أنا مختص في تقديم المعلومات المتعلقة بمطار أغادير المسيرة فقط. إذا كان لديك سؤال حول رحلات، الخدمات أو أي تفاصيل أخرى تخص هذا المطار، فأنا هنا للمساعدة. يرجى إعادة صياغة السؤال ضمن هذا الإطار.",
+      "latency_ms": 1589
+    },
+    {
+      "id": "ho_ar_off_06",
+      "lang": "ar",
+      "question": "ما أفضل فندق قريب من شاطئ أكادير؟",
+      "http_status": 200,
+      "engine": "groq",
+      "sources": [
+        "Our Airports - Discovery.pdf",
+        "Nos Aéroports - 2Guide des Compagnies.pdf",
+        "Nos Aéroports - 4Guide des Compagnies.pdf"
+      ],
+      "reply": "عذراً، أنا مختص فقط في تقديم المعلومات المتعلقة بمطار أكادير المسيرة (الرحلات، الخدمات داخل المطار، المواصلات، الإجراءات الجمركية وغيرها). إذا كان لديك سؤال يتعلق بالمطار، فأنا سعيد بمساعدتك. يرجى إعادة صياغة السؤال ضمن هذا الإطار.",
+      "latency_ms": 1541
+    },
+    {
+      "id": "ho_ar_off_09",
+      "lang": "ar",
+      "question": "أين أجد صيدلية مفتوحة ليلًا في المدينة؟",
+      "http_status": 200,
+      "engine": "groq",
+      "sources": [
+        "Our Airports - Medical Assistance.pdf",
+        "Nos Aéroports - Assistance médicale.pdf",
+        "Our Airports - Taxis.pdf"
+      ],
+      "reply": "أعتذر، لكنني متخصص في تقديم المعلومات المتعلقة بمطار أغادير المسيرة فقط (مثل الرحلات، الخدمات داخل المطار، المواصلات، الإجراءات الجمركية وغيرها). لا أستطيع المساعدة في العثور على صيدلية مفتوحة ليلًا في المدينة. إذا كان لديك سؤال يتعلق بالمطار، فأنا هنا للمساعدة.",
+      "latency_ms": 1592
+    }
+  ]
+}

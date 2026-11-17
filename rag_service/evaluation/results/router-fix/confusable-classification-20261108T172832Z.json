@@ -1,0 +1,116 @@
+{
+  "source_run": "confusable-chat-20261108T172832Z.json",
+  "classified_by": "coding assistant (manual reading of each reply), 2026-11-08",
+  "labels": {
+    "abstention_correcte": "declines or says it has no information, no fact given",
+    "hors_role_infos_aeroport": "answers with airport information unrelated to the question",
+    "inventee": "states a fact not supported by the sources"
+  },
+  "counts": {
+    "abstention_correcte": 14,
+    "hors_role_infos_aeroport": 0,
+    "inventee": 0,
+    "llm_calls": 12,
+    "replies_with_unrelated_sources": 12
+  },
+  "rows": [
+    {
+      "id": "ho_fr_off_04",
+      "engine": "gemini",
+      "label": "abstention_correcte",
+      "unrelated_sources_shown": true,
+      "note": "LLM refusal restating the airport scope; no airport fact given, nothing invented"
+    },
+    {
+      "id": "ho_fr_off_05",
+      "engine": "gemini",
+      "label": "abstention_correcte",
+      "unrelated_sources_shown": true,
+      "note": "LLM refusal restating the airport scope; no airport fact given, nothing invented"
+    },
+    {
+      "id": "ho_fr_off_06",
+      "engine": "groq",
+      "label": "abstention_correcte",
+      "unrelated_sources_shown": true,
+      "note": "LLM refusal restating the airport scope; no airport fact given, nothing invented"
+    },
+    {
+      "id": "ho_fr_off_08",
+      "engine": "groq",
+      "label": "abstention_correcte",
+      "unrelated_sources_shown": true,
+      "note": "LLM refusal restating the airport scope; no airport fact given, nothing invented"
+    },
+    {
+      "id": "ho_fr_off_10",
+      "engine": "groq",
+      "label": "abstention_correcte",
+      "unrelated_sources_shown": true,
+      "note": "refuses, then suggests airport phone services (call center) as an alternative; no invented fact"
+    },
+    {
+      "id": "ho_en_off_04",
+      "engine": "no_result",
+      "label": "abstention_correcte",
+      "unrelated_sources_shown": false,
+      "note": "fixed no_result message; safe but 'contact the airport' is odd for a home router"
+    },
+    {
+      "id": "ho_en_off_05",
+      "engine": "groq",
+      "label": "abstention_correcte",
+      "unrelated_sources_shown": true,
+      "note": "LLM refusal restating the airport scope; no airport fact given, nothing invented"
+    },
+    {
+      "id": "ho_en_off_06",
+      "engine": "groq",
+      "label": "abstention_correcte",
+      "unrelated_sources_shown": true,
+      "note": "LLM refusal restating the airport scope; no airport fact given, nothing invented"
+    },
+    {
+      "id": "ho_en_off_08",
+      "engine": "groq",
+      "label": "abstention_correcte",
+      "unrelated_sources_shown": true,
+      "note": "LLM refusal restating the airport scope; no airport fact given, nothing invented"
+    },
+    {
+      "id": "ho_en_off_10",
+      "engine": "groq",
+      "label": "abstention_correcte",
+      "unrelated_sources_shown": true,
+      "note": "LLM refusal restating the airport scope; no airport fact given, nothing invented"
+    },
+    {
+      "id": "ho_ar_off_04",
+      "engine": "no_result",
+      "label": "abstention_correcte",
+      "unrelated_sources_shown": false,
+      "note": "fixed no_result message; safe but odd wording for a neighbourhood bus"
+    },
+    {
+      "id": "ho_ar_off_05",
+      "engine": "groq",
+      "label": "abstention_correcte",
+      "unrelated_sources_shown": true,
+      "note": "LLM refusal restating the airport scope; no airport fact given, nothing invented"
+    },
+    {
+      "id": "ho_ar_off_06",
+      "engine": "groq",
+      "label": "abstention_correcte",
+      "unrelated_sources_shown": true,
+      "note": "LLM refusal restating the airport scope; no airport fact given, nothing invented"
+    },
+    {
+      "id": "ho_ar_off_09",
+      "engine": "groq",
+      "label": "abstention_correcte",
+      "unrelated_sources_shown": true,
+      "note": "LLM refusal restating the airport scope; no airport fact given, nothing invented"
+    }
+  ]
+}

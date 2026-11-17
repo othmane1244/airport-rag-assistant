@@ -1,0 +1,2992 @@
+{
+  "run_at_utc": "2026-11-08T13:07:46.812127+00:00",
+  "audience": "voyageur",
+  "pdfs": 50,
+  "overlap": 150,
+  "query_expansion": true,
+  "top_k": 5,
+  "mistral_ocr": false,
+  "main_index_passages_for_these_pdfs": 73,
+  "sizes": {
+    "1200": {
+      "collection": "exp_chunk_1200_150",
+      "passages": 60,
+      "mean_passage_chars": 713,
+      "max_passage_chars": 1198,
+      "metrics": {
+        "answerable_questions": 120,
+        "hit_at_3": 0.9083333333333333,
+        "mrr_at_5": 0.7766666666666667,
+        "required_source_recall_at_5": 0.8863636363636364,
+        "median_latency_ms": 18.9
+      },
+      "by_language": {
+        "fr": {
+          "answerable_questions": 40,
+          "hit_at_3": 0.925,
+          "mrr_at_5": 0.7833333333333333,
+          "required_source_recall_at_5": 0.8863636363636364,
+          "median_latency_ms": 19.6
+        },
+        "en": {
+          "answerable_questions": 40,
+          "hit_at_3": 0.95,
+          "mrr_at_5": 0.8175000000000001,
+          "required_source_recall_at_5": 0.9318181818181818,
+          "median_latency_ms": 18.0
+        },
+        "ar": {
+          "answerable_questions": 40,
+          "hit_at_3": 0.85,
+          "mrr_at_5": 0.7291666666666667,
+          "required_source_recall_at_5": 0.8409090909090909,
+          "median_latency_ms": 19.4
+        }
+      },
+      "cases": [
+        {
+          "id": "fr_parking",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 855.7540999900084
+        },
+        {
+          "id": "en_parking",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 138.99159998982213
+        },
+        {
+          "id": "ar_parking",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 18.787899985909462
+        },
+        {
+          "id": "fr_taxi",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 21.19109997875057
+        },
+        {
+          "id": "en_taxi",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 21.868799987714738
+        },
+        {
+          "id": "ar_taxi",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 18.81649999995716
+        },
+        {
+          "id": "fr_taxi_hours",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 19.02820001123473
+        },
+        {
+          "id": "en_taxi_hours",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 19.517399981850758
+        },
+        {
+          "id": "ar_taxi_hours",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 3,
+          "expected_group_ranks": [
+            3
+          ],
+          "latency_ms": 23.134299990488216
+        },
+        {
+          "id": "fr_taxi_fare",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 3,
+          "expected_group_ranks": [
+            3
+          ],
+          "latency_ms": 26.780399988638237
+        },
+        {
+          "id": "en_taxi_fare",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 23.413400020217523
+        },
+        {
+          "id": "ar_taxi_fare",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 3,
+          "expected_group_ranks": [
+            3
+          ],
+          "latency_ms": 18.405200011329725
+        },
+        {
+          "id": "fr_bus_stops",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 21.526900003664196
+        },
+        {
+          "id": "en_bus_stops",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 5,
+          "expected_group_ranks": [
+            5
+          ],
+          "latency_ms": 16.018299997085705
+        },
+        {
+          "id": "ar_bus_stops",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 17.001700005494058
+        },
+        {
+          "id": "fr_rental",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 18.4667999856174
+        },
+        {
+          "id": "en_rental",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 15.826800023205578
+        },
+        {
+          "id": "ar_rental",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": null,
+          "expected_group_ranks": [
+            null
+          ],
+          "latency_ms": 15.491900005144998
+        },
+        {
+          "id": "fr_wifi",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 19.403399986913428
+        },
+        {
+          "id": "en_wifi",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 16.342399991117418
+        },
+        {
+          "id": "ar_wifi",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 15.141399984713644
+        },
+        {
+          "id": "fr_medical",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 19.747399986954406
+        },
+        {
+          "id": "en_medical",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 19.99249999062158
+        },
+        {
+          "id": "ar_medical",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 19.813899998553097
+        },
+        {
+          "id": "fr_prayer",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 17.05789999687113
+        },
+        {
+          "id": "en_prayer",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 20.492699986789376
+        },
+        {
+          "id": "ar_prayer",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 18.379699991783127
+        },
+        {
+          "id": "fr_wheelchair",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 21.44040001439862
+        },
+        {
+          "id": "en_wheelchair",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 16.964899987215176
+        },
+        {
+          "id": "ar_wheelchair",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 16.787400003522635
+        },
+        {
+          "id": "fr_accessible_toilets",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 19.06370001961477
+        },
+        {
+          "id": "en_accessible_toilets",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 18.38839999982156
+        },
+        {
+          "id": "ar_accessible_toilets",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 21.039799990830943
+        },
+        {
+          "id": "fr_trolleys",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 17.829899996286258
+        },
+        {
+          "id": "en_trolleys",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 15.382800018414855
+        },
+        {
+          "id": "ar_trolleys",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 20.04920001490973
+        },
+        {
+          "id": "fr_play_area",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 16.23680000193417
+        },
+        {
+          "id": "en_play_area",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 22.190899995621294
+        },
+        {
+          "id": "ar_play_area",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 15.989000006811693
+        },
+        {
+          "id": "fr_smoking",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 17.85199998994358
+        },
+        {
+          "id": "en_smoking",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 15.65180000034161
+        },
+        {
+          "id": "ar_smoking",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 15.053900016937405
+        },
+        {
+          "id": "fr_food",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 3,
+          "expected_group_ranks": [
+            3
+          ],
+          "latency_ms": 15.155500004766509
+        },
+        {
+          "id": "en_food",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 3,
+          "expected_group_ranks": [
+            3
+          ],
+          "latency_ms": 16.074999992270023
+        },
+        {
+          "id": "ar_food",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 16.491200018208474
+        },
+        {
+          "id": "fr_shops",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 15.44129999820143
+        },
+        {
+          "id": "en_shops",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 15.44879999710247
+        },
+        {
+          "id": "ar_shops",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 15.033299976494163
+        },
+        {
+          "id": "fr_iata",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 17.465399985667318
+        },
+        {
+          "id": "en_iata",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 16.5551999816671
+        },
+        {
+          "id": "ar_iata",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 19.020399980945513
+        },
+        {
+          "id": "fr_call_center",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 17.652499984251335
+        },
+        {
+          "id": "en_call_center",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 16.153400007169694
+        },
+        {
+          "id": "ar_call_center",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 15.759300003992394
+        },
+        {
+          "id": "fr_checkin",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": null,
+          "expected_group_ranks": [
+            null
+          ],
+          "latency_ms": 18.669999990379438
+        },
+        {
+          "id": "en_checkin",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 17.36160001019016
+        },
+        {
+          "id": "ar_checkin",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": null,
+          "expected_group_ranks": [
+            null
+          ],
+          "latency_ms": 17.87999999942258
+        },
+        {
+          "id": "fr_travel_docs",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 16.498799988767132
+        },
+        {
+          "id": "en_travel_docs",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 14.694100013002753
+        },
+        {
+          "id": "ar_travel_docs",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 19.63140000589192
+        },
+        {
+          "id": "fr_city_access",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1,
+            1
+          ],
+          "latency_ms": 21.06239998829551
+        },
+        {
+          "id": "en_city_access",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1,
+            1
+          ],
+          "latency_ms": 26.77550000953488
+        },
+        {
+          "id": "ar_city_access",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1,
+            1
+          ],
+          "latency_ms": 19.439000025158748
+        },
+        {
+          "id": "fr_parking_info",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 25.845700001809746
+        },
+        {
+          "id": "en_parking_info",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 24.589200009359047
+        },
+        {
+          "id": "ar_parking_info",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 22.769799979869276
+        },
+        {
+          "id": "fr_departure",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": null,
+          "expected_group_ranks": [
+            null
+          ],
+          "latency_ms": 19.984399987151846
+        },
+        {
+          "id": "en_departure",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 20.885000005364418
+        },
+        {
+          "id": "ar_departure",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": null,
+          "expected_group_ranks": [
+            null
+          ],
+          "latency_ms": 21.522299997741356
+        },
+        {
+          "id": "fr_prm",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 21.779199974844232
+        },
+        {
+          "id": "en_prm",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 24.44340000511147
+        },
+        {
+          "id": "ar_prm",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 22.524200001498684
+        },
+        {
+          "id": "fr_emergency",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 24.727400013944134
+        },
+        {
+          "id": "en_emergency",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 18.148599978303537
+        },
+        {
+          "id": "ar_emergency",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 23.210100014694035
+        },
+        {
+          "id": "fr_info_contact",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 3,
+          "expected_group_ranks": [
+            3,
+            null
+          ],
+          "latency_ms": 20.094500010600314
+        },
+        {
+          "id": "en_info_contact",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 3,
+          "expected_group_ranks": [
+            3,
+            null
+          ],
+          "latency_ms": 16.3569999858737
+        },
+        {
+          "id": "ar_info_contact",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2,
+            null
+          ],
+          "latency_ms": 20.672300015576184
+        },
+        {
+          "id": "fr_rental_contacts",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 23.756799986585975
+        },
+        {
+          "id": "en_rental_contacts",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 17.25019997684285
+        },
+        {
+          "id": "ar_rental_contacts",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": null,
+          "expected_group_ranks": [
+            null
+          ],
+          "latency_ms": 21.54270000755787
+        },
+        {
+          "id": "fr_food_shops",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 3,
+          "expected_group_ranks": [
+            null,
+            3
+          ],
+          "latency_ms": 17.812700010836124
+        },
+        {
+          "id": "en_food_shops",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 3,
+          "expected_group_ranks": [
+            3,
+            4
+          ],
+          "latency_ms": 17.92870002100244
+        },
+        {
+          "id": "ar_food_shops",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            4,
+            2
+          ],
+          "latency_ms": 21.898599981795996
+        },
+        {
+          "id": "fr_currency_post",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 16.21909998357296
+        },
+        {
+          "id": "en_currency_post",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 18.547199986642227
+        },
+        {
+          "id": "ar_currency_post",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": null,
+          "expected_group_ranks": [
+            null
+          ],
+          "latency_ms": 18.56739999493584
+        },
+        {
+          "id": "fr_travel_customs",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1,
+            5
+          ],
+          "latency_ms": 24.612100009107962
+        },
+        {
+          "id": "en_travel_customs",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1,
+            null
+          ],
+          "latency_ms": 18.265699996845797
+        },
+        {
+          "id": "ar_travel_customs",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1,
+            3
+          ],
+          "latency_ms": 20.950199977960438
+        },
+        {
+          "id": "fr_flight_status",
+          "lang": "fr",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 21.532799990382046
+        },
+        {
+          "id": "en_flight_status",
+          "lang": "en",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 18.18389998516068
+        },
+        {
+          "id": "ar_flight_status",
+          "lang": "ar",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 18.95870000589639
+        },
+        {
+          "id": "fr_flight_gate",
+          "lang": "fr",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 24.455700011458248
+        },
+        {
+          "id": "en_flight_gate",
+          "lang": "en",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 25.464799982728437
+        },
+        {
+          "id": "ar_flight_gate",
+          "lang": "ar",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 23.219099995912984
+        },
+        {
+          "id": "fr_flight_delays",
+          "lang": "fr",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 24.39449998200871
+        },
+        {
+          "id": "en_flight_delays",
+          "lang": "en",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 16.54969999799505
+        },
+        {
+          "id": "ar_flight_delays",
+          "lang": "ar",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 18.300099996849895
+        },
+        {
+          "id": "fr_next_bus",
+          "lang": "fr",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 15.726700017694384
+        },
+        {
+          "id": "en_next_bus",
+          "lang": "en",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 16.882099997019395
+        },
+        {
+          "id": "ar_next_bus",
+          "lang": "ar",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 20.25040000444278
+        },
+        {
+          "id": "fr_parking_spaces",
+          "lang": "fr",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 18.793199997162446
+        },
+        {
+          "id": "en_parking_spaces",
+          "lang": "en",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 16.984400019282475
+        },
+        {
+          "id": "ar_parking_spaces",
+          "lang": "ar",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 18.25209998060018
+        },
+        {
+          "id": "fr_baggage_allowance",
+          "lang": "fr",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 17.6696999988053
+        },
+        {
+          "id": "en_baggage_allowance",
+          "lang": "en",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 18.63990002311766
+        },
+        {
+          "id": "ar_baggage_allowance",
+          "lang": "ar",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 19.43729998311028
+        },
+        {
+          "id": "fr_ticket_price",
+          "lang": "fr",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 22.877699986565858
+        },
+        {
+          "id": "en_ticket_price",
+          "lang": "en",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 20.710799988592044
+        },
+        {
+          "id": "ar_ticket_price",
+          "lang": "ar",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 22.048099985113367
+        },
+        {
+          "id": "fr_security_wait",
+          "lang": "fr",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 19.874899997375906
+        },
+        {
+          "id": "en_security_wait",
+          "lang": "en",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 20.536300027742982
+        },
+        {
+          "id": "ar_security_wait",
+          "lang": "ar",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 25.675900018541142
+        },
+        {
+          "id": "fr_restaurant_now",
+          "lang": "fr",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 21.648599999025464
+        },
+        {
+          "id": "en_restaurant_now",
+          "lang": "en",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 14.922600006684661
+        },
+        {
+          "id": "ar_restaurant_now",
+          "lang": "ar",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 21.253899991279468
+        },
+        {
+          "id": "fr_weather_now",
+          "lang": "fr",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 16.56129999901168
+        },
+        {
+          "id": "en_weather_now",
+          "lang": "en",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 19.778499990934506
+        },
+        {
+          "id": "ar_weather_now",
+          "lang": "ar",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 14.854899985948578
+        },
+        {
+          "id": "fr_park_leave",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 17.39120000274852
+        },
+        {
+          "id": "en_park_leave",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 19.596300000557676
+        },
+        {
+          "id": "ar_park_leave",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 18.59110000077635
+        },
+        {
+          "id": "fr_taxi_queue",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 19.381699996301904
+        },
+        {
+          "id": "en_taxi_queue",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 17.25929998792708
+        },
+        {
+          "id": "ar_taxi_queue",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 17.350500012980774
+        },
+        {
+          "id": "fr_bus_route",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": null,
+          "expected_group_ranks": [
+            null
+          ],
+          "latency_ms": 20.08749998640269
+        },
+        {
+          "id": "en_bus_route",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": null,
+          "expected_group_ranks": [
+            null
+          ],
+          "latency_ms": 17.761000024620444
+        },
+        {
+          "id": "ar_bus_route",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": null,
+          "expected_group_ranks": [
+            null
+          ],
+          "latency_ms": 17.81930000288412
+        },
+        {
+          "id": "fr_internet",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 21.334799996111542
+        },
+        {
+          "id": "en_internet",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 18.712099990807474
+        },
+        {
+          "id": "ar_internet",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 20.91890000156127
+        },
+        {
+          "id": "fr_chair",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 16.100200009532273
+        },
+        {
+          "id": "en_chair",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 19.059799989918247
+        },
+        {
+          "id": "ar_chair",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 24.975700012873858
+        },
+        {
+          "id": "fr_doctor",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 17.92750001186505
+        },
+        {
+          "id": "en_doctor",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 19.513099978212267
+        },
+        {
+          "id": "ar_doctor",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 20.356399996671826
+        },
+        {
+          "id": "fr_prayer_place",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 22.384499985491857
+        },
+        {
+          "id": "en_prayer_place",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 14.694000012241304
+        },
+        {
+          "id": "ar_prayer_place",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 23.547699995106086
+        },
+        {
+          "id": "fr_shopping",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 20.89069999055937
+        },
+        {
+          "id": "en_shopping",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 16.45180000923574
+        },
+        {
+          "id": "ar_shopping",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 19.96470001176931
+        },
+        {
+          "id": "fr_phone_number",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 25.093000003835186
+        },
+        {
+          "id": "en_phone_number",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 17.018499987898394
+        },
+        {
+          "id": "ar_phone_number",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 14.342799986479804
+        },
+        {
+          "id": "fr_papers",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 17.667000007349998
+        },
+        {
+          "id": "en_papers",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 16.066899988800287
+        },
+        {
+          "id": "ar_papers",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 20.463199994992465
+        }
+      ]
+    },
+    "800": {
+      "collection": "exp_chunk_800_150",
+      "passages": 81,
+      "mean_passage_chars": 560,
+      "max_passage_chars": 800,
+      "metrics": {
+        "answerable_questions": 120,
+        "hit_at_3": 0.8916666666666667,
+        "mrr_at_5": 0.7725000000000001,
+        "required_source_recall_at_5": 0.8939393939393939,
+        "median_latency_ms": 17.7
+      },
+      "by_language": {
+        "fr": {
+          "answerable_questions": 40,
+          "hit_at_3": 0.875,
+          "mrr_at_5": 0.7708333333333333,
+          "required_source_recall_at_5": 0.8863636363636364,
+          "median_latency_ms": 18.5
+        },
+        "en": {
+          "answerable_questions": 40,
+          "hit_at_3": 0.95,
+          "mrr_at_5": 0.8175000000000001,
+          "required_source_recall_at_5": 0.9545454545454546,
+          "median_latency_ms": 17.2
+        },
+        "ar": {
+          "answerable_questions": 40,
+          "hit_at_3": 0.85,
+          "mrr_at_5": 0.7291666666666667,
+          "required_source_recall_at_5": 0.8409090909090909,
+          "median_latency_ms": 17.8
+        }
+      },
+      "cases": [
+        {
+          "id": "fr_parking",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 25.035700004082173
+        },
+        {
+          "id": "en_parking",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 16.917400003876537
+        },
+        {
+          "id": "ar_parking",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 18.7275999924168
+        },
+        {
+          "id": "fr_taxi",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 17.203399998834357
+        },
+        {
+          "id": "en_taxi",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 15.937099989969283
+        },
+        {
+          "id": "ar_taxi",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 17.581899999640882
+        },
+        {
+          "id": "fr_taxi_hours",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 15.762600000016391
+        },
+        {
+          "id": "en_taxi_hours",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 15.20719999098219
+        },
+        {
+          "id": "ar_taxi_hours",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 3,
+          "expected_group_ranks": [
+            3
+          ],
+          "latency_ms": 16.608100006124005
+        },
+        {
+          "id": "fr_taxi_fare",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 3,
+          "expected_group_ranks": [
+            3
+          ],
+          "latency_ms": 18.619899987243116
+        },
+        {
+          "id": "en_taxi_fare",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 15.914899995550513
+        },
+        {
+          "id": "ar_taxi_fare",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 3,
+          "expected_group_ranks": [
+            3
+          ],
+          "latency_ms": 20.034599991049618
+        },
+        {
+          "id": "fr_bus_stops",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 27.620699984254315
+        },
+        {
+          "id": "en_bus_stops",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 19.604100001743063
+        },
+        {
+          "id": "ar_bus_stops",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 17.218900000443682
+        },
+        {
+          "id": "fr_rental",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 35.27500000200234
+        },
+        {
+          "id": "en_rental",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 22.447000024840236
+        },
+        {
+          "id": "ar_rental",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": null,
+          "expected_group_ranks": [
+            null
+          ],
+          "latency_ms": 17.664100014371797
+        },
+        {
+          "id": "fr_wifi",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 17.286799993598834
+        },
+        {
+          "id": "en_wifi",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 16.344800009392202
+        },
+        {
+          "id": "ar_wifi",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 17.90199999231845
+        },
+        {
+          "id": "fr_medical",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 19.175199995515868
+        },
+        {
+          "id": "en_medical",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 17.203499999595806
+        },
+        {
+          "id": "ar_medical",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 32.49779998441227
+        },
+        {
+          "id": "fr_prayer",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 21.236800006590784
+        },
+        {
+          "id": "en_prayer",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 17.440399999031797
+        },
+        {
+          "id": "ar_prayer",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 15.578099992126226
+        },
+        {
+          "id": "fr_wheelchair",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 15.127899998333305
+        },
+        {
+          "id": "en_wheelchair",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 15.324999985750765
+        },
+        {
+          "id": "ar_wheelchair",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 15.33330001984723
+        },
+        {
+          "id": "fr_accessible_toilets",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 18.354500003624707
+        },
+        {
+          "id": "en_accessible_toilets",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 17.39379999344237
+        },
+        {
+          "id": "ar_accessible_toilets",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 19.88470001379028
+        },
+        {
+          "id": "fr_trolleys",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 16.22520000091754
+        },
+        {
+          "id": "en_trolleys",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 15.19819998065941
+        },
+        {
+          "id": "ar_trolleys",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 15.64719999441877
+        },
+        {
+          "id": "fr_play_area",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 14.387200004421175
+        },
+        {
+          "id": "en_play_area",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 16.135499987285584
+        },
+        {
+          "id": "ar_play_area",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 15.488000004552305
+        },
+        {
+          "id": "fr_smoking",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 17.66539999516681
+        },
+        {
+          "id": "en_smoking",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 15.887100016698241
+        },
+        {
+          "id": "ar_smoking",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 16.574999986914918
+        },
+        {
+          "id": "fr_food",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 15.708699997048825
+        },
+        {
+          "id": "en_food",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 3,
+          "expected_group_ranks": [
+            3
+          ],
+          "latency_ms": 17.801899986807257
+        },
+        {
+          "id": "ar_food",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 17.183199990540743
+        },
+        {
+          "id": "fr_shops",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 16.952099977061152
+        },
+        {
+          "id": "en_shops",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 16.18810000945814
+        },
+        {
+          "id": "ar_shops",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 23.408400011248887
+        },
+        {
+          "id": "fr_iata",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 27.210100000957027
+        },
+        {
+          "id": "en_iata",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 16.762000013841316
+        },
+        {
+          "id": "ar_iata",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 22.681200003717095
+        },
+        {
+          "id": "fr_call_center",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 18.821699981344864
+        },
+        {
+          "id": "en_call_center",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 15.930499997921288
+        },
+        {
+          "id": "ar_call_center",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 14.893799991114065
+        },
+        {
+          "id": "fr_checkin",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": null,
+          "expected_group_ranks": [
+            null
+          ],
+          "latency_ms": 24.50849997694604
+        },
+        {
+          "id": "en_checkin",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 15.063099999679253
+        },
+        {
+          "id": "ar_checkin",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": null,
+          "expected_group_ranks": [
+            null
+          ],
+          "latency_ms": 17.41050000418909
+        },
+        {
+          "id": "fr_travel_docs",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 17.211500002304092
+        },
+        {
+          "id": "en_travel_docs",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 17.24720001220703
+        },
+        {
+          "id": "ar_travel_docs",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 15.525499999057502
+        },
+        {
+          "id": "fr_city_access",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1,
+            1
+          ],
+          "latency_ms": 19.80149999144487
+        },
+        {
+          "id": "en_city_access",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1,
+            1
+          ],
+          "latency_ms": 18.923499999800697
+        },
+        {
+          "id": "ar_city_access",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1,
+            1
+          ],
+          "latency_ms": 18.899100017733872
+        },
+        {
+          "id": "fr_parking_info",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 20.12170001398772
+        },
+        {
+          "id": "en_parking_info",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 16.14049999625422
+        },
+        {
+          "id": "ar_parking_info",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 21.738999988883734
+        },
+        {
+          "id": "fr_departure",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": null,
+          "expected_group_ranks": [
+            null
+          ],
+          "latency_ms": 19.233900005929172
+        },
+        {
+          "id": "en_departure",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 26.03769997949712
+        },
+        {
+          "id": "ar_departure",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": null,
+          "expected_group_ranks": [
+            null
+          ],
+          "latency_ms": 20.190599985653535
+        },
+        {
+          "id": "fr_prm",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 17.682199977571145
+        },
+        {
+          "id": "en_prm",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 26.02140000090003
+        },
+        {
+          "id": "ar_prm",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 25.75319999596104
+        },
+        {
+          "id": "fr_emergency",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 19.715000002179295
+        },
+        {
+          "id": "en_emergency",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 17.989099986152723
+        },
+        {
+          "id": "ar_emergency",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 20.984600007068366
+        },
+        {
+          "id": "fr_info_contact",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 4,
+          "expected_group_ranks": [
+            4,
+            null
+          ],
+          "latency_ms": 16.574299981584772
+        },
+        {
+          "id": "en_info_contact",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 5,
+          "expected_group_ranks": [
+            5,
+            null
+          ],
+          "latency_ms": 19.644899992272258
+        },
+        {
+          "id": "ar_info_contact",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2,
+            null
+          ],
+          "latency_ms": 16.588600003160536
+        },
+        {
+          "id": "fr_rental_contacts",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 16.561700002057478
+        },
+        {
+          "id": "en_rental_contacts",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 3,
+          "expected_group_ranks": [
+            3
+          ],
+          "latency_ms": 16.89609998720698
+        },
+        {
+          "id": "ar_rental_contacts",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": null,
+          "expected_group_ranks": [
+            null
+          ],
+          "latency_ms": 17.741499992553145
+        },
+        {
+          "id": "fr_food_shops",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 4,
+          "expected_group_ranks": [
+            null,
+            4
+          ],
+          "latency_ms": 17.35710000502877
+        },
+        {
+          "id": "en_food_shops",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 3,
+          "expected_group_ranks": [
+            3,
+            4
+          ],
+          "latency_ms": 15.469300007680431
+        },
+        {
+          "id": "ar_food_shops",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            4,
+            2
+          ],
+          "latency_ms": 16.132099990500137
+        },
+        {
+          "id": "fr_currency_post",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 16.529500018805265
+        },
+        {
+          "id": "en_currency_post",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 17.045299988240004
+        },
+        {
+          "id": "ar_currency_post",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": null,
+          "expected_group_ranks": [
+            null
+          ],
+          "latency_ms": 15.729999984614551
+        },
+        {
+          "id": "fr_travel_customs",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1,
+            3
+          ],
+          "latency_ms": 19.45349999004975
+        },
+        {
+          "id": "en_travel_customs",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1,
+            4
+          ],
+          "latency_ms": 18.611100007547066
+        },
+        {
+          "id": "ar_travel_customs",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            3,
+            2
+          ],
+          "latency_ms": 20.116700005019084
+        },
+        {
+          "id": "fr_flight_status",
+          "lang": "fr",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 17.721899988828227
+        },
+        {
+          "id": "en_flight_status",
+          "lang": "en",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 20.926500001223758
+        },
+        {
+          "id": "ar_flight_status",
+          "lang": "ar",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 18.72769999317825
+        },
+        {
+          "id": "fr_flight_gate",
+          "lang": "fr",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 16.79679998778738
+        },
+        {
+          "id": "en_flight_gate",
+          "lang": "en",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 16.360099980374798
+        },
+        {
+          "id": "ar_flight_gate",
+          "lang": "ar",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 15.876499994192272
+        },
+        {
+          "id": "fr_flight_delays",
+          "lang": "fr",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 16.919499990763143
+        },
+        {
+          "id": "en_flight_delays",
+          "lang": "en",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 15.754099993500859
+        },
+        {
+          "id": "ar_flight_delays",
+          "lang": "ar",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 17.584499990334734
+        },
+        {
+          "id": "fr_next_bus",
+          "lang": "fr",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 18.30550000886433
+        },
+        {
+          "id": "en_next_bus",
+          "lang": "en",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 19.195000000763685
+        },
+        {
+          "id": "ar_next_bus",
+          "lang": "ar",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 15.827399998670444
+        },
+        {
+          "id": "fr_parking_spaces",
+          "lang": "fr",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 16.94359999964945
+        },
+        {
+          "id": "en_parking_spaces",
+          "lang": "en",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 16.021599993109703
+        },
+        {
+          "id": "ar_parking_spaces",
+          "lang": "ar",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 21.757100010290742
+        },
+        {
+          "id": "fr_baggage_allowance",
+          "lang": "fr",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 20.620499999495223
+        },
+        {
+          "id": "en_baggage_allowance",
+          "lang": "en",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 17.855400015832856
+        },
+        {
+          "id": "ar_baggage_allowance",
+          "lang": "ar",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 20.196899975417182
+        },
+        {
+          "id": "fr_ticket_price",
+          "lang": "fr",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 17.959400021936744
+        },
+        {
+          "id": "en_ticket_price",
+          "lang": "en",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 22.54579999134876
+        },
+        {
+          "id": "ar_ticket_price",
+          "lang": "ar",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 19.978399999672547
+        },
+        {
+          "id": "fr_security_wait",
+          "lang": "fr",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 17.55560000310652
+        },
+        {
+          "id": "en_security_wait",
+          "lang": "en",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 16.366199997719377
+        },
+        {
+          "id": "ar_security_wait",
+          "lang": "ar",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 17.236499988939613
+        },
+        {
+          "id": "fr_restaurant_now",
+          "lang": "fr",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 18.630000005941838
+        },
+        {
+          "id": "en_restaurant_now",
+          "lang": "en",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 16.30350001505576
+        },
+        {
+          "id": "ar_restaurant_now",
+          "lang": "ar",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 15.58199999271892
+        },
+        {
+          "id": "fr_weather_now",
+          "lang": "fr",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 15.803800022695214
+        },
+        {
+          "id": "en_weather_now",
+          "lang": "en",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 17.371099995216355
+        },
+        {
+          "id": "ar_weather_now",
+          "lang": "ar",
+          "answerable": false,
+          "expected_rank": null,
+          "expected_group_ranks": [],
+          "latency_ms": 15.195699990727007
+        },
+        {
+          "id": "fr_park_leave",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 22.30569999665022
+        },
+        {
+          "id": "en_park_leave",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 22.327100014081225
+        },
+        {
+          "id": "ar_park_leave",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 20.320899988291785
+        },
+        {
+          "id": "fr_taxi_queue",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 21.644399996148422
+        },
+        {
+          "id": "en_taxi_queue",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 17.38949998980388
+        },
+        {
+          "id": "ar_taxi_queue",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 17.778499983251095
+        },
+        {
+          "id": "fr_bus_route",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": null,
+          "expected_group_ranks": [
+            null
+          ],
+          "latency_ms": 19.486800010781735
+        },
+        {
+          "id": "en_bus_route",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": null,
+          "expected_group_ranks": [
+            null
+          ],
+          "latency_ms": 18.030400009592995
+        },
+        {
+          "id": "ar_bus_route",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": null,
+          "expected_group_ranks": [
+            null
+          ],
+          "latency_ms": 18.91740001155995
+        },
+        {
+          "id": "fr_internet",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 17.900300008477643
+        },
+        {
+          "id": "en_internet",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 18.002500000875443
+        },
+        {
+          "id": "ar_internet",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 19.12609999999404
+        },
+        {
+          "id": "fr_chair",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 21.93970000371337
+        },
+        {
+          "id": "en_chair",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 16.402400011429563
+        },
+        {
+          "id": "ar_chair",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 23.048699978971854
+        },
+        {
+          "id": "fr_doctor",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 21.750499989138916
+        },
+        {
+          "id": "en_doctor",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 18.443699984345585
+        },
+        {
+          "id": "ar_doctor",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 19.21510000829585
+        },
+        {
+          "id": "fr_prayer_place",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 20.883499993942678
+        },
+        {
+          "id": "en_prayer_place",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 17.25469998200424
+        },
+        {
+          "id": "ar_prayer_place",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 15.96569997491315
+        },
+        {
+          "id": "fr_shopping",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 18.78539999597706
+        },
+        {
+          "id": "en_shopping",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 2,
+          "expected_group_ranks": [
+            2
+          ],
+          "latency_ms": 19.278199994005263
+        },
+        {
+          "id": "ar_shopping",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 17.57050000014715
+        },
+        {
+          "id": "fr_phone_number",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 22.617299982812256
+        },
+        {
+          "id": "en_phone_number",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 18.384399998467416
+        },
+        {
+          "id": "ar_phone_number",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 21.854699996765703
+        },
+        {
+          "id": "fr_papers",
+          "lang": "fr",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 18.742699990980327
+        },
+        {
+          "id": "en_papers",
+          "lang": "en",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 16.661300003761426
+        },
+        {
+          "id": "ar_papers",
+          "lang": "ar",
+          "answerable": true,
+          "expected_rank": 1,
+          "expected_group_ranks": [
+            1
+          ],
+          "latency_ms": 18.278900010045618
+        }
+      ]
+    }
+  }
+}

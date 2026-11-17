@@ -1,0 +1,2734 @@
+{
+  "benchmark_id": "aga-rag-v2-150",
+  "config": "D",
+  "config_detail": {
+    "expansion": false,
+    "topic_filter": false,
+    "reranker": false,
+    "label": "raw dense retrieval"
+  },
+  "candidates": 8,
+  "context_passages": 3,
+  "reranker_model": null,
+  "rag_health": {
+    "status": "ok",
+    "service": "AGA Airport RAG",
+    "collections": {
+      "aga_documents": 15346
+    },
+    "query_expansion": false
+  },
+  "run_at_utc": "2026-11-08T13:02:13.523985+00:00",
+  "metrics": {
+    "questions": 150,
+    "answerable_questions": 120,
+    "hit_at_3": 0.9,
+    "mrr_at_5": 0.7936111111111112,
+    "required_source_recall_at_5": 0.8939393939393939,
+    "all_required_sources_hit_at_5": 0.8833333333333333,
+    "zero_passage_answerable": 0,
+    "zero_passage_unanswerable": 0,
+    "mean_latency_ms": 205.5,
+    "median_latency_ms": 185.2,
+    "p95_latency_ms": 230.5
+  },
+  "by_language": {
+    "fr": {
+      "questions": 50,
+      "answerable_questions": 40,
+      "hit_at_3": 0.925,
+      "mrr_at_5": 0.7791666666666667,
+      "required_source_recall_at_5": 0.9090909090909091,
+      "all_required_sources_hit_at_5": 0.9,
+      "zero_passage_answerable": 0,
+      "zero_passage_unanswerable": 0,
+      "mean_latency_ms": 259.2,
+      "median_latency_ms": 183.4,
+      "p95_latency_ms": 234.7
+    },
+    "en": {
+      "questions": 50,
+      "answerable_questions": 40,
+      "hit_at_3": 0.95,
+      "mrr_at_5": 0.8416666666666666,
+      "required_source_recall_at_5": 0.9090909090909091,
+      "all_required_sources_hit_at_5": 0.9,
+      "zero_passage_answerable": 0,
+      "zero_passage_unanswerable": 0,
+      "mean_latency_ms": 181.2,
+      "median_latency_ms": 176.5,
+      "p95_latency_ms": 229.6
+    },
+    "ar": {
+      "questions": 50,
+      "answerable_questions": 40,
+      "hit_at_3": 0.825,
+      "mrr_at_5": 0.76,
+      "required_source_recall_at_5": 0.8636363636363636,
+      "all_required_sources_hit_at_5": 0.85,
+      "zero_passage_answerable": 0,
+      "zero_passage_unanswerable": 0,
+      "mean_latency_ms": 176.2,
+      "median_latency_ms": 187.8,
+      "p95_latency_ms": 219.4
+    }
+  },
+  "cases": [
+    {
+      "id": "fr_parking",
+      "lang": "fr",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -I am passenger - What is an airport_.pdf",
+        "Office National des aéroports -Our Airports - Check-in & Boarding.pdf"
+      ],
+      "latency_ms": 4214.9
+    },
+    {
+      "id": "en_parking",
+      "lang": "en",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -I am passenger - What is an airport_.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf"
+      ],
+      "latency_ms": 144.0
+    },
+    {
+      "id": "ar_parking",
+      "lang": "ar",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -I am passenger - What is an airport_.pdf"
+      ],
+      "latency_ms": 212.7
+    },
+    {
+      "id": "fr_taxi",
+      "lang": "fr",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Parkings.pdf"
+      ],
+      "latency_ms": 213.7
+    },
+    {
+      "id": "en_taxi",
+      "lang": "en",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 179.1
+    },
+    {
+      "id": "ar_taxi",
+      "lang": "ar",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf"
+      ],
+      "latency_ms": 208.3
+    },
+    {
+      "id": "fr_taxi_hours",
+      "lang": "fr",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "final_sources": [
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Parkings.pdf"
+      ],
+      "latency_ms": 225.1
+    },
+    {
+      "id": "en_taxi_hours",
+      "lang": "en",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "final_sources": [
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Parkings.pdf"
+      ],
+      "latency_ms": 132.7
+    },
+    {
+      "id": "ar_taxi_hours",
+      "lang": "ar",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf"
+      ],
+      "latency_ms": 121.1
+    },
+    {
+      "id": "fr_taxi_fare",
+      "lang": "fr",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "final_sources": [
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Parkings.pdf"
+      ],
+      "latency_ms": 178.6
+    },
+    {
+      "id": "en_taxi_fare",
+      "lang": "en",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "final_sources": [
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Parkings.pdf"
+      ],
+      "latency_ms": 201.3
+    },
+    {
+      "id": "ar_taxi_fare",
+      "lang": "ar",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf"
+      ],
+      "latency_ms": 217.5
+    },
+    {
+      "id": "fr_bus_stops",
+      "lang": "fr",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -I am passenger 2- Airport network.pdf"
+      ],
+      "latency_ms": 155.3
+    },
+    {
+      "id": "en_bus_stops",
+      "lang": "en",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [
+        null
+      ],
+      "final_sources": [
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -Our Airports - Présentation.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "latency_ms": 220.1
+    },
+    {
+      "id": "ar_bus_stops",
+      "lang": "ar",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 188.7
+    },
+    {
+      "id": "fr_rental",
+      "lang": "fr",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf"
+      ],
+      "latency_ms": 219.0
+    },
+    {
+      "id": "en_rental",
+      "lang": "en",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf"
+      ],
+      "latency_ms": 104.2
+    },
+    {
+      "id": "ar_rental",
+      "lang": "ar",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 5,
+      "expected_group_ranks": [
+        5
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 100.4
+    },
+    {
+      "id": "fr_wifi",
+      "lang": "fr",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Internet.pdf",
+        "Office National des aéroports -I am passenger 2- Airport network.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "latency_ms": 127.9
+    },
+    {
+      "id": "en_wifi",
+      "lang": "en",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Internet.pdf",
+        "Office National des aéroports -I am passenger 2- Airport network.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "latency_ms": 120.8
+    },
+    {
+      "id": "ar_wifi",
+      "lang": "ar",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Internet.pdf",
+        "Office National des aéroports -I am passenger 2- Airport network.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 173.9
+    },
+    {
+      "id": "fr_medical",
+      "lang": "fr",
+      "category": "medical",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "final_sources": [
+        "Office National des aéroports -Nos Aéroports - Assistance médicale.pdf",
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 211.7
+    },
+    {
+      "id": "en_medical",
+      "lang": "en",
+      "category": "medical",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "final_sources": [
+        "Office National des aéroports -Nos Aéroports - Assistance médicale.pdf",
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 184.5
+    },
+    {
+      "id": "ar_medical",
+      "lang": "ar",
+      "category": "medical",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "final_sources": [
+        "Office National des aéroports -Nos Aéroports - Assistance médicale.pdf",
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "latency_ms": 187.2
+    },
+    {
+      "id": "fr_prayer",
+      "lang": "fr",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Check-in & Boarding.pdf"
+      ],
+      "latency_ms": 113.7
+    },
+    {
+      "id": "en_prayer",
+      "lang": "en",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "latency_ms": 110.0
+    },
+    {
+      "id": "ar_prayer",
+      "lang": "ar",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 105.2
+    },
+    {
+      "id": "fr_wheelchair",
+      "lang": "fr",
+      "category": "accessibility",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -I am passenger - 11Travel documents.pdf"
+      ],
+      "latency_ms": 104.0
+    },
+    {
+      "id": "en_wheelchair",
+      "lang": "en",
+      "category": "accessibility",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "latency_ms": 105.7
+    },
+    {
+      "id": "ar_wheelchair",
+      "lang": "ar",
+      "category": "accessibility",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -I am passenger - 11Travel documents.pdf"
+      ],
+      "latency_ms": 155.9
+    },
+    {
+      "id": "fr_accessible_toilets",
+      "lang": "fr",
+      "category": "accessibility",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - Security and Customs.pdf"
+      ],
+      "latency_ms": 129.5
+    },
+    {
+      "id": "en_accessible_toilets",
+      "lang": "en",
+      "category": "accessibility",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "latency_ms": 106.1
+    },
+    {
+      "id": "ar_accessible_toilets",
+      "lang": "ar",
+      "category": "accessibility",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - Security and Customs.pdf"
+      ],
+      "latency_ms": 123.6
+    },
+    {
+      "id": "fr_trolleys",
+      "lang": "fr",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Parkings.pdf"
+      ],
+      "latency_ms": 131.0
+    },
+    {
+      "id": "en_trolleys",
+      "lang": "en",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - Luggage.pdf",
+        "Office National des aéroports -I am passenger - Luggage.pdf"
+      ],
+      "latency_ms": 113.8
+    },
+    {
+      "id": "ar_trolleys",
+      "lang": "ar",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 98.8
+    },
+    {
+      "id": "fr_play_area",
+      "lang": "fr",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - What is an airport_.pdf",
+        "Office National des aéroports -I am passenger - aeronautical terms.pdf"
+      ],
+      "latency_ms": 123.7
+    },
+    {
+      "id": "en_play_area",
+      "lang": "en",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - What is an airport_.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf"
+      ],
+      "latency_ms": 130.2
+    },
+    {
+      "id": "ar_play_area",
+      "lang": "ar",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - What is an airport_.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "latency_ms": 105.3
+    },
+    {
+      "id": "fr_smoking",
+      "lang": "fr",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf"
+      ],
+      "latency_ms": 104.9
+    },
+    {
+      "id": "en_smoking",
+      "lang": "en",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 110.0
+    },
+    {
+      "id": "ar_smoking",
+      "lang": "ar",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf"
+      ],
+      "latency_ms": 118.4
+    },
+    {
+      "id": "fr_food",
+      "lang": "fr",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Cafes and restaurants.pdf",
+        "Office National des aéroports -Nos Aéroports - Cafés & restaurants.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 194.6
+    },
+    {
+      "id": "en_food",
+      "lang": "en",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Cafes and restaurants.pdf",
+        "Office National des aéroports -Nos Aéroports - Cafés & restaurants.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 230.5
+    },
+    {
+      "id": "ar_food",
+      "lang": "ar",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Cafes and restaurants.pdf",
+        "Office National des aéroports -Nos Aéroports - Cafés & restaurants.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 120.3
+    },
+    {
+      "id": "fr_shops",
+      "lang": "fr",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Boutiques.pdf",
+        "Office National des aéroports -Nos Aéroports - Boutiques.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 115.0
+    },
+    {
+      "id": "en_shops",
+      "lang": "en",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Boutiques.pdf",
+        "Office National des aéroports -Nos Aéroports - Boutiques.pdf"
+      ],
+      "latency_ms": 225.6
+    },
+    {
+      "id": "ar_shops",
+      "lang": "ar",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Boutiques.pdf",
+        "Office National des aéroports -Nos Aéroports - Boutiques.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 132.0
+    },
+    {
+      "id": "fr_iata",
+      "lang": "fr",
+      "category": "airport_info",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Présentation.pdf",
+        "Office National des aéroports -Nos Aéroports - 3Guide des Compagnies.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf"
+      ],
+      "latency_ms": 114.2
+    },
+    {
+      "id": "en_iata",
+      "lang": "en",
+      "category": "airport_info",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Présentation.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -Nos Aéroports - 3Guide des Compagnies.pdf"
+      ],
+      "latency_ms": 112.9
+    },
+    {
+      "id": "ar_iata",
+      "lang": "ar",
+      "category": "airport_info",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 5,
+      "expected_group_ranks": [
+        5
+      ],
+      "final_sources": [
+        "Office National des aéroports -Nos Aéroports - 2Guide des Compagnies.pdf",
+        "Office National des aéroports -Nos Aéroports - 3Guide des Compagnies.pdf",
+        "Office National des aéroports -Nos Aéroports - 4Guide des Compagnies.pdf"
+      ],
+      "latency_ms": 109.7
+    },
+    {
+      "id": "fr_call_center",
+      "lang": "fr",
+      "category": "airport_info",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Call center.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 112.7
+    },
+    {
+      "id": "en_call_center",
+      "lang": "en",
+      "category": "airport_info",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Call center.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 106.7
+    },
+    {
+      "id": "ar_call_center",
+      "lang": "ar",
+      "category": "airport_info",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Call center.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "latency_ms": 195.3
+    },
+    {
+      "id": "fr_checkin",
+      "lang": "fr",
+      "category": "formalites",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [
+        null
+      ],
+      "final_sources": [
+        "Office National des aéroports -I am passenger - 9Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 11Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 6Travel documents.pdf"
+      ],
+      "latency_ms": 215.2
+    },
+    {
+      "id": "en_checkin",
+      "lang": "en",
+      "category": "formalites",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Check-in & Boarding.pdf",
+        "Office National des aéroports -I am passenger - 9Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 4Travel documents.pdf"
+      ],
+      "latency_ms": 152.7
+    },
+    {
+      "id": "ar_checkin",
+      "lang": "ar",
+      "category": "formalites",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [
+        null
+      ],
+      "final_sources": [
+        "Office National des aéroports -I am passenger - 9Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 4Travel documents.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "latency_ms": 213.8
+    },
+    {
+      "id": "fr_travel_docs",
+      "lang": "fr",
+      "category": "formalites",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -I am passenger - 8Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 5Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 4Travel documents.pdf"
+      ],
+      "latency_ms": 152.3
+    },
+    {
+      "id": "en_travel_docs",
+      "lang": "en",
+      "category": "formalites",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -I am passenger - 8Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 3Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 5Travel documents.pdf"
+      ],
+      "latency_ms": 206.9
+    },
+    {
+      "id": "ar_travel_docs",
+      "lang": "ar",
+      "category": "formalites",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -I am passenger - 8Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 5Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 6Travel documents.pdf"
+      ],
+      "latency_ms": 207.7
+    },
+    {
+      "id": "fr_city_access",
+      "lang": "fr",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1,
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf"
+      ],
+      "latency_ms": 224.9
+    },
+    {
+      "id": "en_city_access",
+      "lang": "en",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1,
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 171.6
+    },
+    {
+      "id": "ar_city_access",
+      "lang": "ar",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1,
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 211.3
+    },
+    {
+      "id": "fr_parking_info",
+      "lang": "fr",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -I am passenger - Airport network.pdf"
+      ],
+      "latency_ms": 195.8
+    },
+    {
+      "id": "en_parking_info",
+      "lang": "en",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 207.1
+    },
+    {
+      "id": "ar_parking_info",
+      "lang": "ar",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf"
+      ],
+      "latency_ms": 164.0
+    },
+    {
+      "id": "fr_departure",
+      "lang": "fr",
+      "category": "formalites",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [
+        null
+      ],
+      "final_sources": [
+        "Office National des aéroports -I am passenger - 9Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 6Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 5Travel documents.pdf"
+      ],
+      "latency_ms": 134.3
+    },
+    {
+      "id": "en_departure",
+      "lang": "en",
+      "category": "formalites",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Check-in & Boarding.pdf",
+        "Office National des aéroports -I am passenger - 9Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 6Travel documents.pdf"
+      ],
+      "latency_ms": 217.7
+    },
+    {
+      "id": "ar_departure",
+      "lang": "ar",
+      "category": "formalites",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [
+        null
+      ],
+      "final_sources": [
+        "Office National des aéroports -I am passenger - 9Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 4Travel documents.pdf",
+        "Office National des aéroports -I am passenger - Travel documents.pdf"
+      ],
+      "latency_ms": 189.7
+    },
+    {
+      "id": "fr_prm",
+      "lang": "fr",
+      "category": "accessibility",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf"
+      ],
+      "latency_ms": 157.0
+    },
+    {
+      "id": "en_prm",
+      "lang": "en",
+      "category": "accessibility",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf"
+      ],
+      "latency_ms": 138.5
+    },
+    {
+      "id": "ar_prm",
+      "lang": "ar",
+      "category": "accessibility",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf"
+      ],
+      "latency_ms": 156.3
+    },
+    {
+      "id": "fr_emergency",
+      "lang": "fr",
+      "category": "medical",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "final_sources": [
+        "Office National des aéroports -Nos Aéroports - Assistance médicale.pdf",
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 121.2
+    },
+    {
+      "id": "en_emergency",
+      "lang": "en",
+      "category": "medical",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf",
+        "Office National des aéroports -Nos Aéroports - Assistance médicale.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 171.7
+    },
+    {
+      "id": "ar_emergency",
+      "lang": "ar",
+      "category": "medical",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf",
+        "Office National des aéroports -Nos Aéroports - Assistance médicale.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 207.6
+    },
+    {
+      "id": "fr_info_contact",
+      "lang": "fr",
+      "category": "airport_info",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2,
+        null
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -Our Airports - Informations points.pdf",
+        "Office National des aéroports -Our Airports - Call center.pdf"
+      ],
+      "latency_ms": 183.3
+    },
+    {
+      "id": "en_info_contact",
+      "lang": "en",
+      "category": "airport_info",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 3,
+      "expected_group_ranks": [
+        3,
+        null
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -Our Airports - Call center.pdf",
+        "Office National des aéroports -Our Airports - Informations points.pdf"
+      ],
+      "latency_ms": 229.6
+    },
+    {
+      "id": "ar_info_contact",
+      "lang": "ar",
+      "category": "airport_info",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2,
+        null
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -Our Airports - Informations points.pdf",
+        "Office National des aéroports -Our Airports - Call center.pdf"
+      ],
+      "latency_ms": 238.3
+    },
+    {
+      "id": "fr_rental_contacts",
+      "lang": "fr",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 3,
+      "expected_group_ranks": [
+        3
+      ],
+      "final_sources": [
+        "Office National des aéroports -I am passenger 2- Airport network.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf"
+      ],
+      "latency_ms": 125.4
+    },
+    {
+      "id": "en_rental_contacts",
+      "lang": "en",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 163.4
+    },
+    {
+      "id": "ar_rental_contacts",
+      "lang": "ar",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [
+        null
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Change & poste.pdf"
+      ],
+      "latency_ms": 163.3
+    },
+    {
+      "id": "fr_food_shops",
+      "lang": "fr",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 3,
+      "expected_group_ranks": [
+        4,
+        3
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Boutiques.pdf"
+      ],
+      "latency_ms": 159.3
+    },
+    {
+      "id": "en_food_shops",
+      "lang": "en",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1,
+        4
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Cafes and restaurants.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Nos Aéroports - Cafés & restaurants.pdf"
+      ],
+      "latency_ms": 224.1
+    },
+    {
+      "id": "ar_food_shops",
+      "lang": "ar",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1,
+        3
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Cafes and restaurants.pdf",
+        "Office National des aéroports -Nos Aéroports - Cafés & restaurants.pdf",
+        "Office National des aéroports -Our Airports - Boutiques.pdf"
+      ],
+      "latency_ms": 227.1
+    },
+    {
+      "id": "fr_currency_post",
+      "lang": "fr",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Change & poste.pdf",
+        "Office National des aéroports -I am passenger - 11Travel documents.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 209.8
+    },
+    {
+      "id": "en_currency_post",
+      "lang": "en",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Change & poste.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - 11Travel documents.pdf"
+      ],
+      "latency_ms": 458.4
+    },
+    {
+      "id": "ar_currency_post",
+      "lang": "ar",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [
+        null
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger 2- Airport network.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "latency_ms": 137.0
+    },
+    {
+      "id": "fr_travel_customs",
+      "lang": "fr",
+      "category": "formalites",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1,
+        5
+      ],
+      "final_sources": [
+        "Office National des aéroports -I am passenger - 6Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 5Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 4Travel documents.pdf"
+      ],
+      "latency_ms": 214.3
+    },
+    {
+      "id": "en_travel_customs",
+      "lang": "en",
+      "category": "formalites",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1,
+        null
+      ],
+      "final_sources": [
+        "Office National des aéroports -I am passenger - 6Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 5Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 8Travel documents.pdf"
+      ],
+      "latency_ms": 151.8
+    },
+    {
+      "id": "ar_travel_customs",
+      "lang": "ar",
+      "category": "formalites",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1,
+        4
+      ],
+      "final_sources": [
+        "Office National des aéroports -I am passenger - 6Travel documents.pdf",
+        "Office National des aéroports -I am passenger - LAW and Legalization.pdf",
+        "Office National des aéroports -I am passenger - 4Travel documents.pdf"
+      ],
+      "latency_ms": 196.0
+    },
+    {
+      "id": "fr_flight_status",
+      "lang": "fr",
+      "category": "flight_live",
+      "answerable": false,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "final_sources": [
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -I am passenger - Airport network.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "latency_ms": 194.5
+    },
+    {
+      "id": "en_flight_status",
+      "lang": "en",
+      "category": "flight_live",
+      "answerable": false,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "final_sources": [
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -I am passenger 2- Airport network.pdf",
+        "Office National des aéroports -I am passenger - Airport network.pdf"
+      ],
+      "latency_ms": 186.9
+    },
+    {
+      "id": "ar_flight_status",
+      "lang": "ar",
+      "category": "flight_live",
+      "answerable": false,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "final_sources": [
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -I am passenger - Airport network.pdf",
+        "Office National des aéroports -I am passenger 2- Airport network.pdf"
+      ],
+      "latency_ms": 221.7
+    },
+    {
+      "id": "fr_flight_gate",
+      "lang": "fr",
+      "category": "flight_live",
+      "answerable": false,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "final_sources": [
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -Nos Aéroports - 4Guide des Compagnies.pdf",
+        "Office National des aéroports -Nos Aéroports - 2Guide des Compagnies.pdf"
+      ],
+      "latency_ms": 207.7
+    },
+    {
+      "id": "en_flight_gate",
+      "lang": "en",
+      "category": "flight_live",
+      "answerable": false,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "final_sources": [
+        "Office National des aéroports -Nos Aéroports - 4Guide des Compagnies.pdf",
+        "Office National des aéroports -Nos Aéroports - 2Guide des Compagnies.pdf",
+        "Office National des aéroports -Nos Aéroports - Guide des Compagnies.pdf"
+      ],
+      "latency_ms": 169.4
+    },
+    {
+      "id": "ar_flight_gate",
+      "lang": "ar",
+      "category": "flight_live",
+      "answerable": false,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "final_sources": [
+        "Office National des aéroports -Nos Aéroports - 4Guide des Compagnies.pdf",
+        "Office National des aéroports -Our Airports - Présentation.pdf",
+        "Office National des aéroports -Nos Aéroports - Guide des Compagnies.pdf"
+      ],
+      "latency_ms": 188.5
+    },
+    {
+      "id": "fr_flight_delays",
+      "lang": "fr",
+      "category": "flight_live",
+      "answerable": false,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "final_sources": [
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -I am passenger - Security and Customs.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "latency_ms": 218.9
+    },
+    {
+      "id": "en_flight_delays",
+      "lang": "en",
+      "category": "flight_live",
+      "answerable": false,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "final_sources": [
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -Our Airports - Présentation.pdf",
+        "Office National des aéroports -Nos Aéroports - 4Guide des Compagnies.pdf"
+      ],
+      "latency_ms": 216.3
+    },
+    {
+      "id": "ar_flight_delays",
+      "lang": "ar",
+      "category": "flight_live",
+      "answerable": false,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "final_sources": [
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -I am passenger - Security and Customs.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "latency_ms": 147.6
+    },
+    {
+      "id": "fr_next_bus",
+      "lang": "fr",
+      "category": "transport_live",
+      "answerable": false,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "final_sources": [
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf"
+      ],
+      "latency_ms": 234.7
+    },
+    {
+      "id": "en_next_bus",
+      "lang": "en",
+      "category": "transport_live",
+      "answerable": false,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "final_sources": [
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf"
+      ],
+      "latency_ms": 210.8
+    },
+    {
+      "id": "ar_next_bus",
+      "lang": "ar",
+      "category": "transport_live",
+      "answerable": false,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "final_sources": [
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf"
+      ],
+      "latency_ms": 150.7
+    },
+    {
+      "id": "fr_parking_spaces",
+      "lang": "fr",
+      "category": "transport_live",
+      "answerable": false,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Présentation.pdf",
+        "Office National des aéroports -I am passenger - Airport network.pdf"
+      ],
+      "latency_ms": 192.1
+    },
+    {
+      "id": "en_parking_spaces",
+      "lang": "en",
+      "category": "transport_live",
+      "answerable": false,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Présentation.pdf",
+        "Office National des aéroports -I am passenger - Airport network.pdf"
+      ],
+      "latency_ms": 156.9
+    },
+    {
+      "id": "ar_parking_spaces",
+      "lang": "ar",
+      "category": "transport_live",
+      "answerable": false,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "final_sources": [
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Parkings.pdf"
+      ],
+      "latency_ms": 176.9
+    },
+    {
+      "id": "fr_baggage_allowance",
+      "lang": "fr",
+      "category": "airline_policy",
+      "answerable": false,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - Luggage.pdf",
+        "Office National des aéroports -I am passenger - Airport network.pdf"
+      ],
+      "latency_ms": 212.4
+    },
+    {
+      "id": "en_baggage_allowance",
+      "lang": "en",
+      "category": "airline_policy",
+      "answerable": false,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - Airport network.pdf",
+        "Office National des aéroports -I am passenger - Luggage.pdf"
+      ],
+      "latency_ms": 202.2
+    },
+    {
+      "id": "ar_baggage_allowance",
+      "lang": "ar",
+      "category": "airline_policy",
+      "answerable": false,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "final_sources": [
+        "Office National des aéroports -I am passenger - Luggage.pdf",
+        "Office National des aéroports -I am passenger 2- Airport network.pdf",
+        "Office National des aéroports -I am passenger - Luggage.pdf"
+      ],
+      "latency_ms": 219.4
+    },
+    {
+      "id": "fr_ticket_price",
+      "lang": "fr",
+      "category": "airline_policy",
+      "answerable": false,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Présentation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 198.5
+    },
+    {
+      "id": "en_ticket_price",
+      "lang": "en",
+      "category": "airline_policy",
+      "answerable": false,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Présentation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 193.2
+    },
+    {
+      "id": "ar_ticket_price",
+      "lang": "ar",
+      "category": "airline_policy",
+      "answerable": false,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Présentation.pdf",
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf"
+      ],
+      "latency_ms": 193.0
+    },
+    {
+      "id": "fr_security_wait",
+      "lang": "fr",
+      "category": "live_operations",
+      "answerable": false,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "final_sources": [
+        "Office National des aéroports -I am passenger - Security and Customs.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf",
+        "Office National des aéroports -I am passenger - Security and Customs.pdf"
+      ],
+      "latency_ms": 205.7
+    },
+    {
+      "id": "en_security_wait",
+      "lang": "en",
+      "category": "live_operations",
+      "answerable": false,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "final_sources": [
+        "Office National des aéroports -I am passenger - Security and Customs.pdf",
+        "Office National des aéroports -Our Airports - Check-in & Boarding.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "latency_ms": 159.9
+    },
+    {
+      "id": "ar_security_wait",
+      "lang": "ar",
+      "category": "live_operations",
+      "answerable": false,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf",
+        "Office National des aéroports -I am passenger - Security and Customs.pdf",
+        "Office National des aéroports -I am passenger - Security and Customs.pdf"
+      ],
+      "latency_ms": 200.6
+    },
+    {
+      "id": "fr_restaurant_now",
+      "lang": "fr",
+      "category": "live_hours",
+      "answerable": false,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf",
+        "Office National des aéroports -Nos Aéroports - Cafés & restaurants.pdf"
+      ],
+      "latency_ms": 317.5
+    },
+    {
+      "id": "en_restaurant_now",
+      "lang": "en",
+      "category": "live_hours",
+      "answerable": false,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf",
+        "Office National des aéroports -Nos Aéroports - Cafés & restaurants.pdf"
+      ],
+      "latency_ms": 222.2
+    },
+    {
+      "id": "ar_restaurant_now",
+      "lang": "ar",
+      "category": "live_hours",
+      "answerable": false,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "final_sources": [
+        "Office National des aéroports -Nos Aéroports - Cafés & restaurants.pdf",
+        "Office National des aéroports -Our Airports - Cafes and restaurants.pdf",
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf"
+      ],
+      "latency_ms": 182.3
+    },
+    {
+      "id": "fr_weather_now",
+      "lang": "fr",
+      "category": "live_weather",
+      "answerable": false,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "final_sources": [
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 163.4
+    },
+    {
+      "id": "en_weather_now",
+      "lang": "en",
+      "category": "live_weather",
+      "answerable": false,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "final_sources": [
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Discovery.pdf"
+      ],
+      "latency_ms": 209.6
+    },
+    {
+      "id": "ar_weather_now",
+      "lang": "ar",
+      "category": "live_weather",
+      "answerable": false,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [],
+      "final_sources": [
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -I am passenger - What is an airport_.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 157.0
+    },
+    {
+      "id": "fr_park_leave",
+      "lang": "fr",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -I am passenger - Luggage.pdf",
+        "Office National des aéroports -Our Airports - Taxis.pdf"
+      ],
+      "latency_ms": 148.2
+    },
+    {
+      "id": "en_park_leave",
+      "lang": "en",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -I am passenger - Luggage.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 311.6
+    },
+    {
+      "id": "ar_park_leave",
+      "lang": "ar",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -I am passenger - Luggage.pdf",
+        "Office National des aéroports -I am passenger - 4Travel documents.pdf"
+      ],
+      "latency_ms": 184.7
+    },
+    {
+      "id": "fr_taxi_queue",
+      "lang": "fr",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Parkings.pdf"
+      ],
+      "latency_ms": 142.6
+    },
+    {
+      "id": "en_taxi_queue",
+      "lang": "en",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 218.1
+    },
+    {
+      "id": "ar_taxi_queue",
+      "lang": "ar",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Taxis.pdf",
+        "Office National des aéroports -Our Airports - Parkings.pdf",
+        "Office National des aéroports -Nos Aéroports - Taxi & Bus.pdf"
+      ],
+      "latency_ms": 214.6
+    },
+    {
+      "id": "fr_bus_route",
+      "lang": "fr",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [
+        null
+      ],
+      "final_sources": [
+        "Office National des aéroports -I am passenger 2- Airport network.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "latency_ms": 359.4
+    },
+    {
+      "id": "en_bus_route",
+      "lang": "en",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [
+        null
+      ],
+      "final_sources": [
+        "Office National des aéroports -I am passenger 2- Airport network.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "latency_ms": 172.5
+    },
+    {
+      "id": "ar_bus_route",
+      "lang": "ar",
+      "category": "transport",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": null,
+      "expected_group_ranks": [
+        null
+      ],
+      "final_sources": [
+        "Office National des aéroports -I am passenger3 - Airport network.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 210.0
+    },
+    {
+      "id": "fr_internet",
+      "lang": "fr",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "final_sources": [
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -Our Airports - Internet.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "latency_ms": 234.4
+    },
+    {
+      "id": "en_internet",
+      "lang": "en",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 3,
+      "expected_group_ranks": [
+        3
+      ],
+      "final_sources": [
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -I am passenger - 11Travel documents.pdf",
+        "Office National des aéroports -Our Airports - Internet.pdf"
+      ],
+      "latency_ms": 214.9
+    },
+    {
+      "id": "ar_internet",
+      "lang": "ar",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "final_sources": [
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -Our Airports - Internet.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "latency_ms": 191.6
+    },
+    {
+      "id": "fr_chair",
+      "lang": "fr",
+      "category": "accessibility",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "latency_ms": 173.4
+    },
+    {
+      "id": "en_chair",
+      "lang": "en",
+      "category": "accessibility",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -I am passenger - Security and Customs.pdf"
+      ],
+      "latency_ms": 132.9
+    },
+    {
+      "id": "ar_chair",
+      "lang": "ar",
+      "category": "accessibility",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 210.6
+    },
+    {
+      "id": "fr_doctor",
+      "lang": "fr",
+      "category": "medical",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf",
+        "Office National des aéroports -Nos Aéroports - Assistance médicale.pdf",
+        "Office National des aéroports -I am passenger - 6Travel documents.pdf"
+      ],
+      "latency_ms": 160.8
+    },
+    {
+      "id": "en_doctor",
+      "lang": "en",
+      "category": "medical",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf",
+        "Office National des aéroports -I am passenger - 7Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 6Travel documents.pdf"
+      ],
+      "latency_ms": 199.4
+    },
+    {
+      "id": "ar_doctor",
+      "lang": "ar",
+      "category": "medical",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Medical Assistance.pdf",
+        "Office National des aéroports -Nos Aéroports - Assistance médicale.pdf",
+        "Office National des aéroports -I am passenger - 6Travel documents.pdf"
+      ],
+      "latency_ms": 197.1
+    },
+    {
+      "id": "fr_prayer_place",
+      "lang": "fr",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "final_sources": [
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 203.1
+    },
+    {
+      "id": "en_prayer_place",
+      "lang": "en",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 215.5
+    },
+    {
+      "id": "ar_prayer_place",
+      "lang": "ar",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -I am passenger - How does an airplane fly_.pdf"
+      ],
+      "latency_ms": 196.2
+    },
+    {
+      "id": "fr_shopping",
+      "lang": "fr",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Boutiques.pdf",
+        "Office National des aéroports -Nos Aéroports - Boutiques.pdf"
+      ],
+      "latency_ms": 183.4
+    },
+    {
+      "id": "en_shopping",
+      "lang": "en",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 2,
+      "expected_group_ranks": [
+        2
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf",
+        "Office National des aéroports -Our Airports - Boutiques.pdf",
+        "Office National des aéroports -Nos Aéroports - Boutiques.pdf"
+      ],
+      "latency_ms": 199.5
+    },
+    {
+      "id": "ar_shopping",
+      "lang": "ar",
+      "category": "services",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Boutiques.pdf",
+        "Office National des aéroports -Nos Aéroports - Boutiques.pdf",
+        "Office National des aéroports -Our Airports - Assistance & Facilitation.pdf"
+      ],
+      "latency_ms": 186.2
+    },
+    {
+      "id": "fr_phone_number",
+      "lang": "fr",
+      "category": "airport_info",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Call center.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -Our Airports - Informations points.pdf"
+      ],
+      "latency_ms": 138.6
+    },
+    {
+      "id": "en_phone_number",
+      "lang": "en",
+      "category": "airport_info",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Call center.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -Our Airports - Informations points.pdf"
+      ],
+      "latency_ms": 173.9
+    },
+    {
+      "id": "ar_phone_number",
+      "lang": "ar",
+      "category": "airport_info",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -Our Airports - Call center.pdf",
+        "Office National des aéroports -Our Airports - Car rent.pdf",
+        "Office National des aéroports -I am passenger3 - Airport network.pdf"
+      ],
+      "latency_ms": 185.7
+    },
+    {
+      "id": "fr_papers",
+      "lang": "fr",
+      "category": "formalites",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -I am passenger - 6Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 8Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 5Travel documents.pdf"
+      ],
+      "latency_ms": 190.1
+    },
+    {
+      "id": "en_papers",
+      "lang": "en",
+      "category": "formalites",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -I am passenger - 8Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 6Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 4Travel documents.pdf"
+      ],
+      "latency_ms": 161.9
+    },
+    {
+      "id": "ar_papers",
+      "lang": "ar",
+      "category": "formalites",
+      "answerable": true,
+      "candidates_after_chain": 8,
+      "final_count": 3,
+      "expected_rank": 1,
+      "expected_group_ranks": [
+        1
+      ],
+      "final_sources": [
+        "Office National des aéroports -I am passenger - 6Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 8Travel documents.pdf",
+        "Office National des aéroports -I am passenger - 5Travel documents.pdf"
+      ],
+      "latency_ms": 210.6
+    }
+  ],
+  "notes": [
+    "Hit@3 is measured on the passages actually sent to the LLM; MRR@5 and recall@5 on the ordered list before the cut to 3.",
+    "The topic rules and the query expansion were tuned while looking at this same question set."
+  ]
+}

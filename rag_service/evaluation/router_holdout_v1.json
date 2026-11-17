@@ -1,0 +1,442 @@
+{
+  "dataset_id": "aga-router-holdout-v1",
+  "created": "2026-11-08",
+  "purpose": "Held-out test set for the intent router. Written before any router change and never used to tune keywords, rules or thresholds. Use it only to measure the router after a fix (and the current router as the 'before' baseline, run at the same time).",
+  "rules": [
+    "Do not edit questions or labels after a router change has been designed.",
+    "If a label is disputed, fix it in a new version (v2) and report both."
+  ],
+  "labelling": {
+    "out_of_scope": "not about Agadir Al Massira airport or air travel through it; 'confusable' items contain airport-like words (bus, Wi-Fi, park, Agadir, weather) in an unrelated context",
+    "documentary": "airport service or travel-formality question, answerable or not by the corpus",
+    "flight_status": "live flight information (delay, cancellation, landing time) WITHOUT a flight number"
+  },
+  "counts": {
+    "total": 60,
+    "out_of_scope": 30,
+    "in_scope": 30,
+    "flight_status_without_number": 6
+  },
+  "cases": [
+    {
+      "id": "ho_fr_off_01",
+      "lang": "fr",
+      "kind": "off_topic",
+      "expected_intent": "out_of_scope",
+      "query": "Quelle est la recette du tajine aux pruneaux ?"
+    },
+    {
+      "id": "ho_fr_off_02",
+      "lang": "fr",
+      "kind": "off_topic",
+      "expected_intent": "out_of_scope",
+      "query": "Qui a gagné la Coupe d'Afrique des nations en 2025 ?"
+    },
+    {
+      "id": "ho_fr_off_03",
+      "lang": "fr",
+      "kind": "off_topic",
+      "expected_intent": "out_of_scope",
+      "query": "Peux-tu m'aider à écrire une lettre de motivation ?"
+    },
+    {
+      "id": "ho_fr_off_04",
+      "lang": "fr",
+      "kind": "confusable",
+      "expected_intent": "out_of_scope",
+      "query": "Le bus de mon quartier est encore en retard ce matin, c'est normal ?"
+    },
+    {
+      "id": "ho_fr_off_05",
+      "lang": "fr",
+      "kind": "confusable",
+      "expected_intent": "out_of_scope",
+      "query": "Quel temps fera-t-il à Marrakech ce week-end ?"
+    },
+    {
+      "id": "ho_fr_off_06",
+      "lang": "fr",
+      "kind": "confusable",
+      "expected_intent": "out_of_scope",
+      "query": "Comment réserver un hôtel pas cher à Taghazout ?"
+    },
+    {
+      "id": "ho_fr_off_07",
+      "lang": "fr",
+      "kind": "off_topic",
+      "expected_intent": "out_of_scope",
+      "query": "Quelle est la capitale de l'Australie ?"
+    },
+    {
+      "id": "ho_fr_off_08",
+      "lang": "fr",
+      "kind": "confusable",
+      "expected_intent": "out_of_scope",
+      "query": "Combien coûte un abonnement de salle de sport à Agadir ?"
+    },
+    {
+      "id": "ho_fr_off_09",
+      "lang": "fr",
+      "kind": "off_topic",
+      "expected_intent": "out_of_scope",
+      "query": "Explique-moi la théorie de la relativité simplement."
+    },
+    {
+      "id": "ho_fr_off_10",
+      "lang": "fr",
+      "kind": "confusable",
+      "expected_intent": "out_of_scope",
+      "query": "Où acheter un téléphone d'occasion en ville ?"
+    },
+    {
+      "id": "ho_en_off_01",
+      "lang": "en",
+      "kind": "off_topic",
+      "expected_intent": "out_of_scope",
+      "query": "What's a good recipe for banana bread?"
+    },
+    {
+      "id": "ho_en_off_02",
+      "lang": "en",
+      "kind": "off_topic",
+      "expected_intent": "out_of_scope",
+      "query": "Who won the Champions League final last season?"
+    },
+    {
+      "id": "ho_en_off_03",
+      "lang": "en",
+      "kind": "off_topic",
+      "expected_intent": "out_of_scope",
+      "query": "Can you translate \"good night\" into Japanese?"
+    },
+    {
+      "id": "ho_en_off_04",
+      "lang": "en",
+      "kind": "confusable",
+      "expected_intent": "out_of_scope",
+      "query": "How do I reset my home Wi-Fi router?"
+    },
+    {
+      "id": "ho_en_off_05",
+      "lang": "en",
+      "kind": "confusable",
+      "expected_intent": "out_of_scope",
+      "query": "Which train goes from Casablanca to Rabat in the morning?"
+    },
+    {
+      "id": "ho_en_off_06",
+      "lang": "en",
+      "kind": "confusable",
+      "expected_intent": "out_of_scope",
+      "query": "What is the best beach for surfing near Agadir?"
+    },
+    {
+      "id": "ho_en_off_07",
+      "lang": "en",
+      "kind": "off_topic",
+      "expected_intent": "out_of_scope",
+      "query": "How many planets are in the solar system?"
+    },
+    {
+      "id": "ho_en_off_08",
+      "lang": "en",
+      "kind": "confusable",
+      "expected_intent": "out_of_scope",
+      "query": "Can I park my car on the street overnight in my neighbourhood?"
+    },
+    {
+      "id": "ho_en_off_09",
+      "lang": "en",
+      "kind": "off_topic",
+      "expected_intent": "out_of_scope",
+      "query": "Write a short poem about the ocean."
+    },
+    {
+      "id": "ho_en_off_10",
+      "lang": "en",
+      "kind": "confusable",
+      "expected_intent": "out_of_scope",
+      "query": "What time does the post office in my town close?"
+    },
+    {
+      "id": "ho_ar_off_01",
+      "lang": "ar",
+      "kind": "off_topic",
+      "expected_intent": "out_of_scope",
+      "query": "ما هي طريقة تحضير الكسكس بالخضر؟"
+    },
+    {
+      "id": "ho_ar_off_02",
+      "lang": "ar",
+      "kind": "off_topic",
+      "expected_intent": "out_of_scope",
+      "query": "من فاز بكأس العالم لكرة القدم سنة 2022؟"
+    },
+    {
+      "id": "ho_ar_off_03",
+      "lang": "ar",
+      "kind": "off_topic",
+      "expected_intent": "out_of_scope",
+      "query": "كيف أكتب رسالة طلب عمل؟"
+    },
+    {
+      "id": "ho_ar_off_04",
+      "lang": "ar",
+      "kind": "confusable",
+      "expected_intent": "out_of_scope",
+      "query": "الحافلة في حيّنا تتأخر كل صباح، ماذا أفعل؟"
+    },
+    {
+      "id": "ho_ar_off_05",
+      "lang": "ar",
+      "kind": "confusable",
+      "expected_intent": "out_of_scope",
+      "query": "كيف سيكون الطقس في الرباط غدًا؟"
+    },
+    {
+      "id": "ho_ar_off_06",
+      "lang": "ar",
+      "kind": "confusable",
+      "expected_intent": "out_of_scope",
+      "query": "ما أفضل فندق قريب من شاطئ أكادير؟"
+    },
+    {
+      "id": "ho_ar_off_07",
+      "lang": "ar",
+      "kind": "off_topic",
+      "expected_intent": "out_of_scope",
+      "query": "كم عدد سكان المغرب؟"
+    },
+    {
+      "id": "ho_ar_off_08",
+      "lang": "ar",
+      "kind": "off_topic",
+      "expected_intent": "out_of_scope",
+      "query": "اشرح لي قانون نيوتن الثاني ببساطة."
+    },
+    {
+      "id": "ho_ar_off_09",
+      "lang": "ar",
+      "kind": "confusable",
+      "expected_intent": "out_of_scope",
+      "query": "أين أجد صيدلية مفتوحة ليلًا في المدينة؟"
+    },
+    {
+      "id": "ho_ar_off_10",
+      "lang": "ar",
+      "kind": "off_topic",
+      "expected_intent": "out_of_scope",
+      "query": "كيف أتعلم البرمجة بلغة بايثون؟"
+    },
+    {
+      "id": "ho_fr_in_01",
+      "lang": "fr",
+      "kind": "in_scope_documentary",
+      "expected_intent": "documentary",
+      "query": "Est-ce qu'il y a un distributeur de billets dans l'aérogare ?"
+    },
+    {
+      "id": "ho_fr_in_02",
+      "lang": "fr",
+      "kind": "in_scope_documentary",
+      "expected_intent": "documentary",
+      "query": "Je voyage avec un bébé, existe-t-il un espace pour changer les couches ?"
+    },
+    {
+      "id": "ho_fr_in_03",
+      "lang": "fr",
+      "kind": "in_scope_documentary",
+      "expected_intent": "documentary",
+      "query": "Puis-je faire emballer ma valise sous film plastique avant l'enregistrement ?"
+    },
+    {
+      "id": "ho_fr_in_04",
+      "lang": "fr",
+      "kind": "in_scope_documentary",
+      "expected_intent": "documentary",
+      "query": "Combien de temps à l'avance dois-je arriver pour un vol international ?"
+    },
+    {
+      "id": "ho_fr_in_05",
+      "lang": "fr",
+      "kind": "in_scope_documentary",
+      "expected_intent": "documentary",
+      "query": "Les animaux de compagnie sont-ils acceptés dans le terminal ?"
+    },
+    {
+      "id": "ho_fr_in_06",
+      "lang": "fr",
+      "kind": "in_scope_documentary",
+      "expected_intent": "documentary",
+      "query": "Où se trouve le bureau des objets trouvés ?"
+    },
+    {
+      "id": "ho_fr_in_07",
+      "lang": "fr",
+      "kind": "in_scope_documentary",
+      "expected_intent": "documentary",
+      "query": "Y a-t-il une pharmacie à l'intérieur de l'aéroport ?"
+    },
+    {
+      "id": "ho_fr_in_08",
+      "lang": "fr",
+      "kind": "in_scope_documentary",
+      "expected_intent": "documentary",
+      "query": "Comment rejoindre le centre-ville d'Agadir depuis l'aérogare ?"
+    },
+    {
+      "id": "ho_fr_in_09",
+      "lang": "fr",
+      "kind": "in_scope_flight_no_number",
+      "expected_intent": "flight_status",
+      "query": "Mon avion pour Lyon a-t-il du retard ce soir ?"
+    },
+    {
+      "id": "ho_fr_in_10",
+      "lang": "fr",
+      "kind": "in_scope_flight_no_number",
+      "expected_intent": "flight_status",
+      "query": "À quelle heure atterrit le prochain avion en provenance de Bruxelles ?"
+    },
+    {
+      "id": "ho_en_in_01",
+      "lang": "en",
+      "kind": "in_scope_documentary",
+      "expected_intent": "documentary",
+      "query": "Is there an ATM in the departure hall?"
+    },
+    {
+      "id": "ho_en_in_02",
+      "lang": "en",
+      "kind": "in_scope_documentary",
+      "expected_intent": "documentary",
+      "query": "Can I get my suitcase wrapped in plastic before check-in?"
+    },
+    {
+      "id": "ho_en_in_03",
+      "lang": "en",
+      "kind": "in_scope_documentary",
+      "expected_intent": "documentary",
+      "query": "Where is the lost and found office?"
+    },
+    {
+      "id": "ho_en_in_04",
+      "lang": "en",
+      "kind": "in_scope_documentary",
+      "expected_intent": "documentary",
+      "query": "Are pets allowed inside the terminal building?"
+    },
+    {
+      "id": "ho_en_in_05",
+      "lang": "en",
+      "kind": "in_scope_documentary",
+      "expected_intent": "documentary",
+      "query": "Is there a pharmacy at Agadir Al Massira?"
+    },
+    {
+      "id": "ho_en_in_06",
+      "lang": "en",
+      "kind": "in_scope_documentary",
+      "expected_intent": "documentary",
+      "query": "How early should I arrive before an international departure?"
+    },
+    {
+      "id": "ho_en_in_07",
+      "lang": "en",
+      "kind": "in_scope_documentary",
+      "expected_intent": "documentary",
+      "query": "Do you have a baby changing room?"
+    },
+    {
+      "id": "ho_en_in_08",
+      "lang": "en",
+      "kind": "in_scope_documentary",
+      "expected_intent": "documentary",
+      "query": "Can I buy a local SIM card after landing?"
+    },
+    {
+      "id": "ho_en_in_09",
+      "lang": "en",
+      "kind": "in_scope_flight_no_number",
+      "expected_intent": "flight_status",
+      "query": "Has the evening plane to London been cancelled?"
+    },
+    {
+      "id": "ho_en_in_10",
+      "lang": "en",
+      "kind": "in_scope_flight_no_number",
+      "expected_intent": "flight_status",
+      "query": "When does the next arrival from Paris land?"
+    },
+    {
+      "id": "ho_ar_in_01",
+      "lang": "ar",
+      "kind": "in_scope_documentary",
+      "expected_intent": "documentary",
+      "query": "هل يوجد صراف آلي داخل المطار؟"
+    },
+    {
+      "id": "ho_ar_in_02",
+      "lang": "ar",
+      "kind": "in_scope_documentary",
+      "expected_intent": "documentary",
+      "query": "هل يمكن تغليف حقيبتي بالبلاستيك قبل التسجيل؟"
+    },
+    {
+      "id": "ho_ar_in_03",
+      "lang": "ar",
+      "kind": "in_scope_documentary",
+      "expected_intent": "documentary",
+      "query": "أين يقع مكتب المفقودات؟"
+    },
+    {
+      "id": "ho_ar_in_04",
+      "lang": "ar",
+      "kind": "in_scope_documentary",
+      "expected_intent": "documentary",
+      "query": "هل يُسمح بدخول الحيوانات الأليفة إلى المحطة؟"
+    },
+    {
+      "id": "ho_ar_in_05",
+      "lang": "ar",
+      "kind": "in_scope_documentary",
+      "expected_intent": "documentary",
+      "query": "هل توجد صيدلية داخل المطار؟"
+    },
+    {
+      "id": "ho_ar_in_06",
+      "lang": "ar",
+      "kind": "in_scope_documentary",
+      "expected_intent": "documentary",
+      "query": "كم من الوقت قبل الإقلاع يجب أن أصل للرحلات الدولية؟"
+    },
+    {
+      "id": "ho_ar_in_07",
+      "lang": "ar",
+      "kind": "in_scope_documentary",
+      "expected_intent": "documentary",
+      "query": "هل هناك غرفة لتغيير حفاضات الأطفال؟"
+    },
+    {
+      "id": "ho_ar_in_08",
+      "lang": "ar",
+      "kind": "in_scope_documentary",
+      "expected_intent": "documentary",
+      "query": "كيف أصل إلى وسط مدينة أكادير انطلاقًا من المطار؟"
+    },
+    {
+      "id": "ho_ar_in_09",
+      "lang": "ar",
+      "kind": "in_scope_flight_no_number",
+      "expected_intent": "flight_status",
+      "query": "هل تأخرت طائرتي المتجهة إلى باريس هذا المساء؟"
+    },
+    {
+      "id": "ho_ar_in_10",
+      "lang": "ar",
+      "kind": "in_scope_flight_no_number",
+      "expected_intent": "flight_status",
+      "query": "متى تهبط الطائرة القادمة من مدريد؟"
+    }
+  ]
+}

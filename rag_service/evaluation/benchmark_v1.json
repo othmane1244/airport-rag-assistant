@@ -1,0 +1,38 @@
+{
+  "benchmark_id": "aga-rag-v1",
+  "description": "Initial retrieval benchmark: 30 manually authored questions, balanced across French, English and Arabic. Measures source retrieval only, not generated-answer correctness.",
+  "cases": [
+    {"id":"fr_wifi","lang":"fr","category":"services","query":"Le Wi-Fi est-il disponible à l’aéroport d’Agadir ?","expected_sources":["Internet"]},
+    {"id":"fr_taxi","lang":"fr","category":"transport","query":"Où se trouve la station des taxis à l’aéroport d’Agadir ?","expected_sources":["Taxi & Bus","Taxis"]},
+    {"id":"fr_documents","lang":"fr","category":"formalites","query":"Quels documents faut-il pour voyager à l’étranger depuis le Maroc ?","expected_sources":["Travel documents"]},
+    {"id":"fr_parking","lang":"fr","category":"transport","query":"Où peut-on stationner une voiture à l’aéroport Agadir Al Massira ?","expected_sources":["Parkings"]},
+    {"id":"fr_code_iata","lang":"fr","category":"airport_info","query":"Quel est le code IATA de l’aéroport d’Agadir Al Massira ?","expected_sources":["Présentation","AGADIR AL MASSIRA AIRPORT"]},
+    {"id":"fr_prayer","lang":"fr","category":"services","query":"Où se trouvent les salles de prière à l’aéroport d’Agadir ?","expected_sources":["Assistance & Facilitation"]},
+    {"id":"fr_wheelchair","lang":"fr","category":"accessibility","query":"Comment demander un fauteuil roulant à l’aéroport d’Agadir ?","expected_sources":["Assistance & Facilitation"]},
+    {"id":"fr_medical","lang":"fr","category":"medical","query":"Y a-t-il une assistance médicale d’urgence à l’aéroport d’Agadir ?","expected_sources":["Medical Assistance"]},
+    {"id":"fr_restaurants","lang":"fr","category":"services","query":"Quels cafés et restaurants se trouvent à l’aéroport d’Agadir ?","expected_sources":["Cafés & restaurants","Cafes and restaurants"]},
+    {"id":"fr_boutiques","lang":"fr","category":"services","query":"Quelles boutiques sont présentes dans l’aéroport d’Agadir ?","expected_sources":["Boutiques"]},
+
+    {"id":"en_wifi","lang":"en","category":"services","query":"Does Agadir Al Massira Airport provide Wi-Fi access?","expected_sources":["Internet"]},
+    {"id":"en_taxi","lang":"en","category":"transport","query":"Where is the taxi stand at Agadir Airport?","expected_sources":["Taxi & Bus","Taxis"]},
+    {"id":"en_documents","lang":"en","category":"formalites","query":"Which travel documents are needed when leaving Morocco?","expected_sources":["Travel documents"]},
+    {"id":"en_parking","lang":"en","category":"transport","query":"Where can I park my car at Agadir Al Massira Airport?","expected_sources":["Parkings"]},
+    {"id":"en_code_iata","lang":"en","category":"airport_info","query":"What is the IATA code of Agadir Al Massira Airport?","expected_sources":["Présentation","AGADIR AL MASSIRA AIRPORT"]},
+    {"id":"en_prayer","lang":"en","category":"services","query":"Where are the prayer rooms at Agadir Airport?","expected_sources":["Assistance & Facilitation"]},
+    {"id":"en_wheelchair","lang":"en","category":"accessibility","query":"How can a passenger request a wheelchair at Agadir Airport?","expected_sources":["Assistance & Facilitation"]},
+    {"id":"en_medical","lang":"en","category":"medical","query":"Is emergency medical assistance available at Agadir Airport?","expected_sources":["Medical Assistance"]},
+    {"id":"en_restaurants","lang":"en","category":"services","query":"What cafés and restaurants are available at Agadir Airport?","expected_sources":["Cafés & restaurants","Cafes and restaurants"]},
+    {"id":"en_boutiques","lang":"en","category":"services","query":"Which shops can passengers find at Agadir Airport?","expected_sources":["Boutiques"]},
+
+    {"id":"ar_wifi","lang":"ar","category":"services","query":"هل تتوفر خدمة الواي فاي في مطار أكادير المسيرة؟","expected_sources":["Internet"]},
+    {"id":"ar_taxi","lang":"ar","category":"transport","query":"أين يوجد موقف سيارات الأجرة في مطار أكادير؟","expected_sources":["Taxi & Bus","Taxis"]},
+    {"id":"ar_documents","lang":"ar","category":"formalites","query":"ما هي وثائق السفر المطلوبة لمغادرة المغرب؟","expected_sources":["Travel documents"]},
+    {"id":"ar_parking","lang":"ar","category":"transport","query":"أين يمكنني ركن سيارتي في مطار أكادير المسيرة؟","expected_sources":["Parkings"]},
+    {"id":"ar_code_iata","lang":"ar","category":"airport_info","query":"ما هو رمز إياتا لمطار أكادير المسيرة؟","expected_sources":["Présentation","AGADIR AL MASSIRA AIRPORT"]},
+    {"id":"ar_prayer","lang":"ar","category":"services","query":"أين توجد قاعات الصلاة في مطار أكادير؟","expected_sources":["Assistance & Facilitation"]},
+    {"id":"ar_wheelchair","lang":"ar","category":"accessibility","query":"كيف أطلب كرسياً متحركاً في مطار أكادير؟","expected_sources":["Assistance & Facilitation"]},
+    {"id":"ar_medical","lang":"ar","category":"medical","query":"هل توجد مساعدة طبية طارئة في مطار أكادير؟","expected_sources":["Medical Assistance"]},
+    {"id":"ar_restaurants","lang":"ar","category":"services","query":"ما هي المقاهي والمطاعم الموجودة في مطار أكادير؟","expected_sources":["Cafés & restaurants","Cafes and restaurants"]},
+    {"id":"ar_boutiques","lang":"ar","category":"services","query":"ما هي المحلات التجارية الموجودة في مطار أكادير؟","expected_sources":["Boutiques"]}
+  ]
+}

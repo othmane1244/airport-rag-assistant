@@ -1,0 +1,1902 @@
+{
+  "benchmark_id": "aga-rag-v2-150",
+  "description": "Draft retrieval benchmark: 150 manually authored questions, 50 each in French, English and Arabic. Balanced by subtype: 60 factual, 30 complex, 30 unanswerable, 30 paraphrases. Answerable cases specify required source groups. Unanswerable cases are diagnostic only. Questions, translations and expected sources require airport-domain expert review before formal reporting.",
+  "counts": {
+    "total": 150,
+    "by_language": {
+      "fr": 50,
+      "en": 50,
+      "ar": 50
+    },
+    "by_subtype": {
+      "factual": 60,
+      "complex": 30,
+      "unanswerable": 30,
+      "paraphrase": 30
+    }
+  },
+  "review_status": "draft_requires_domain_expert_review",
+  "cases": [
+    {
+      "id": "fr_parking",
+      "lang": "fr",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Où stationner et payer le ticket à l’aéroport ?",
+      "expected_source_groups": [
+        [
+          "Parkings"
+        ]
+      ]
+    },
+    {
+      "id": "en_parking",
+      "lang": "en",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Where can I park and pay the ticket at the airport?",
+      "expected_source_groups": [
+        [
+          "Parkings"
+        ]
+      ]
+    },
+    {
+      "id": "ar_parking",
+      "lang": "ar",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "أين أركن السيارة وأدفع التذكرة في المطار؟",
+      "expected_source_groups": [
+        [
+          "Parkings"
+        ]
+      ]
+    },
+    {
+      "id": "fr_taxi",
+      "lang": "fr",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Où est la station de taxis ?",
+      "expected_source_groups": [
+        [
+          "Taxis",
+          "Taxi & Bus"
+        ]
+      ]
+    },
+    {
+      "id": "en_taxi",
+      "lang": "en",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Where is the taxi stand?",
+      "expected_source_groups": [
+        [
+          "Taxis",
+          "Taxi & Bus"
+        ]
+      ]
+    },
+    {
+      "id": "ar_taxi",
+      "lang": "ar",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "أين موقف سيارات الأجرة؟",
+      "expected_source_groups": [
+        [
+          "Taxis",
+          "Taxi & Bus"
+        ]
+      ]
+    },
+    {
+      "id": "fr_taxi_hours",
+      "lang": "fr",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Quels sont les horaires du service de taxis ?",
+      "expected_source_groups": [
+        [
+          "Taxis"
+        ]
+      ]
+    },
+    {
+      "id": "en_taxi_hours",
+      "lang": "en",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "What are the taxi service hours?",
+      "expected_source_groups": [
+        [
+          "Taxis"
+        ]
+      ]
+    },
+    {
+      "id": "ar_taxi_hours",
+      "lang": "ar",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "ما أوقات خدمة سيارات الأجرة؟",
+      "expected_source_groups": [
+        [
+          "Taxis"
+        ]
+      ]
+    },
+    {
+      "id": "fr_taxi_fare",
+      "lang": "fr",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Quel tarif est indiqué pour un taxi vers Agadir-Bensergao ?",
+      "expected_source_groups": [
+        [
+          "Taxis"
+        ]
+      ]
+    },
+    {
+      "id": "en_taxi_fare",
+      "lang": "en",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "What taxi fare is listed for Agadir-Bensergao?",
+      "expected_source_groups": [
+        [
+          "Taxis"
+        ]
+      ]
+    },
+    {
+      "id": "ar_taxi_fare",
+      "lang": "ar",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "ما تعريفة سيارة الأجرة إلى أكادير بنسركاو؟",
+      "expected_source_groups": [
+        [
+          "Taxis"
+        ]
+      ]
+    },
+    {
+      "id": "fr_bus_stops",
+      "lang": "fr",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Quels arrêts desservent les navettes vers l’aéroport ?",
+      "expected_source_groups": [
+        [
+          "Taxi & Bus"
+        ]
+      ]
+    },
+    {
+      "id": "en_bus_stops",
+      "lang": "en",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Which stops do the airport shuttles serve?",
+      "expected_source_groups": [
+        [
+          "Taxi & Bus"
+        ]
+      ]
+    },
+    {
+      "id": "ar_bus_stops",
+      "lang": "ar",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "ما المحطات التي تخدمها حافلات المطار؟",
+      "expected_source_groups": [
+        [
+          "Taxi & Bus"
+        ]
+      ]
+    },
+    {
+      "id": "fr_rental",
+      "lang": "fr",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Quelles agences louent des voitures à l’aéroport ?",
+      "expected_source_groups": [
+        [
+          "Car rent"
+        ]
+      ]
+    },
+    {
+      "id": "en_rental",
+      "lang": "en",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Which agencies rent cars at the airport?",
+      "expected_source_groups": [
+        [
+          "Car rent"
+        ]
+      ]
+    },
+    {
+      "id": "ar_rental",
+      "lang": "ar",
+      "category": "transport",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "ما وكالات كراء السيارات في المطار؟",
+      "expected_source_groups": [
+        [
+          "Car rent"
+        ]
+      ]
+    },
+    {
+      "id": "fr_wifi",
+      "lang": "fr",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Le Wi-Fi est-il disponible à l’aéroport ?",
+      "expected_source_groups": [
+        [
+          "Internet"
+        ]
+      ]
+    },
+    {
+      "id": "en_wifi",
+      "lang": "en",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Is Wi-Fi available at the airport?",
+      "expected_source_groups": [
+        [
+          "Internet"
+        ]
+      ]
+    },
+    {
+      "id": "ar_wifi",
+      "lang": "ar",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "هل تتوفر خدمة الواي فاي في المطار؟",
+      "expected_source_groups": [
+        [
+          "Internet"
+        ]
+      ]
+    },
+    {
+      "id": "fr_medical",
+      "lang": "fr",
+      "category": "medical",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Où se trouve l’unité médicale et quand est-elle ouverte ?",
+      "expected_source_groups": [
+        [
+          "Medical Assistance"
+        ]
+      ]
+    },
+    {
+      "id": "en_medical",
+      "lang": "en",
+      "category": "medical",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Where is the medical unit, and when is it open?",
+      "expected_source_groups": [
+        [
+          "Medical Assistance"
+        ]
+      ]
+    },
+    {
+      "id": "ar_medical",
+      "lang": "ar",
+      "category": "medical",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "أين توجد الوحدة الطبية ومتى تعمل؟",
+      "expected_source_groups": [
+        [
+          "Medical Assistance"
+        ]
+      ]
+    },
+    {
+      "id": "fr_prayer",
+      "lang": "fr",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Où se trouvent les salles de prière ?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ]
+    },
+    {
+      "id": "en_prayer",
+      "lang": "en",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Where are the prayer rooms?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ]
+    },
+    {
+      "id": "ar_prayer",
+      "lang": "ar",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "أين توجد قاعات الصلاة؟",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ]
+    },
+    {
+      "id": "fr_wheelchair",
+      "lang": "fr",
+      "category": "accessibility",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Comment demander un fauteuil roulant ?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ]
+    },
+    {
+      "id": "en_wheelchair",
+      "lang": "en",
+      "category": "accessibility",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "How can I request a wheelchair?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ]
+    },
+    {
+      "id": "ar_wheelchair",
+      "lang": "ar",
+      "category": "accessibility",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "كيف أطلب كرسيًا متحركًا؟",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ]
+    },
+    {
+      "id": "fr_accessible_toilets",
+      "lang": "fr",
+      "category": "accessibility",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Y a-t-il des toilettes accessibles aux personnes à mobilité réduite ?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ]
+    },
+    {
+      "id": "en_accessible_toilets",
+      "lang": "en",
+      "category": "accessibility",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Are accessible toilets available?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ]
+    },
+    {
+      "id": "ar_accessible_toilets",
+      "lang": "ar",
+      "category": "accessibility",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "هل توجد مراحيض مهيأة لذوي الحركة المحدودة؟",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ]
+    },
+    {
+      "id": "fr_trolleys",
+      "lang": "fr",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Où trouver des chariots à bagages ?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ]
+    },
+    {
+      "id": "en_trolleys",
+      "lang": "en",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Where can I find luggage trolleys?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ]
+    },
+    {
+      "id": "ar_trolleys",
+      "lang": "ar",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "أين أجد عربات الأمتعة؟",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ]
+    },
+    {
+      "id": "fr_play_area",
+      "lang": "fr",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Où se trouve l’espace de jeux pour enfants ?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ]
+    },
+    {
+      "id": "en_play_area",
+      "lang": "en",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Where is the children’s play area?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ]
+    },
+    {
+      "id": "ar_play_area",
+      "lang": "ar",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "أين توجد منطقة ألعاب الأطفال؟",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ]
+    },
+    {
+      "id": "fr_smoking",
+      "lang": "fr",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Où peut-on fumer dans l’aéroport ?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ]
+    },
+    {
+      "id": "en_smoking",
+      "lang": "en",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Where can passengers smoke at the airport?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ]
+    },
+    {
+      "id": "ar_smoking",
+      "lang": "ar",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "أين يمكن التدخين في المطار؟",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ]
+    },
+    {
+      "id": "fr_food",
+      "lang": "fr",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Quels bars et restaurants sont proposés ?",
+      "expected_source_groups": [
+        [
+          "Cafes and restaurants"
+        ]
+      ]
+    },
+    {
+      "id": "en_food",
+      "lang": "en",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Which bars and restaurants are available?",
+      "expected_source_groups": [
+        [
+          "Cafes and restaurants"
+        ]
+      ]
+    },
+    {
+      "id": "ar_food",
+      "lang": "ar",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "ما المقاهي والمطاعم المتوفرة؟",
+      "expected_source_groups": [
+        [
+          "Cafes and restaurants"
+        ]
+      ]
+    },
+    {
+      "id": "fr_shops",
+      "lang": "fr",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Quelles boutiques trouve-t-on dans le terminal ?",
+      "expected_source_groups": [
+        [
+          "Boutiques"
+        ]
+      ]
+    },
+    {
+      "id": "en_shops",
+      "lang": "en",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Which shops are in the terminal?",
+      "expected_source_groups": [
+        [
+          "Boutiques"
+        ]
+      ]
+    },
+    {
+      "id": "ar_shops",
+      "lang": "ar",
+      "category": "services",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "ما المتاجر الموجودة في مبنى المطار؟",
+      "expected_source_groups": [
+        [
+          "Boutiques"
+        ]
+      ]
+    },
+    {
+      "id": "fr_iata",
+      "lang": "fr",
+      "category": "airport_info",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Quel est le code IATA d’Agadir Al Massira ?",
+      "expected_source_groups": [
+        [
+          "Présentation",
+          "AGADIR AL MASSIRA AIRPORT"
+        ]
+      ]
+    },
+    {
+      "id": "en_iata",
+      "lang": "en",
+      "category": "airport_info",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "What is the IATA code for Agadir Al Massira?",
+      "expected_source_groups": [
+        [
+          "Présentation",
+          "AGADIR AL MASSIRA AIRPORT"
+        ]
+      ]
+    },
+    {
+      "id": "ar_iata",
+      "lang": "ar",
+      "category": "airport_info",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "ما رمز إياتا لمطار أكادير المسيرة؟",
+      "expected_source_groups": [
+        [
+          "Présentation",
+          "AGADIR AL MASSIRA AIRPORT"
+        ]
+      ]
+    },
+    {
+      "id": "fr_call_center",
+      "lang": "fr",
+      "category": "airport_info",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Comment contacter le centre d’appel ?",
+      "expected_source_groups": [
+        [
+          "Call center"
+        ]
+      ]
+    },
+    {
+      "id": "en_call_center",
+      "lang": "en",
+      "category": "airport_info",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "How can I contact the call center?",
+      "expected_source_groups": [
+        [
+          "Call center"
+        ]
+      ]
+    },
+    {
+      "id": "ar_call_center",
+      "lang": "ar",
+      "category": "airport_info",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "كيف أتواصل مع مركز الاتصال؟",
+      "expected_source_groups": [
+        [
+          "Call center"
+        ]
+      ]
+    },
+    {
+      "id": "fr_checkin",
+      "lang": "fr",
+      "category": "formalites",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Où trouver les informations sur l’enregistrement et l’embarquement ?",
+      "expected_source_groups": [
+        [
+          "Check-in & Boarding"
+        ]
+      ]
+    },
+    {
+      "id": "en_checkin",
+      "lang": "en",
+      "category": "formalites",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Where can I find check-in and boarding information?",
+      "expected_source_groups": [
+        [
+          "Check-in & Boarding"
+        ]
+      ]
+    },
+    {
+      "id": "ar_checkin",
+      "lang": "ar",
+      "category": "formalites",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "أين أجد معلومات تسجيل الوصول والصعود؟",
+      "expected_source_groups": [
+        [
+          "Check-in & Boarding"
+        ]
+      ]
+    },
+    {
+      "id": "fr_travel_docs",
+      "lang": "fr",
+      "category": "formalites",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Quels documents faut-il pour quitter le Maroc ?",
+      "expected_source_groups": [
+        [
+          "Travel documents"
+        ]
+      ]
+    },
+    {
+      "id": "en_travel_docs",
+      "lang": "en",
+      "category": "formalites",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "Which travel documents are needed to leave Morocco?",
+      "expected_source_groups": [
+        [
+          "Travel documents"
+        ]
+      ]
+    },
+    {
+      "id": "ar_travel_docs",
+      "lang": "ar",
+      "category": "formalites",
+      "subtype": "factual",
+      "answerable": true,
+      "query": "ما وثائق السفر اللازمة لمغادرة المغرب؟",
+      "expected_source_groups": [
+        [
+          "Travel documents"
+        ]
+      ]
+    },
+    {
+      "id": "fr_city_access",
+      "lang": "fr",
+      "category": "transport",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "Comment rejoindre Agadir : où prendre un taxi et quels arrêts de bus sont desservis ?",
+      "expected_source_groups": [
+        [
+          "Taxis",
+          "Taxi & Bus"
+        ],
+        [
+          "Taxi & Bus"
+        ]
+      ]
+    },
+    {
+      "id": "en_city_access",
+      "lang": "en",
+      "category": "transport",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "How can I reach Agadir: where are taxis, and which bus stops are served?",
+      "expected_source_groups": [
+        [
+          "Taxis",
+          "Taxi & Bus"
+        ],
+        [
+          "Taxi & Bus"
+        ]
+      ]
+    },
+    {
+      "id": "ar_city_access",
+      "lang": "ar",
+      "category": "transport",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "كيف أصل إلى أكادير: أين أجد سيارات الأجرة وما محطات الحافلات؟",
+      "expected_source_groups": [
+        [
+          "Taxis",
+          "Taxi & Bus"
+        ],
+        [
+          "Taxi & Bus"
+        ]
+      ]
+    },
+    {
+      "id": "fr_parking_info",
+      "lang": "fr",
+      "category": "transport",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "Quelles sont la capacité du parking et les modalités de paiement pour plusieurs heures ?",
+      "expected_source_groups": [
+        [
+          "Parkings"
+        ]
+      ]
+    },
+    {
+      "id": "en_parking_info",
+      "lang": "en",
+      "category": "transport",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "What are the parking capacity and payment terms for several hours?",
+      "expected_source_groups": [
+        [
+          "Parkings"
+        ]
+      ]
+    },
+    {
+      "id": "ar_parking_info",
+      "lang": "ar",
+      "category": "transport",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "ما سعة الموقف وكيف يتم الدفع عند الوقوف عدة ساعات؟",
+      "expected_source_groups": [
+        [
+          "Parkings"
+        ]
+      ]
+    },
+    {
+      "id": "fr_departure",
+      "lang": "fr",
+      "category": "formalites",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "Pour un départ international, où trouver les consignes d’enregistrement et d’embarquement ?",
+      "expected_source_groups": [
+        [
+          "Check-in & Boarding"
+        ]
+      ]
+    },
+    {
+      "id": "en_departure",
+      "lang": "en",
+      "category": "formalites",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "For an international departure, where can I find check-in and boarding guidance?",
+      "expected_source_groups": [
+        [
+          "Check-in & Boarding"
+        ]
+      ]
+    },
+    {
+      "id": "ar_departure",
+      "lang": "ar",
+      "category": "formalites",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "لرحلة دولية، أين أجد إرشادات تسجيل الوصول والصعود؟",
+      "expected_source_groups": [
+        [
+          "Check-in & Boarding"
+        ]
+      ]
+    },
+    {
+      "id": "fr_prm",
+      "lang": "fr",
+      "category": "accessibility",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "Quelles aides sont prévues pour un passager à mobilité réduite, dont fauteuil et toilettes ?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ]
+    },
+    {
+      "id": "en_prm",
+      "lang": "en",
+      "category": "accessibility",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "What support is available to a passenger with reduced mobility, including a wheelchair and toilets?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ]
+    },
+    {
+      "id": "ar_prm",
+      "lang": "ar",
+      "category": "accessibility",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "ما المساعدة المتاحة لراكب محدود الحركة، مثل الكرسي المتحرك والمراحيض؟",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ]
+    },
+    {
+      "id": "fr_emergency",
+      "lang": "fr",
+      "category": "medical",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "En urgence, où aller pour voir le médecin et à quels horaires ?",
+      "expected_source_groups": [
+        [
+          "Medical Assistance"
+        ]
+      ]
+    },
+    {
+      "id": "en_emergency",
+      "lang": "en",
+      "category": "medical",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "In an emergency, where can I see a doctor, and at what times?",
+      "expected_source_groups": [
+        [
+          "Medical Assistance"
+        ]
+      ]
+    },
+    {
+      "id": "ar_emergency",
+      "lang": "ar",
+      "category": "medical",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "في حالة الطوارئ، أين أجد الطبيب وما أوقات توفره؟",
+      "expected_source_groups": [
+        [
+          "Medical Assistance"
+        ]
+      ]
+    },
+    {
+      "id": "fr_info_contact",
+      "lang": "fr",
+      "category": "airport_info",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "Où demander des renseignements et quel contact téléphonique est indiqué ?",
+      "expected_source_groups": [
+        [
+          "Informations points"
+        ],
+        [
+          "Phone"
+        ]
+      ]
+    },
+    {
+      "id": "en_info_contact",
+      "lang": "en",
+      "category": "airport_info",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "Where can I ask for information, and what phone contact is listed?",
+      "expected_source_groups": [
+        [
+          "Informations points"
+        ],
+        [
+          "Phone"
+        ]
+      ]
+    },
+    {
+      "id": "ar_info_contact",
+      "lang": "ar",
+      "category": "airport_info",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "أين أطلب المعلومات وما رقم الهاتف المذكور؟",
+      "expected_source_groups": [
+        [
+          "Informations points"
+        ],
+        [
+          "Phone"
+        ]
+      ]
+    },
+    {
+      "id": "fr_rental_contacts",
+      "lang": "fr",
+      "category": "transport",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "Quelles agences de location sont présentes et quelles coordonnées de réservation sont publiées ?",
+      "expected_source_groups": [
+        [
+          "Car rent"
+        ]
+      ]
+    },
+    {
+      "id": "en_rental_contacts",
+      "lang": "en",
+      "category": "transport",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "Which rental agencies are present, and what booking contacts are listed?",
+      "expected_source_groups": [
+        [
+          "Car rent"
+        ]
+      ]
+    },
+    {
+      "id": "ar_rental_contacts",
+      "lang": "ar",
+      "category": "transport",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "ما وكالات الكراء الموجودة وما بيانات الحجز المنشورة؟",
+      "expected_source_groups": [
+        [
+          "Car rent"
+        ]
+      ]
+    },
+    {
+      "id": "fr_food_shops",
+      "lang": "fr",
+      "category": "services",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "Quelles options de restauration et quelles boutiques sont indiquées ?",
+      "expected_source_groups": [
+        [
+          "Cafes and restaurants"
+        ],
+        [
+          "Boutiques"
+        ]
+      ]
+    },
+    {
+      "id": "en_food_shops",
+      "lang": "en",
+      "category": "services",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "What dining options and shops are listed?",
+      "expected_source_groups": [
+        [
+          "Cafes and restaurants"
+        ],
+        [
+          "Boutiques"
+        ]
+      ]
+    },
+    {
+      "id": "ar_food_shops",
+      "lang": "ar",
+      "category": "services",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "ما خيارات الطعام والمتاجر المذكورة؟",
+      "expected_source_groups": [
+        [
+          "Cafes and restaurants"
+        ],
+        [
+          "Boutiques"
+        ]
+      ]
+    },
+    {
+      "id": "fr_currency_post",
+      "lang": "fr",
+      "category": "services",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "Quels services de change et services postaux sont mentionnés ?",
+      "expected_source_groups": [
+        [
+          "Change & poste"
+        ]
+      ]
+    },
+    {
+      "id": "en_currency_post",
+      "lang": "en",
+      "category": "services",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "Which currency-exchange and postal services are mentioned?",
+      "expected_source_groups": [
+        [
+          "Change & poste"
+        ]
+      ]
+    },
+    {
+      "id": "ar_currency_post",
+      "lang": "ar",
+      "category": "services",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "ما خدمات الصرف والبريد المذكورة؟",
+      "expected_source_groups": [
+        [
+          "Change & poste"
+        ]
+      ]
+    },
+    {
+      "id": "fr_travel_customs",
+      "lang": "fr",
+      "category": "formalites",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "Quels documents préparer et quelles règles de sécurité ou de douane consulter ?",
+      "expected_source_groups": [
+        [
+          "Travel documents"
+        ],
+        [
+          "Security and Customs"
+        ]
+      ]
+    },
+    {
+      "id": "en_travel_customs",
+      "lang": "en",
+      "category": "formalites",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "Which documents should I prepare, and what security or customs rules should I consult?",
+      "expected_source_groups": [
+        [
+          "Travel documents"
+        ],
+        [
+          "Security and Customs"
+        ]
+      ]
+    },
+    {
+      "id": "ar_travel_customs",
+      "lang": "ar",
+      "category": "formalites",
+      "subtype": "complex",
+      "answerable": true,
+      "query": "ما الوثائق التي أعدها وما قواعد الأمن أو الجمارك التي أراجعها؟",
+      "expected_source_groups": [
+        [
+          "Travel documents"
+        ],
+        [
+          "Security and Customs"
+        ]
+      ]
+    },
+    {
+      "id": "fr_flight_status",
+      "lang": "fr",
+      "category": "flight_live",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "Le vol FR5545 est-il à l’heure aujourd’hui ?",
+      "expected_source_groups": []
+    },
+    {
+      "id": "en_flight_status",
+      "lang": "en",
+      "category": "flight_live",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "Is flight FR5545 on time today?",
+      "expected_source_groups": []
+    },
+    {
+      "id": "ar_flight_status",
+      "lang": "ar",
+      "category": "flight_live",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "هل رحلة FR5545 في موعدها اليوم؟",
+      "expected_source_groups": []
+    },
+    {
+      "id": "fr_flight_gate",
+      "lang": "fr",
+      "category": "flight_live",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "Quelle porte est attribuée maintenant au prochain vol pour Paris ?",
+      "expected_source_groups": []
+    },
+    {
+      "id": "en_flight_gate",
+      "lang": "en",
+      "category": "flight_live",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "Which gate is currently assigned to the next Paris flight?",
+      "expected_source_groups": []
+    },
+    {
+      "id": "ar_flight_gate",
+      "lang": "ar",
+      "category": "flight_live",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "ما بوابة الرحلة القادمة إلى باريس حاليًا؟",
+      "expected_source_groups": []
+    },
+    {
+      "id": "fr_flight_delays",
+      "lang": "fr",
+      "category": "flight_live",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "Quels vols sont retardés en ce moment ?",
+      "expected_source_groups": []
+    },
+    {
+      "id": "en_flight_delays",
+      "lang": "en",
+      "category": "flight_live",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "Which flights are delayed right now?",
+      "expected_source_groups": []
+    },
+    {
+      "id": "ar_flight_delays",
+      "lang": "ar",
+      "category": "flight_live",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "ما الرحلات المتأخرة الآن؟",
+      "expected_source_groups": []
+    },
+    {
+      "id": "fr_next_bus",
+      "lang": "fr",
+      "category": "transport_live",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "À quelle heure part le prochain bus vers le centre aujourd’hui ?",
+      "expected_source_groups": []
+    },
+    {
+      "id": "en_next_bus",
+      "lang": "en",
+      "category": "transport_live",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "What time does the next bus downtown leave today?",
+      "expected_source_groups": []
+    },
+    {
+      "id": "ar_next_bus",
+      "lang": "ar",
+      "category": "transport_live",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "متى تنطلق الحافلة القادمة إلى وسط المدينة اليوم؟",
+      "expected_source_groups": []
+    },
+    {
+      "id": "fr_parking_spaces",
+      "lang": "fr",
+      "category": "transport_live",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "Combien de places de parking sont libres actuellement ?",
+      "expected_source_groups": []
+    },
+    {
+      "id": "en_parking_spaces",
+      "lang": "en",
+      "category": "transport_live",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "How many parking spaces are free right now?",
+      "expected_source_groups": []
+    },
+    {
+      "id": "ar_parking_spaces",
+      "lang": "ar",
+      "category": "transport_live",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "كم مكانًا شاغرًا في الموقف الآن؟",
+      "expected_source_groups": []
+    },
+    {
+      "id": "fr_baggage_allowance",
+      "lang": "fr",
+      "category": "airline_policy",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "Quel poids de bagage cabine autorise mon billet Royal Air Maroc ?",
+      "expected_source_groups": []
+    },
+    {
+      "id": "en_baggage_allowance",
+      "lang": "en",
+      "category": "airline_policy",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "What cabin-bag weight does my Royal Air Maroc ticket allow?",
+      "expected_source_groups": []
+    },
+    {
+      "id": "ar_baggage_allowance",
+      "lang": "ar",
+      "category": "airline_policy",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "ما وزن حقيبة المقصورة المسموح به في تذكرة الخطوط الملكية المغربية؟",
+      "expected_source_groups": []
+    },
+    {
+      "id": "fr_ticket_price",
+      "lang": "fr",
+      "category": "airline_policy",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "Quel est aujourd’hui le prix d’un billet Agadir-Paris avec bagage en soute ?",
+      "expected_source_groups": []
+    },
+    {
+      "id": "en_ticket_price",
+      "lang": "en",
+      "category": "airline_policy",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "What is today’s price for an Agadir–Paris ticket with checked baggage?",
+      "expected_source_groups": []
+    },
+    {
+      "id": "ar_ticket_price",
+      "lang": "ar",
+      "category": "airline_policy",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "كم سعر تذكرة أكادير باريس مع أمتعة مشحونة اليوم؟",
+      "expected_source_groups": []
+    },
+    {
+      "id": "fr_security_wait",
+      "lang": "fr",
+      "category": "live_operations",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "Combien de temps dure actuellement la file du contrôle de sécurité ?",
+      "expected_source_groups": []
+    },
+    {
+      "id": "en_security_wait",
+      "lang": "en",
+      "category": "live_operations",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "How long is the security-check queue right now?",
+      "expected_source_groups": []
+    },
+    {
+      "id": "ar_security_wait",
+      "lang": "ar",
+      "category": "live_operations",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "كم مدة الانتظار في التفتيش الأمني حاليًا؟",
+      "expected_source_groups": []
+    },
+    {
+      "id": "fr_restaurant_now",
+      "lang": "fr",
+      "category": "live_hours",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "Quel restaurant est ouvert à cette minute dans la zone d’embarquement ?",
+      "expected_source_groups": []
+    },
+    {
+      "id": "en_restaurant_now",
+      "lang": "en",
+      "category": "live_hours",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "Which restaurant is open this minute in the boarding area?",
+      "expected_source_groups": []
+    },
+    {
+      "id": "ar_restaurant_now",
+      "lang": "ar",
+      "category": "live_hours",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "أي مطعم مفتوح الآن في منطقة الصعود؟",
+      "expected_source_groups": []
+    },
+    {
+      "id": "fr_weather_now",
+      "lang": "fr",
+      "category": "live_weather",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "Quel temps fait-il actuellement sur le tarmac ?",
+      "expected_source_groups": []
+    },
+    {
+      "id": "en_weather_now",
+      "lang": "en",
+      "category": "live_weather",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "What is the current weather on the apron?",
+      "expected_source_groups": []
+    },
+    {
+      "id": "ar_weather_now",
+      "lang": "ar",
+      "category": "live_weather",
+      "subtype": "unanswerable",
+      "answerable": false,
+      "query": "كيف الطقس الآن على ساحة المطار؟",
+      "expected_source_groups": []
+    },
+    {
+      "id": "fr_park_leave",
+      "lang": "fr",
+      "category": "transport",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Je pars quelques jours : où laisser ma voiture et où payer en sortant ?",
+      "expected_source_groups": [
+        [
+          "Parkings"
+        ]
+      ]
+    },
+    {
+      "id": "en_park_leave",
+      "lang": "en",
+      "category": "transport",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "I’m away for a few days: where can I leave my car and pay when exiting?",
+      "expected_source_groups": [
+        [
+          "Parkings"
+        ]
+      ]
+    },
+    {
+      "id": "ar_park_leave",
+      "lang": "ar",
+      "category": "transport",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "سأسافر أيامًا: أين أترك سيارتي وأدفع عند الخروج؟",
+      "expected_source_groups": [
+        [
+          "Parkings"
+        ]
+      ]
+    },
+    {
+      "id": "fr_taxi_queue",
+      "lang": "fr",
+      "category": "transport",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Où les taxis attendent-ils à la sortie des arrivées ?",
+      "expected_source_groups": [
+        [
+          "Taxis",
+          "Taxi & Bus"
+        ]
+      ]
+    },
+    {
+      "id": "en_taxi_queue",
+      "lang": "en",
+      "category": "transport",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Where do taxis wait outside arrivals?",
+      "expected_source_groups": [
+        [
+          "Taxis",
+          "Taxi & Bus"
+        ]
+      ]
+    },
+    {
+      "id": "ar_taxi_queue",
+      "lang": "ar",
+      "category": "transport",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "أين تنتظر سيارات الأجرة عند مخرج الوصول؟",
+      "expected_source_groups": [
+        [
+          "Taxis",
+          "Taxi & Bus"
+        ]
+      ]
+    },
+    {
+      "id": "fr_bus_route",
+      "lang": "fr",
+      "category": "transport",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Existe-t-il une navette vers Inezgane ou Aït Melloul ?",
+      "expected_source_groups": [
+        [
+          "Taxi & Bus"
+        ]
+      ]
+    },
+    {
+      "id": "en_bus_route",
+      "lang": "en",
+      "category": "transport",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Is there a shuttle to Inezgane or Aït Melloul?",
+      "expected_source_groups": [
+        [
+          "Taxi & Bus"
+        ]
+      ]
+    },
+    {
+      "id": "ar_bus_route",
+      "lang": "ar",
+      "category": "transport",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "هل توجد حافلة إلى إنزكان أو أيت ملول؟",
+      "expected_source_groups": [
+        [
+          "Taxi & Bus"
+        ]
+      ]
+    },
+    {
+      "id": "fr_internet",
+      "lang": "fr",
+      "category": "services",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Puis-je me connecter en ligne en attendant mon avion ?",
+      "expected_source_groups": [
+        [
+          "Internet"
+        ]
+      ]
+    },
+    {
+      "id": "en_internet",
+      "lang": "en",
+      "category": "services",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Can I get online while waiting for my plane?",
+      "expected_source_groups": [
+        [
+          "Internet"
+        ]
+      ]
+    },
+    {
+      "id": "ar_internet",
+      "lang": "ar",
+      "category": "services",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "هل يمكنني الاتصال بالإنترنت أثناء انتظار الطائرة؟",
+      "expected_source_groups": [
+        [
+          "Internet"
+        ]
+      ]
+    },
+    {
+      "id": "fr_chair",
+      "lang": "fr",
+      "category": "accessibility",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Je marche difficilement : comment obtenir une chaise roulante ?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ]
+    },
+    {
+      "id": "en_chair",
+      "lang": "en",
+      "category": "accessibility",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "I have difficulty walking; how can I get a wheelchair?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ]
+    },
+    {
+      "id": "ar_chair",
+      "lang": "ar",
+      "category": "accessibility",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "أجد صعوبة في المشي، كيف أحصل على كرسي متحرك؟",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ]
+    },
+    {
+      "id": "fr_doctor",
+      "lang": "fr",
+      "category": "medical",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Où aller si un voyageur a besoin d’un médecin ?",
+      "expected_source_groups": [
+        [
+          "Medical Assistance"
+        ]
+      ]
+    },
+    {
+      "id": "en_doctor",
+      "lang": "en",
+      "category": "medical",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Where should a traveler go if they need a doctor?",
+      "expected_source_groups": [
+        [
+          "Medical Assistance"
+        ]
+      ]
+    },
+    {
+      "id": "ar_doctor",
+      "lang": "ar",
+      "category": "medical",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "أين أذهب إذا احتاج مسافر إلى طبيب؟",
+      "expected_source_groups": [
+        [
+          "Medical Assistance"
+        ]
+      ]
+    },
+    {
+      "id": "fr_prayer_place",
+      "lang": "fr",
+      "category": "services",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Y a-t-il un lieu de prière avant le départ ?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ]
+    },
+    {
+      "id": "en_prayer_place",
+      "lang": "en",
+      "category": "services",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Is there a place to pray before departure?",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ]
+    },
+    {
+      "id": "ar_prayer_place",
+      "lang": "ar",
+      "category": "services",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "هل يوجد مكان للصلاة قبل المغادرة؟",
+      "expected_source_groups": [
+        [
+          "Assistance & Facilitation"
+        ]
+      ]
+    },
+    {
+      "id": "fr_shopping",
+      "lang": "fr",
+      "category": "services",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Où peut-on faire des achats dans le terminal ?",
+      "expected_source_groups": [
+        [
+          "Boutiques"
+        ]
+      ]
+    },
+    {
+      "id": "en_shopping",
+      "lang": "en",
+      "category": "services",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Where can I shop in the terminal?",
+      "expected_source_groups": [
+        [
+          "Boutiques"
+        ]
+      ]
+    },
+    {
+      "id": "ar_shopping",
+      "lang": "ar",
+      "category": "services",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "أين يمكن التسوق في مبنى المطار؟",
+      "expected_source_groups": [
+        [
+          "Boutiques"
+        ]
+      ]
+    },
+    {
+      "id": "fr_phone_number",
+      "lang": "fr",
+      "category": "airport_info",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Quel numéro appeler pour joindre l’aéroport ?",
+      "expected_source_groups": [
+        [
+          "Phone",
+          "Call center"
+        ]
+      ]
+    },
+    {
+      "id": "en_phone_number",
+      "lang": "en",
+      "category": "airport_info",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "What number should I call to reach the airport?",
+      "expected_source_groups": [
+        [
+          "Phone",
+          "Call center"
+        ]
+      ]
+    },
+    {
+      "id": "ar_phone_number",
+      "lang": "ar",
+      "category": "airport_info",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "ما الرقم الذي أتصل به للوصول إلى المطار؟",
+      "expected_source_groups": [
+        [
+          "Phone",
+          "Call center"
+        ]
+      ]
+    },
+    {
+      "id": "fr_papers",
+      "lang": "fr",
+      "category": "formalites",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "Quels papiers préparer avant de prendre l’avion depuis le Maroc ?",
+      "expected_source_groups": [
+        [
+          "Travel documents"
+        ]
+      ]
+    },
+    {
+      "id": "en_papers",
+      "lang": "en",
+      "category": "formalites",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "What papers should I prepare before flying from Morocco?",
+      "expected_source_groups": [
+        [
+          "Travel documents"
+        ]
+      ]
+    },
+    {
+      "id": "ar_papers",
+      "lang": "ar",
+      "category": "formalites",
+      "subtype": "paraphrase",
+      "answerable": true,
+      "query": "ما الأوراق التي أجهزها قبل السفر جوًا من المغرب؟",
+      "expected_source_groups": [
+        [
+          "Travel documents"
+        ]
+      ]
+    }
+  ]
+}
